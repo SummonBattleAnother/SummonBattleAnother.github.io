@@ -1,19 +1,22 @@
 {
     "heroes": [
-      {
-        "id": "hero1",
-        "name": "영웅1",
-        "icon": "hero1-icon.jpg"
-      },
-      {
-        "id": "hero2",
-        "name": "영웅2",
-        "icon": "hero2-icon.jpg"
-      },
-      {
-        "id": "hero3",
-        "name": "영웅3",
-        "icon": "hero3-icon.jpg"
+    {
+      "id": "hero1",
+      "name": "영웅1",
+      "role": "탱커",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "fullDescription": "영웅1은 전장의 최전선에서...",
+      "skills": [
+        {
+          "name": "강철 방패",
+          "description": "3초 동안 모든 피해를 50% 감소시킵니다."
+        }
+      ],
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
       }
-    ]
+    }]
   }

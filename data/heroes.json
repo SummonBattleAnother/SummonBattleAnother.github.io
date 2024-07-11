@@ -3,7 +3,7 @@
     {
       "id": "hero1",
       "name": "영웅1",
-      "role": "탱커",
+      "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "fullDescription": "영웅1은 전장의 최전선에서...",
       "skills": [
@@ -18,5 +18,25 @@
         "mobility": 4,
         "utility": 6
       }
-    }]
+    },
+    {
+      "id": "hero2",
+      "name": "영웅2",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "fullDescription": "영웅1은 전장의 최전선에서...",
+      "skills": [
+        {
+          "name": "강철 방패",
+          "description": "3초 동안 모든 피해를 50% 감소시킵니다."
+        }
+      ],
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    }
+    ]
   }

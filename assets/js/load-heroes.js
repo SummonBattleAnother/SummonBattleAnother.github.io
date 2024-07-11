@@ -8,8 +8,8 @@ async function loadHeroes() {
       data.heroes.forEach(hero => {
         heroGrid += `
           <div class="hero-item">
-            <a href="${hero.id}.html">
-              <img src="${hero.icon}" alt="${hero.name}" class="hero-icon">
+            <a href="heores/${hero.id}.html">
+              <img src="assets/images/hero-icons/${hero.icon}" alt="${hero.name}" class="hero-icon">
               <p>${hero.name}</p>
             </a>
           </div>

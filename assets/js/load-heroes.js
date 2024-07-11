@@ -31,7 +31,7 @@ function renderHeroes() {
     heroCard.className = 'hero-card';
     heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
-        <img src="/assets/images/hero-icons/${hero.icon}" alt="${hero.name}" class="hero-icon">
+        <img src="/assets/images/hero-icons/${hero.id}" alt="${hero.name}" class="hero-icon">
         <div class="hero-name">${hero.name}</div>
       </a>
     `;

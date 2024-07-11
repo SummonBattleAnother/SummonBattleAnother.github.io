@@ -19,21 +19,20 @@ async function loadHeroes() {
 function renderHeroes() {
   const heroList = document.getElementById('hero-list');
   heroList.innerHTML = `
-    <h2 class="text-2xl font-bold mb-4">영웅 목록</h2>
-    <div id="filters" class="mb-4"></div>
-    <div id="hero-grid" class="grid grid-cols-4 gap-4"></div>
+    <h2 class="hero-title">영웅 목록</h2>
+    <div id="filters" class="filters"></div>
+    <div id="hero-grid" class="hero-grid"></div>
   `;
 
   const heroGrid = document.getElementById('hero-grid');
 
   filteredHeroes.forEach(hero => {
     const heroCard = document.createElement('div');
-    heroCard.className = 'bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300';
+    heroCard.className = 'hero-card';
     heroCard.innerHTML = `
-      <a href="heroes/${hero.id}.html" class="block text-center">
-        <img src="assets/images/hero-icons/${hero.icon}" alt="${hero.name}" class="w-24 h-24 mx-auto mb-2 rounded-full">
-        <p class="font-semibold">${hero.name}</p>
-        <p class="text-sm text-gray-600">${hero.role}</p>
+      <a href="heroes/${hero.id}.html" class="hero-link">
+        <img src="assets/images/hero-icons/${hero.icon}" alt="${hero.name}" class="hero-icon">
+        <div class="hero-name">${hero.name}</div>
       </a>
     `;
     heroGrid.appendChild(heroCard);
@@ -49,12 +48,13 @@ function setupFilters() {
     filterHeroes();
   }, '역할 선택');
 
+  filtersContainer.innerHTML = ''; // Clear existing content
   filtersContainer.appendChild(roleSelect);
 }
 
 function createSelect(options, defaultValue, onChange, labelText) {
   const select = document.createElement('select');
-  select.className = 'bg-white border border-gray-300 rounded-md px-2 py-1';
+  select.className = 'role-select';
   options.forEach(option => {
     const optionElement = document.createElement('option');
     optionElement.value = option;
@@ -65,8 +65,8 @@ function createSelect(options, defaultValue, onChange, labelText) {
   select.addEventListener('change', (e) => onChange(e.target.value));
 
   const label = document.createElement('label');
-  label.className = 'flex items-center';
-  label.innerHTML = `<span class="mr-2">${labelText}:</span>`;
+  label.className = 'role-label';
+  label.innerHTML = `<span>${labelText}:</span>`;
   label.appendChild(select);
 
   return label;
@@ -77,6 +77,7 @@ function filterHeroes() {
     ? heroes
     : heroes.filter(hero => hero.role === selectedRole);
   renderHeroes();
+  setupFilters(); // Re-setup filters to maintain the dropdown
 }
 
 document.addEventListener('DOMContentLoaded', loadHeroes);

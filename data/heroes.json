@@ -1,0 +1,19 @@
+{
+    "heroes": [
+      {
+        "id": "hero1",
+        "name": "영웅1",
+        "icon": "hero1-icon.jpg"
+      },
+      {
+        "id": "hero2",
+        "name": "영웅2",
+        "icon": "hero2-icon.jpg"
+      },
+      {
+        "id": "hero3",
+        "name": "영웅3",
+        "icon": "hero3-icon.jpg"
+      }
+    ]
+  }

@@ -1,0 +1,123 @@
+/* 기본 스타일 */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --highlight-color: #3498db;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* 헤더 스타일 */
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* 네비게이션 스타일 */
+  nav {
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 영웅 그리드 스타일 */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .hero-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .hero-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .hero-icon {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .hero-item p {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* 영웅 상세 페이지 스타일 */
+  .hero-detail {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .hero-info {
+    flex: 1;
+  }
+  
+  .skill-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skill-item {
+    background-color: var(--background-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .radar-chart {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .hero-detail {
+      flex-direction: column;
+    }
+    
+    .hero-image {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }

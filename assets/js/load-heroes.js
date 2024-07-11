@@ -30,8 +30,8 @@ function renderHeroes() {
     const heroCard = document.createElement('div');
     heroCard.className = 'hero-card';
     heroCard.innerHTML = `
-      <a href="heroes/${hero.id}.html" class="hero-link">
-        <img src="assets/images/hero-icons/${hero.icon}" alt="${hero.name}" class="hero-icon">
+      <a href="/heroes/${hero.id}.html" class="hero-link">
+        <img src="/assets/images/hero-icons/${hero.icon}" alt="${hero.name}" class="hero-icon">
         <div class="hero-name">${hero.name}</div>
       </a>
     `;
@@ -46,7 +46,7 @@ function setupFilters() {
   const roleSelect = createSelect(roles, selectedRole, (value) => {
     selectedRole = value;
     filterHeroes();
-  }, '역할 선택');
+  }, '타입 선택');
 
   filtersContainer.innerHTML = ''; // Clear existing content
   filtersContainer.appendChild(roleSelect);
@@ -56,9 +56,9 @@ function createSelect(options, defaultValue, onChange, labelText) {
   const select = document.createElement('select');
   select.className = 'role-select';
   options.forEach(option => {
-    const optionElement = document.createElement('option');
+    const optionElement = document.createElement('option'); 
     optionElement.value = option;
-    optionElement.textContent = option === 'all' ? '모든 역할' : option;
+    optionElement.textContent = option === 'all' ? '모든 타입' : option;
     if (option === defaultValue) optionElement.selected = true;
     select.appendChild(optionElement);
   });

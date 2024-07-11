@@ -1,6 +1,6 @@
 async function loadHeroes() {
     try {
-      const response = await fetch('heroes.json');
+      const response = await fetch('/data/heroes.json');
       const data = await response.json();
       const heroList = document.getElementById('hero-list');
       

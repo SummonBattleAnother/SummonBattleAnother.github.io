@@ -11,6 +11,7 @@ async function loadHeroDetails() {
         herorole = hero.role
 
         if (hero) {
+            loadDescription(hero.shortDescription);
             loadStats(hero.stats);
         } else {
             console.error('Hero not found');
@@ -18,6 +19,16 @@ async function loadHeroDetails() {
     } catch (error) {
         console.error('Error loading hero details:', error);
     }
+}
+
+function loadDescription(descrption){
+    const heroDesc = document.getElementById('shortDescription');
+    heroDesc.innerHTML = `
+      <h2 class="hero-title">영웅 소개</h2>
+      <p> ${descrption} </p>
+      <div id="filters" class="filters"></div>
+      <div id="hero-grid" class="hero-grid"></div>
+    `;
 }
 
 function loadStats(stats) {
@@ -35,7 +46,18 @@ function loadStats(stats) {
             chartBackgroundColor = 'rgba(0, 99, 132, 0.3)'
             chartBorderColor = 'rgba(0, 99, 132, 1)'
             break;
-        
+        case '일격':
+            chartBackgroundColor = 'rgba(0, 99, 132, 0.3)'
+            chartBorderColor = 'rgba(0, 99, 132, 1)'
+            break;
+        case '광역':
+            chartBackgroundColor = 'rgba(0, 99, 132, 0.3)'
+            chartBorderColor = 'rgba(0, 99, 132, 1)'
+            break;
+        case '보조':
+            chartBackgroundColor = 'rgba(0, 99, 132, 0.3)'
+            chartBorderColor = 'rgba(0, 99, 132, 1)'
+            break;
     }
     
     const data = {

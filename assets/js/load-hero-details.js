@@ -1,12 +1,16 @@
+let heroname = ''
+let herorole = ''
+
 async function loadHeroDetails() {
     try {
         const response = await fetch('/data/heroes.json');
         const data = await response.json();
         const heroId = document.body.id; // HTML의 body 태그에 hero ID를 지정해야 합니다
         const hero = data.heroes.find(h => h.id === heroId);
+        heroname = hero.name
+        herorole = hero.role
 
         if (hero) {
-            loadSkills(hero.skills);
             loadStats(hero.stats);
         } else {
             console.error('Hero not found');
@@ -16,33 +20,61 @@ async function loadHeroDetails() {
     }
 }
 
-function loadSkills(skills) {
-    const skillsSection = document.getElementById('hero-skills');
-    const skillsList = document.createElement('ul');
-
-    skills.forEach(skill => {
-        const skillItem = document.createElement('li');
-        skillItem.innerHTML = `
-            <h3>${skill.name}</h3>
-            <p>${skill.description}</p>
-        `;
-        skillsList.appendChild(skillItem);
-    });
-
-    skillsSection.appendChild(skillsList);
-}
-
 function loadStats(stats) {
-    const statsSection = document.getElementById('hero-stats');
-    const statsList = document.createElement('ul');
+    // Radar 차트 생성
+    const ctx = document.getElementById('stats-chart').getContext('2d');
+    let chartBackgroundColor = ''
+    let chartBorderColor = ''
 
-    for (const [stat, value] of Object.entries(stats)) {
-        const statItem = document.createElement('li');
-        statItem.textContent = `${stat.charAt(0).toUpperCase() + stat.slice(1)}: ${value}`;
-        statsList.appendChild(statItem);
+    switch(herorole){
+        case '일반':
+            chartBackgroundColor = 'rgba(255, 99, 132, 0.3)'
+            chartBorderColor = 'rgba(255, 99, 132, 1)'
+            break;
+        case '소환':
+            chartBackgroundColor = 'rgba(0, 99, 132, 0.3)'
+            chartBorderColor = 'rgba(0, 99, 132, 1)'
+            break;
+        
     }
+    
+    const data = {
+        labels: Object.keys(stats).map(stat => stat.charAt(0).toUpperCase() + stat.slice(1)),
+        datasets: [{
+            label: heroname,
+            data: Object.values(stats),
+            backgroundColor: chartBackgroundColor,
+            borderColor: chartBorderColor,
+            borderWidth: 1
+        }]
+    };
+    
+    const options = {
+        scale: {
+            ticks: { beginAtZero: true },
+            r: {
+                angleLines: {
+                    display: false
+                },
+                suggestedMin: 0,
+                suggestedMax: 5
+            }
+        }
+        ,plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    
+                }
+            }
+        }
+    };
 
-    statsSection.appendChild(statsList);
+    new Chart(ctx, {
+        type: 'radar',
+        data: data,
+        options: options
+    });
 }
 
 document.addEventListener('DOMContentLoaded', loadHeroDetails);

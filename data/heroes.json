@@ -2,16 +2,37 @@
     "heroes": [
     {
       "id": "hero1",
-      "name": "영웅1",
+      "name": "팔라딘",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "fullDescription": "영웅1은 전장의 최전선에서...",
+      "stats": {
+        "소환": 7,
+        "일격": 9,
+        "광역": 4,
+        "유틸": 6
+      }
+    },
+    {
+      "id": "hero2",
+      "name": "마운틴킹",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "fullDescription": "영웅1은 전장의 최전선에서...",
-      "skills": [
-        {
-          "name": "강철 방패",
-          "description": "3초 동안 모든 피해를 50% 감소시킵니다."
-        }
-      ],
+      "stats": {
+        "소환": 7,
+        "일격": 9,
+        "광역": 4,
+        "유틸": 6
+      }
+    },
+    
+    {
+      "id": "hero3",
+      "name": "아크메이지",
+      "role": "광역",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "fullDescription": "영웅1은 전장의 최전선에서...",
       "stats": {
         "attack": 7,
         "defense": 9,
@@ -20,17 +41,24 @@
       }
     },
     {
-      "id": "hero2",
-      "name": "영웅2",
+      "id": "hero4",
+      "name": "블러드메이지",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "fullDescription": "영웅1은 전장의 최전선에서...",
-      "skills": [
-        {
-          "name": "강철 방패",
-          "description": "3초 동안 모든 피해를 50% 감소시킵니다."
-        }
-      ],
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero5",
+      "name": "데스나이트",
+      "role": "보조",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "fullDescription": "영웅1은 전장의 최전선에서...",
       "stats": {
         "attack": 7,
         "defense": 9,

@@ -1,5 +1,5 @@
 /* 기본 스타일 */
-:root {
+  :root {
     --primary-color: #2c3e50;
     --secondary-color: #e74c3c;
     --background-color: #ecf0f1;
@@ -144,12 +144,12 @@
   background-color: white;
   padding: 8px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
 }
 
 .hero-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hero-link {
@@ -181,11 +181,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 10%;
   opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 12px;
-  padding: 4px;
+  padding: 2px;
   text-align: center;
   word-break: break-word;
 }

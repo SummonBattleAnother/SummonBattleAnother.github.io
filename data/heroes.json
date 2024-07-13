@@ -4,8 +4,7 @@
       "id": "hero1",
       "name": "팔라딘",
       "role": "일반",
-      "shortDescription": "강력한 대 지상 화력과 범위 회복 및 공격력 증가 버프를 제공하는 근접 힘 영웅",
-      "fullDescription": "영웅1은 전장의 최전선에서...",
+      "shortDescription": " 팔라딘은 아군을 보조하는 소환유닛인 프리스트와 힐 그리고 강력한 버프인 영광의 축복을 사용할 수 있습니다. <bar> 또한 일반공격타입의 소환수인 나이트와 캡틴을 소환하여 강력한 지상 화력을 보유한 영웅입니다.",
       "stats": {
         "소환화력": 3.5,
         "대인능력": 1.5,
@@ -19,7 +18,6 @@
       "name": "마운틴킹",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "fullDescription": "영웅1은 전장의 최전선에서...",
       "stats": {
         "지상화력": 3.5,
         "공중화력": 0.5,
@@ -34,7 +32,6 @@
       "name": "아크메이지",
       "role": "광역",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "fullDescription": "영웅1은 전장의 최전선에서...",
       "stats": {
         "attack": 7,
         "defense": 9,
@@ -47,7 +44,6 @@
       "name": "블러드메이지",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "fullDescription": "영웅1은 전장의 최전선에서...",
       "stats": {
         "attack": 7,
         "defense": 9,
@@ -57,10 +53,477 @@
     },
     {
       "id": "hero5",
+      "name": "블레이드마스터",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero6",
+      "name": "파시어",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero7",
+      "name": "타우렌치프틴",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero8",
+      "name": "쉐도우헌터",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero9",
       "name": "데스나이트",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero10",
+      "name": "리치",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero11",
+      "name": "드레드로드",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero12",
+      "name": "크립트로드",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero13",
+      "name": "프리스티스오브문",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero14",
+      "name": "키퍼오브그루브",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero15",
+      "name": "디몬헌터",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero16",
+      "name": "워든",
+      "role": "일반",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero17",
+      "name": "고블린팅커",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero18",
+      "name": "나가씨위치",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero19",
+      "name": "판다렌브루마스터",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero20",
+      "name": "비스트마스터",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero21",
+      "name": "제이나프라우드무어",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero22",
+      "name": "유령아크메이지",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero23",
+      "name": "굴단",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero24",
+      "name": "말퓨리온",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero25",
+      "name": "가리토스",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero26",
+      "name": "스랄",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero27",
+      "name": "켈투자드",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero28",
+      "name": "아키몬드",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero29",
+      "name": "타워왕",
+      "role": "소환",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero30",
+      "name": "유령키퍼",
       "role": "보조",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "fullDescription": "영웅1은 전장의 최전선에서...",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero31",
+      "name": "파이어로드",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero32",
+      "name": "다크레인저",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero33",
+      "name": "핏로드",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero34",
+      "name": "나가로얄가드",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero35",
+      "name": "상인",
+      "role": "보조",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero36",
+      "name": "마이에브",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero37",
+      "name": "아서스",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero38",
+      "name": "아카마",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero39",
+      "name": "흑화타우렌치프틴",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero40",
+      "name": "그롬",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero41",
+      "name": "일리단",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero42",
+      "name": "영혼사냥꾼",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero43",
+      "name": "흑의 창술사",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "stats": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      }
+    },
+    {
+      "id": "hero44",
+      "name": "불꽃남자",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
       "stats": {
         "attack": 7,
         "defense": 9,
@@ -68,5 +531,7 @@
         "utility": 6
       }
     }
+
+
     ]
   }

@@ -1,5 +1,6 @@
 let heroname = ''
 let herorole = ''
+let shortDescription =''
 
 async function loadHeroDetails() {
     try {
@@ -9,6 +10,7 @@ async function loadHeroDetails() {
         const hero = data.heroes.find(h => h.id === heroId);
         heroname = hero.name
         herorole = hero.role
+        shortDescription =hero.shortDescription
 
         if (hero) {
             loadDescription(hero.shortDescription);
@@ -22,10 +24,15 @@ async function loadHeroDetails() {
 }
 
 function loadDescription(descrption){
-    const heroDesc = document.getElementById('shortDescription');
+    const heroDesc = document.getElementById('selected-hero');
     heroDesc.innerHTML = `
-      <h2 class="hero-title">영웅 소개</h2>
-      <p> ${descrption} </p>
+        <div class="hero-portrait"></div>
+            <div>
+                <h2 class="hero-title">${heroname}</h2>
+            </div>
+            <div>
+                <p>${shortDescription}</p>
+            </div>
       <div id="filters" class="filters"></div>
       <div id="hero-grid" class="hero-grid"></div>
     `;

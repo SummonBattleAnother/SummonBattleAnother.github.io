@@ -18,6 +18,7 @@ async function loadHeroes() {
 
 function renderHeroes() {
   const heroList = document.getElementById('hero-list');
+  
   heroList.innerHTML = `
     <h2 class="hero-title">영웅 목록</h2>
     <div id="filters" class="filters"></div>
@@ -31,7 +32,7 @@ function renderHeroes() {
     heroCard.className = 'hero-card';
     heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
-        <img src="/assets/images/hero-icons/${hero.id}.jpg" alt="${hero.name}" class="hero-icon">
+        <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.name}" class="hero-icon">
         <div class="hero-name">${hero.name}</div>
       </a>
     `;

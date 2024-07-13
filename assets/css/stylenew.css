@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.navbar h1 {
+  margin-bottom: 10px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.card-header {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-body {
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.card-content {
+  padding: 15px;
+  max-height: 270px;  /* Slightly less than card-body to account for padding */
+  overflow-y: auto;
+}
+.hero-list.collapsed .card-body {
+  max-height: 0;
+}
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero-item {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+}
+
+.hero-card {
+  width: 80px;
+  height: 80px;
+}
+
+.selected-hero {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.hero-portrait {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+  margin-right: 15px;
+}
+.tag {
+  
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: white;
+}
+.tag-summoner { background-color: #00bcd4; }
+.tag-intelligence { background-color: #e91e63; }
+.tag-range { background-color: #ff9800; }
+
+.information-grid {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.skill-table {
+  background-color: #ffcccb;
+  padding: 15px;
+}
+.toggle-icon {
+  transition: transform 0.3s ease;
+}
+.hero-list.collapsed .toggle-icon {
+  transform: rotate(-180deg);
+}
+
+.filters {
+  margin-bottom: 16px;
+}

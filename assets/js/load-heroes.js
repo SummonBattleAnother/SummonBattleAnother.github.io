@@ -20,9 +20,9 @@ function renderHeroes() {
   const heroList = document.getElementById('hero-list');
   
   heroList.innerHTML = `
-    <h2 class="hero-title">영웅 목록</h2>
     <div id="filters" class="filters"></div>
     <div id="hero-grid" class="hero-grid"></div>
+    
   `;
 
   const heroGrid = document.getElementById('hero-grid');

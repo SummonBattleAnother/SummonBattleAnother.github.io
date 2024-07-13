@@ -1,173 +1,94 @@
-/* 기본 스타일 */
-  :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #e74c3c;
-    --background-color: #ecf0f1;
-    --text-color: #34495e;
-    --highlight-color: #3498db;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  /* 헤더 스타일 */
-  header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  /* 네비게이션 스타일 */
-  nav {
-    background-color: var(--secondary-color);
-    padding: 0.5rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* 영웅 그리드 스타일 */
-  .hero-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .hero-item {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    overflow: hidden;
-  }
-  
-  .hero-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .hero-icon {
-    width: 100%;
-    height: auto;
-    border-radius: 0px 0px 0 0;
-  }
-  
-  .hero-item p {
-    padding: 1rem;
-    margin: 0;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  /* 영웅 상세 페이지 스타일 */
-  .hero-detail {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hero-image {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .hero-info {
-    flex: 1;
-  }
-  
-  .skill-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .skill-item {
-    background-color: var(--background-color);
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-  }
-  
-  .radar-chart {
-    width: 100%;
-    max-width: 500px;
-    margin: 2rem auto;
-  }
-
-  .hero-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color:#ddd
 }
 
-.filters {
-  margin-bottom: 16px;
+h2{
+  margin: bottom 0;
 }
 
-.role-label {
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.navbar h1 {
+  margin-bottom: 10px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.card-header {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 0 0
+  cursor: pointer;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-
-.role-label span {
-  margin-right: 8px;
+.card-body {
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  
 }
-
-.role-select {
-  padding: 4px 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.card-content {
+  padding: 15px;
+  max-height: 270px;  /* Slightly less than card-body to account for padding */
+  overflow-y: auto;
+  
 }
-
+.hero-list.collapsed .card-body {
+  max-height: 0;
+}
 .hero-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hero-item {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
 }
 
 .hero-card {
+  width: 80px;
+  height: 80px;
   background-color: white;
   padding: 8px;
   border-radius: 8px;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
 }
-
+.hero-link:hover .hero-name {
+  opacity: 1;
+}
 .hero-card:hover {
-  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
-.hero-link {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
-}
-
-.hero-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+.hero-card-list{
+  padding:0px
 }
 
 .hero-name {
@@ -190,19 +111,62 @@
   word-break: break-word;
 }
 
-.hero-link:hover .hero-name {
-  opacity: 1;
+.hero-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-  
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-  .hero-detail {
-    flex-direction: column;
-  }
-  
-  .hero-image {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
+
+.hero-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
 }
+
+.selected-hero {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.hero-portrait {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+  margin-right: 15px;
+}
+.tag {
+  
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: white;
+}
+.tag-summoner { background-color: #00bcd4; }
+.tag-intelligence { background-color: #e91e63; }
+.tag-range { background-color: #ff9800; }
+
+.information-grid {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.skill-table {
+  margin-bottom:30px
+}
+.toggle-icon {
+  transition: transform 0.3s ease;
+}
+.hero-list.collapsed .toggle-icon {
+  transform: rotate(-180deg);
+}
+
+.filters {
+  margin-bottom: 16px;
+}
+

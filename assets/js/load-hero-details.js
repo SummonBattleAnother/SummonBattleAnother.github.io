@@ -1,3 +1,4 @@
+let heroid = 0
 let heroname = ''
 let herorole = ''
 let shortDescription =''
@@ -8,6 +9,7 @@ async function loadHeroDetails() {
         const data = await response.json();
         const heroId = document.body.id; // HTML의 body 태그에 hero ID를 지정해야 합니다
         const hero = data.heroes.find(h => h.id === heroId);
+        heroid = heroId
         heroname = hero.name
         herorole = hero.role
         shortDescription =hero.shortDescription
@@ -26,13 +28,17 @@ async function loadHeroDetails() {
 function loadDescription(descrption){
     const heroDesc = document.getElementById('selected-hero');
     heroDesc.innerHTML = `
-        <div class="hero-portrait"></div>
-            <div>
-                <h2 class="hero-title">${heroname}</h2>
-            </div>
-            <div>
-                <p>${shortDescription}</p>
-            </div>
+
+        <a href="/heroes/${heroid}.html" class="hero-link">
+        <img src="/assets/images/hero-icons/${heroid}.webp" alt="${heroname}" class="hero-icon">
+      </a>
+        <div>
+            <h2 class="hero-title">${heroname}</h2>
+        </div>
+        
+        <div>
+            <p>${shortDescription}</p>
+        </div>
       <div id="filters" class="filters"></div>
       <div id="hero-grid" class="hero-grid"></div>
     `;

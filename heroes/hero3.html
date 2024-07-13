@@ -3,59 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영웅1 - SBA 위키 영웅정보</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <title>팔라딘 - SBA 위키 영웅정보</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-    <header>
-        <h1>영웅2</h1>
-        <nav>
-            <a href="../index.html">홈으로</a>
+<body id="hero1">
+    <body>
+        <nav class="navbar">
+            <div>
+                <a href="../index.html" style="font-size:40px;"> SBA Wiki</a>
+            </div>
+            <div>
+                <a href="/heroes/hero1.html">Heroes</a>
+                <a href="#">Item</a>
+                <a href="#">tips</a>
+            </div>
         </nav>
-        <section id="hero-list">
-            <!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
-        </section>
-    </header>
     
-    <main>
-        <section id="hero-info">
-            <img src="/assets/images/hero-full/hero1-full.jpg" alt="영웅1의 전신 이미지">
-            <h2>역할: 탱커</h2>
-            <p>
-                영웅1은 전장의 최전선에서 아군을 보호하는 강력한 방어 전문가입니다. 
-                그의 거대한 방패와 굳건한 의지로, 어떠한 공격도 막아낼 수 있습니다. 
-                팀의 진군을 이끌며, 적의 공격을 무력화시키는 그의 능력은 승리의 핵심 요소입니다.
-            </p>
-            <p>
-                전투 경험이 풍부한 영웅1은 언제나 냉철한 판단으로 전황을 분석하고, 
-                팀원들에게 적절한 지시를 내립니다. 그의 존재만으로도 아군의 사기는 크게 올라가며, 
-                적들은 그를 마주하는 것을 두려워합니다.
-            </p>
-        </section>
-        
-        <section id="hero-skills">
-            <h2>스킬</h2>
-            <!-- 스킬 정보는 동적으로 로드됩니다 -->
-        </section>
-        
-        <section id="hero-stats">
-            <h2>능력치</h2>
-            <!-- 능력치는 동적으로 로드됩니다 -->
-        </section>
+        <div class="card hero-list">
+            <div class="card-header">
+                <h2 id="heroListToggle">영웅 목록</h2>
+                <div id="filters" class="filters"></div>
+                <span class="toggle-icon"  id="heroListToggle">▼</span>
+            </div>
+            <div class="card-body hero-card-list">
+                <div class="card-content">
+                    <section id="hero-list">
+                        <!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
+                    </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
-        <section id="hero-chart">
-            <h2>차트</h2>
-            <canvas id="stats-chart"></canvas>
-        </section>
-    </main>
+    <div class="card">
+        <div class="card-header">
+            <h2>영웅소개</h2>
+        </div>
+        <div  class="card-body">
+            <div id="selected-hero" class="selected-hero">
+                
+            </div>
+        </div>
+    </div>
 
+    <div class="card">
+        <div class="card-header">
+            <h2>정보</h2>
+        </div>
+        <div class="card-body">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card">
+                            태그섹션
+                            <p class="badge badge-pill badge-primary">✊근거리</p>
+                            🏹원거리
+                            🗡️일격
+                        </div>
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card">
+                            
+                            <div class="container">
+                                <section id="hero-stats">
+                                    <!-- 능력치는 동적으로 로드됩니다 -->
+                                    <h2>능력치</h2>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="container">
+                                <section id="hero-chart">
+                                    <h2>평가</h2>
+                                    <canvas id="stats-chart"></canvas>
+                                </section>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="information-grid">
+                    <div>
+                        <h3>tag</h3>
+                        <span class="tag tag-summoner">Summoner</span>
+                        <span class="tag tag-intelligence">intelligence</span>
+                        <span class="tag tag-range">range</span>
+                    </div>
+                    <div>
+                        <h3>status</h3>
+                        <p>strength 35+5.5</p>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3>chart</h3>
+                    <!-- Add chart content here -->
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>Skill</h2>
+        </div>
+        <div class="card-body skill-table">
+            <p>Skill information Table</p>
+            <!-- Add skill information table content here -->
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>Tip</h2>
+        </div>
+        <div class="card-body">
+            <p>tip1</p>
+            <p>tip2</p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; Summon Battle Another. All rights reserved.</p>
     </footer>
-
+    
+    <script>
+        document.getElementById('heroListToggle').addEventListener('click', function() {
+            const heroList = document.querySelector('.hero-list');
+            heroList.classList.toggle('collapsed');
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="/assets/js/load-heroes.js"></script>
     <script src="/assets/js/load-hero-details.js"></script>
 </body>

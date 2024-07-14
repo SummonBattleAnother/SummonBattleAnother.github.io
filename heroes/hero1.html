@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>팔라딘 - SBA 위키 영웅정보</title>
+    <title>팔라딘 - 소환대전어나더 Wiki - 영웅정보</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar">
             <div>
-                <a href="../index.html" style="font-size:40px;"> SBA Wiki</a>
+                <a href="../index.html" style="font-size:40px;"> 소환대전어나더 Wiki</a>
             </div>
             <div>
                 <a href="/heroes/hero1.html">Heroes</a>
@@ -37,79 +37,64 @@
         </div>
     
 
-    <div class="card">
-        <div class="card-header">
-            <h2>영웅소개</h2>
-        </div>
-        <div  class="card-body">
-            <div id="selected-hero" class="selected-hero">
-                
+        <div class="card">
+            <div class="card-header">
+                <h2>영웅소개</h2>
+            </div>
+            <div  class="card-body">
+                <div id="selected-hero" class="selected-hero">
+                    
+                </div>
             </div>
         </div>
-    </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>정보</h2>
+            </div>
+            <div class="card-body">
+                <div class="info-container">
+                    <div class="info-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 two-div">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>KeyWord</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="keyword-container">
+                                                <!-- 키워드가 여기에 동적으로 로드됩니다 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 two-div">
+                                    <div class="card">
+                                        <section id="hero-stats">
+                                            <div class="card-header">
+                                                <h4>스탯</h4>
+                                            </div>
+                                            <div class="card-body">
 
-    <div class="card">
-        <div class="card-header">
-            <h2>정보</h2>
-        </div>
-        <div class="card-body">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="card">
-                            태그섹션
-                            <p class="badge badge-pill badge-primary">✊근거리</p>
-                            🏹원거리
-                            🗡️일격
-                        </div>
-                    </div>
-                    </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="card">
-                            
-                            <div class="container">
-                                <section id="hero-stats">
-                                    <!-- 능력치는 동적으로 로드됩니다 -->
-                                    <h2>능력치</h2>
-                                </section>
+                                                <span class="badge bg-danger strength">힘</span>
+                                                <span class="badge bg-danger agility">민</span>
+                                                <span class="badge bg-danger intelligence">지</span>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm">
-                        <div class="card">
-                            <div class="container">
-                                <section id="hero-chart">
-                                    <h2>평가</h2>
-                                    <canvas id="stats-chart"></canvas>
-                                </section>
-                            </div>
-                        </div>
-                        
+                    <div class="info-chart">
+                        <section id="hero-chart">
+                            <canvas id="stats-chart"></canvas>
+                        </section>
                     </div>
-                </div>
-                
-                <div class="information-grid">
-                    <div>
-                        <h3>tag</h3>
-                        <span class="tag tag-summoner">Summoner</span>
-                        <span class="tag tag-intelligence">intelligence</span>
-                        <span class="tag tag-range">range</span>
-                    </div>
-                    <div>
-                        <h3>status</h3>
-                        <p>strength 35+5.5</p>
-                    </div>
-                </div>
-                <div style="margin-top: 20px;">
-                    <h3>chart</h3>
-                    <!-- Add chart content here -->
                 </div>
             </div>
-            
         </div>
-    </div>
 
     <div class="card">
         <div class="card-header">

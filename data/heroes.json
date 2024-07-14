@@ -5,12 +5,17 @@
       "name": "팔라딘",
       "role": "일반",
       "shortDescription": " 팔라딘은 아군을 보조하는 소환유닛인 프리스트와 힐 그리고 강력한 버프인 영광의 축복을 사용할 수 있습니다. <bar> 또한 일반공격타입의 소환수인 나이트와 캡틴을 소환하여 강력한 지상 화력을 보유한 영웅입니다.",
-      "stats": {
+      "score": {
         "소환화력": 3.5,
         "대인능력": 1.5,
         "공성능력": 4,
         "광역처리": 0.5,
         "유틸": 3.5
+      },
+      "status":{
+        "힘"    : "47 + 4.5",
+        "민첩성": "28 + 2.5",
+        "지능"  : "37 + 3.5"
       }
     },
     {
@@ -18,37 +23,52 @@
       "name": "아크메이지",
       "role": "일반",
       "shortDescription": "아크메이지는 궁극기인 매스텔레포트를 활용한 최고의 기동성과 준수한 소환유닛을 가진 기본 영웅입니다",
-      "stats": {
+      "score": {
         "지상화력": 3.5,
         "공중화력": 0.5,
         "공성능력": 4,
         "대인능력": 3,
         "유틸": 3.5
+      },
+      "status":{
+        "힘"    : "31 + 3",
+        "민첩성": "37 + 2",
+        "지능"  : "40 + 5"
       }
     },
     
     {
       "id": "hero3",
       "name": "마운틴킹",
-      "role": "광역",
+      "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "54 + 3",
+        "민첩성": "24 + 2.5",
+        "지능"  : "33 + 2.5"
       }
     },
     {
       "id": "hero4",
       "name": "블러드메이지",
-      "role": "일격",
+      "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "40 + 2.5",
+        "민첩성": "31 + 2.5",
+        "지능"  : "42 + 5"
       }
     },
     {
@@ -56,11 +76,16 @@
       "name": "블레이드마스터",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "35 + 3.5",
+        "민첩성": "50 + 4.5",
+        "지능"  : "32 + 3"
       }
     },
     {
@@ -68,11 +93,16 @@
       "name": "파시어",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "40 + 2",
+        "지능"  : "42 + 5"
       }
     },
     {
@@ -80,11 +110,16 @@
       "name": "타우렌치프틴",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "56 + 5",
+        "민첩성": "23 + 3",
+        "지능"  : "33 + 3"
       }
     },
     {
@@ -92,11 +127,16 @@
       "name": "쉐도우헌터",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "45 + 4.5",
+        "지능"  : "37 + 3.5"
       }
     },
     {
@@ -104,11 +144,16 @@
       "name": "데스나이트",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "47 + 4.5",
+        "민첩성": "28 + 2.5",
+        "지능"  : "37 + 3.5"
       }
     },
     {
@@ -116,11 +161,16 @@
       "name": "리치",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "30 + 2",
+        "지능"  : "47 + 5"
       }
     },
     {
@@ -128,11 +178,16 @@
       "name": "드레드로드",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "47 + 4.5",
+        "민첩성": "30 + 3",
+        "지능"  : "43 + 3.5"
       }
     },
     {
@@ -140,11 +195,16 @@
       "name": "크립트로드",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "56 + 5",
+        "민첩성": "29 + 2.5",
+        "지능"  : "28 + 2.5"
       }
     },
     {
@@ -152,11 +212,16 @@
       "name": "프리스티스오브문",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "38 + 3",
+        "민첩성": "45 + 4.5",
+        "지능"  : "31 + 2.5"
       }
     },
     {
@@ -164,11 +229,16 @@
       "name": "키퍼오브그루브",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "36 + 3.5",
+        "민첩성": "33 + 2.5",
+        "지능"  : "41 + 4.5"
       }
     },
     {
@@ -176,11 +246,16 @@
       "name": "디몬헌터",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "40 + 3.5",
+        "민첩성": "48 + 4.5",
+        "지능"  : "30 + 2.5"
       }
     },
     {
@@ -188,11 +263,16 @@
       "name": "워든",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "40 + 3.5",
+        "민첩성": "45 + 4",
+        "지능"  : "33 + 3"
       }
     },
     {
@@ -200,11 +280,16 @@
       "name": "고블린팅커",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "34 + 3.5",
+        "민첩성": "36 + 2",
+        "지능"  : "46 + 5"
       }
     },
     {
@@ -212,11 +297,16 @@
       "name": "나가씨위치",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "34 + 3.5",
+        "민첩성": "33 + 2",
+        "지능"  : "49 + 5"
       }
     },
     {
@@ -224,11 +314,16 @@
       "name": "판다렌브루마스터",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "49 + 5.5",
+        "민첩성": "29 + 2.5",
+        "지능"  : "33 + 3"
       }
     },
     {
@@ -236,11 +331,16 @@
       "name": "비스트마스터",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "52 + 4.5",
+        "민첩성": "30 + 2.5",
+        "지능"  : "34 + 3.5"
       }
     },
     {
@@ -248,11 +348,16 @@
       "name": "제이나프라우드무어",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "33 + 2",
+        "지능"  : "44 + 5"
       }
     },
     {
@@ -260,11 +365,16 @@
       "name": "유령아크메이지",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "31 + 3",
+        "민첩성": "32 + 2.5",
+        "지능"  : "45 + 4.5"
       }
     },
     {
@@ -272,11 +382,16 @@
       "name": "굴단",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "30 + 2.5",
+        "지능"  : "48 + 4.5"
       }
     },
     {
@@ -284,11 +399,16 @@
       "name": "말퓨리온",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "35 + 2.5",
+        "민첩성": "30 + 2.5",
+        "지능"  : "46 + 5"
       }
     },
     {
@@ -296,11 +416,16 @@
       "name": "가리토스",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "47 + 4.5",
+        "민첩성": "28 + 2.5",
+        "지능"  : "41 + 3.5"
       }
     },
     {
@@ -308,11 +433,16 @@
       "name": "스랄",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "31 + 2",
+        "지능"  : "47 + 5.5"
       }
     },
     {
@@ -320,11 +450,16 @@
       "name": "켈투자드",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "30 + 3",
+        "민첩성": "30 + 3",
+        "지능"  : "50 + 4.5"
       }
     },
     {
@@ -332,11 +467,16 @@
       "name": "아키몬드",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "32 + 3",
+        "민첩성": "28 + 2.5",
+        "지능"  : "54 + 5"
       }
     },
     {
@@ -344,11 +484,16 @@
       "name": "타워왕",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "30 + 3",
+        "민첩성": "30 + 3.5",
+        "지능"  : "50 + 4.5"
       }
     },
     {
@@ -356,11 +501,16 @@
       "name": "유령키퍼",
       "role": "보조",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "30 + 3",
+        "민첩성": "29 + 2.5",
+        "지능"  : "54 + 5"
       }
     },
     {
@@ -368,11 +518,16 @@
       "name": "파이어로드",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "48 + 4",
+        "지능"  : "30 + 3"
       }
     },
     {
@@ -380,11 +535,16 @@
       "name": "다크레인저",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "33 + 3",
+        "민첩성": "47 + 4.5",
+        "지능"  : "30 + 3"
       }
     },
     {
@@ -392,11 +552,16 @@
       "name": "핏로드",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "54 + 5",
+        "민첩성": "31 + 2.5",
+        "지능"  : "31 + 3"
       }
     },
     {
@@ -404,11 +569,16 @@
       "name": "나가로얄가드",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "54 + 4.5",
+        "민첩성": "33 + 3.5",
+        "지능"  : "31 + 3.5"
       }
     },
     {
@@ -416,11 +586,16 @@
       "name": "상인",
       "role": "보조",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "54 + 5",
+        "민첩성": "28 + 2.5",
+        "지능"  : "38 + 2.5"
       }
     },
     {
@@ -428,11 +603,16 @@
       "name": "마이에브",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "35 + 3.5",
+        "민첩성": "50 + 5",
+        "지능"  : "30 + 2.5"
       }
     },
     {
@@ -440,11 +620,16 @@
       "name": "아서스",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "49 + 5",
+        "민첩성": "30 + 3",
+        "지능"  : "37 + 3"
       }
     },
     {
@@ -452,11 +637,16 @@
       "name": "아카마",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "30 + 3.5",
+        "민첩성": "30 + 2.5",
+        "지능"  : "50 + 5.5"
       }
     },
     {
@@ -464,11 +654,16 @@
       "name": "흑화타우렌치프틴",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "55 + 5",
+        "민첩성": "29 + 2.5",
+        "지능"  : "31 + 2"
       }
     },
     {
@@ -476,11 +671,16 @@
       "name": "그롬",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "37 + 3.5",
+        "민첩성": "50 + 4.5",
+        "지능"  : "31 + 3"
       }
     },
     {
@@ -488,11 +688,16 @@
       "name": "일리단",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "39 + 3",
+        "민첩성": "48 + 5",
+        "지능"  : "28 + 2.5"
       }
     },
     {
@@ -500,11 +705,16 @@
       "name": "영혼사냥꾼",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "35 + 3.5",
+        "민첩성": "45 + 5",
+        "지능"  : "30 + 2.5"
       }
     },
     {
@@ -512,11 +722,16 @@
       "name": "흑의 창술사",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "54 + 4.5",
+        "민첩성": "36 + 3.5",
+        "지능"  : "26 + 2.5"
       }
     },
     {
@@ -524,14 +739,17 @@
       "name": "불꽃남자",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
-      "stats": {
+      "score": {
         "attack": 7,
         "defense": 9,
         "mobility": 4,
         "utility": 6
+      },
+      "status":{
+        "힘"    : "54 + 4.5",
+        "민첩성": "36 + 3",
+        "지능"  : "26 + 3"
       }
     }
-
-
     ]
   }

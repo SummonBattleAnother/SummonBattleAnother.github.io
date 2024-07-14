@@ -3,17 +3,18 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color:#ddd
+  background-color: #ddd;
 }
 
-h2{
-  margin: bottom 0;
+h2 {
+  margin-bottom: 0;
 }
 
 .navbar {
@@ -22,49 +23,55 @@ h2{
   padding: 10px;
   margin-bottom: 20px;
 }
+
 .navbar h1 {
   margin-bottom: 10px;
 }
+
 .navbar a {
   color: white;
   text-decoration: none;
   margin-right: 15px;
 }
+
 .card {
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
   overflow: hidden;
 }
+
 .card-header {
   background-color: #f8f9fa;
   padding: 10px;
   border-bottom: 1px solid #ddd;
-  margin: 0 0 0 0
+  margin: 0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .card-body {
-  max-height: 300px;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  
 }
+
 .card-content {
   padding: 15px;
-  max-height: 270px;  /* Slightly less than card-body to account for padding */
+  max-height: 270px;
   overflow-y: auto;
-  
 }
+
 .hero-list.collapsed .card-body {
   max-height: 0;
 }
+
 .hero-grid {
   display: flex;
   flex-wrap: wrap;
 }
+
 .hero-item {
   width: 80px;
   height: 80px;
@@ -78,17 +85,19 @@ h2{
   padding: 8px;
   border-radius: 8px;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .hero-link:hover .hero-name {
   opacity: 1;
 }
+
 .hero-card:hover {
   transform: translateY(-5px);
 }
 
-.hero-card-list{
-  padding:0px
+.hero-card-list {
+  padding: 0px;
 }
 
 .hero-name {
@@ -130,22 +139,41 @@ h2{
 
 .selected-hero {
   padding: 10px;
+}
+
+.hero-intro {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
-.hero-portrait {
-  width: 80px;
-  height: 80px;
-  background-color: #ddd;
-  margin-right: 15px;
+
+.hero-icon-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
 }
+
+.hero-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title {
+  margin: 0 0 10px 0;
+}
+
+.hero-description {
+  margin: 0;
+}
+
 .tag {
-  
   display: inline-block;
   padding: 5px 10px;
   margin-right: 5px;
   color: white;
 }
+
 .tag-summoner { background-color: #00bcd4; }
 .tag-intelligence { background-color: #e91e63; }
 .tag-range { background-color: #ff9800; }
@@ -156,12 +184,15 @@ h2{
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
 .skill-table {
-  margin-bottom:30px
+  margin-bottom: 30px;
 }
+
 .toggle-icon {
   transition: transform 0.3s ease;
 }
+
 .hero-list.collapsed .toggle-icon {
   transform: rotate(-180deg);
 }
@@ -170,3 +201,98 @@ h2{
   margin-bottom: 16px;
 }
 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+}
+
+.filters {
+  margin-left: 20px ;  
+  margin-top: auto ;  
+  margin-bottom: auto ;  
+  align-items: center;
+  flex-grow: 1;
+}
+
+.toggle-icon {
+  cursor: pointer;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-content {
+  flex: 1;
+  min-width: 50%;
+  padding-right: 15px;
+}
+
+.info-chart {
+  flex: 1;
+  min-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stats-chart {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+
+.keyword-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.keyword {
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 14px;
+  cursor: help;
+  position: relative;
+}
+
+.keyword::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.keyword:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .info-content, .info-chart {
+      min-width: 100%;
+  }
+
+  .info-content {
+      padding-right: 0;
+      margin-bottom: 20px;
+  }
+}

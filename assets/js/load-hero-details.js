@@ -18,13 +18,14 @@ const ROLE_COLORS = {
 
 // Hero class
 class Hero {
-    constructor(id, name, role, shortDescription, keywords, score) {
+    constructor(id, name, role, shortDescription, keywords, score, status) {
         this.id = id;
         this.name = name;
         this.role = role;
         this.shortDescription = shortDescription;
         this.keywords = keywords;
         this.score = score;
+        this.status = status; 
     }
 
     loadKeywords() {
@@ -66,6 +67,34 @@ class Hero {
         `;
     }
 
+    loadStatus() {
+        const statusStrength = document.getElementById('status-strength');
+        if (!statusStrength) {
+            console.error('Element with id "selected-hero" not found');
+            return;
+        }
+        const statusAgility= document.getElementById('status-agility');
+        if (!statusAgility) {
+            console.error('Element with id "selected-hero" not found');
+            return;
+        }
+        const statusIntelligence = document.getElementById('status-intelligence');
+        if (!statusIntelligence) {
+            console.error('Element with id "selected-hero" not found');
+            return;
+        }
+
+        statusStrength.innerHTML = `
+           <span id="status-strength">${this.status['strength']}</span>
+        `;
+        statusAgility.innerHTML = `
+           <span id="status-agility">${this.status['agility']}</span>
+        `;
+        statusIntelligence.innerHTML = `
+           <span id="status-intelligence">${this.status['intelligence']}</span>
+        `;
+    }
+
     loadScore() {
         const ctx = document.getElementById('stats-chart');
         if (!ctx) {
@@ -88,16 +117,26 @@ class Hero {
 
         const options = {
             scale: {
-                ticks: { beginAtZero: true },
+                ticks: { beginAtZero: true, fontSize:20},
                 r: {
                     angleLines: { display: false },
                     suggestedMin: 0,
-                    suggestedMax: 5
+                    suggestedMax: 5,
+                    pointLabels: {
+                        font: {
+                            size: 50,
+                            family: "'Comic Sans MS', 'Comic Sans'"
+                        },
+                    }
                 }
             },
             plugins: {
                 legend: {
-                    labels: {}
+                    labels: {
+                        font:{
+                            size:18
+                        }
+                    }
                 }
             }
         };
@@ -134,11 +173,13 @@ async function loadHeroDetails() {
             heroData.role,
             heroData.shortDescription,
             heroData.keywords,
-            heroData.score
+            heroData.score,
+            heroData.status
         );
 
         hero.loadDescription();
         hero.loadKeywords();
+        hero.loadStatus();
         hero.loadScore();
     } catch (error) {
         console.error('Error loading hero details:', error);

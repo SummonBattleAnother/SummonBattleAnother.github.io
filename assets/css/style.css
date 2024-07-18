@@ -38,7 +38,7 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .card-header {
@@ -251,8 +251,8 @@ h2 {
 .keyword-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 5px;
+  padding: 10px;
 }
 
 .keyword {
@@ -262,23 +262,28 @@ h2 {
   font-size: 14px;
   cursor: help;
   position: relative;
+  display: inline-block;
 }
 
 .keyword::after {
-  content: attr(data-description);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+    content: attr(data-description);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    pointer-events: none;
+    width: max-content;
+    max-width: 200px;
 }
 
 .keyword:hover::after {

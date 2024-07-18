@@ -1,4 +1,5 @@
 let keywords = {};
+
 async function loadKeywords() {
     try {
         const response = await fetch('/data/keywords.json');
@@ -7,6 +8,7 @@ async function loadKeywords() {
         console.error('Error loading keywords:', error);
     }
 }
+
 // Constants
 const ROLE_COLORS = {
     '일반': { bg: 'rgba(255, 99, 132, 0.3)', border: 'rgba(255, 99, 132, 1)' },
@@ -34,7 +36,7 @@ class Hero {
             console.error('Keyword container not found');
             return;
         }
-
+    
         keywordElement.innerHTML = this.keywords.map(keyword => {
             const keywordInfo = keywords[keyword];
             return `

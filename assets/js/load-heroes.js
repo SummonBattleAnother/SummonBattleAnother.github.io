@@ -32,8 +32,8 @@ function renderHeroes() {
     heroCard.className = 'hero-card';
     heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
-        <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.name}" class="hero-icon">
-        <div class="hero-name">${hero.name}</div>
+        <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon">
+        <div class="hero-name">${hero.job}</div>
       </a>
     `;
     heroGrid.appendChild(heroCard);

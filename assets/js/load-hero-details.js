@@ -1,6 +1,4 @@
 let keywords = {};
-import {computePosition} from '@floating-ui/dom';
-
 async function loadKeywords() {
     try {
         const response = await fetch('/data/keywords.json');
@@ -9,7 +7,6 @@ async function loadKeywords() {
         console.error('Error loading keywords:', error);
     }
 }
-
 // Constants
 const ROLE_COLORS = {
     '일반': { bg: 'rgba(255, 99, 132, 0.3)', border: 'rgba(255, 99, 132, 1)' },
@@ -21,9 +18,10 @@ const ROLE_COLORS = {
 
 // Hero class
 class Hero {
-    constructor(id, name, role, shortDescription, keywords, score, status) {
+    constructor(id, name,job, role, shortDescription, keywords, score, status) {
         this.id = id;
         this.name = name;
+        this.job = job;
         this.role = role;
         this.shortDescription = shortDescription;
         this.keywords = keywords;
@@ -57,10 +55,10 @@ class Hero {
 
         heroDesc.innerHTML = `
             <a href="/heroes/${this.id}.html" class="hero-link">
-                <img src="/assets/images/hero-icons/${this.id}.webp" alt="${this.name}" class="hero-icon">
+                <img src="/assets/images/hero-icons/${this.id}.webp" alt="${this.job}" class="hero-icon">
             </a>
             <div>
-                <h2 class="hero-title">${this.name}</h2>
+                <h2 class="hero-title">${this.job}</h2>
             </div>
             <div>
                 <p>${this.shortDescription}</p>
@@ -110,7 +108,7 @@ class Hero {
         const data = {
             labels: Object.keys(this.score).map(stat => stat.charAt(0).toUpperCase() + stat.slice(1)),
             datasets: [{
-                label: this.name,
+                label: this.job,
                 data: Object.values(this.score),
                 backgroundColor,
                 borderColor,
@@ -173,6 +171,7 @@ async function loadHeroDetails() {
         const hero = new Hero(
             heroData.id,
             heroData.name,
+            heroData.job,
             heroData.role,
             heroData.shortDescription,
             heroData.keywords,

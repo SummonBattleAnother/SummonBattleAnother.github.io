@@ -2,7 +2,8 @@
     "heroes": [
     {
       "id": "hero1",
-      "name": "팔라딘",
+      "name": "그라니스 다크해머",
+      "job": "팔라딘",
       "role": "일반",
       "shortDescription": " 팔라딘은 보조 유닛인 프리스트소환, 범위 홀리라이트, 강력한 강회/회복 버프인 영광의 축복을 사용할 수 있는 영웅입니다. <bar> 또한 일반공격타입의 나이트와 캡틴을 소환하여 강력한 지상 화력 또한 보유한 영웅입니다.",
       "keywords": ["일반","소환", "일격", "광역","보조","특수소환","기동성","공성","수영가능","무적-반격"],
@@ -21,7 +22,8 @@
     },
     {
       "id": "hero2",
-      "name": "아크메이지",
+      "name": "포드레드 아란",
+      "job": "아크메이지",
       "role": "일반",
       "shortDescription": "아크메이지는 높은 유틸성과 준수한 성능의 소환스킬을 보유한 영웅입니다. 소서리스의 인비저블리티, 궁극기인 메스텔레포트를 활용한 빠른 공/수 전환이 특징입니다. <bar> 다만 3종류의 업그레이드 중 선택과 집중이 필요합니다 ",
       "keywords": ["일반","공중유닛","기동성"],
@@ -41,7 +43,8 @@
     
     {
       "id": "hero3",
-      "name": "마운틴킹",
+      "name": "켈브 스턴해머",
+      "job": "마운틴킹",
       "role": "일반",
       "shortDescription": "마운틴킹은 배쉬, 스톰볼트, 아바타를 사용할 수 있어 우수한 대인능력을 보유한 영웅입니다. 건물 공격시 모탈팀의 장거리 공성능력을 활용할 수 있으며 게임 후반부에는 강력한 공중유닛인 그리폰라이더를 운영하여 전투를 이끕니다",
       "keywords": ["일반","공중유닛","공성"],
@@ -60,7 +63,8 @@
     },
     {
       "id": "hero4",
-      "name": "블러드메이지",
+      "name": "태닝 호킹",
+      "job": "블러드메이지",
       "role": "일반",
       "shortDescription": "블러드메이지는 일반타입 보병유닛인 스펠브레이커, 캡틴을 소환할 수 있으며, 강력한 공중유닛인 피닉스를 사용할 수 있습니다. '사이펀 마나'로 적 마나를 가로채거나 아군에게 마나를 지원할 수 있어 견제에도 유용합니다.",
       "score": {
@@ -78,7 +82,8 @@
     },
     {
       "id": "hero5",
-      "name": "블레이드마스터",
+      "name": "토자로",
+      "job": "블레이드마스터",
       "role": "일반",
       "shortDescription": "블레이드 마스터는 필리지를 보유한 그런트, 레이더를 소환할 수 있습니다. 윈드웍을 사용하여 적 영웅을 노리거나, 위기에서 탈출할 수 있으며, 게임 후반부에는 강력한 공중유닛인 윈드라이더를 지휘하여 전투에 기여합니다",
       "score": {
@@ -96,7 +101,8 @@
     },
     {
       "id": "hero6",
-      "name": "파시어",
+      "name": "나즈그렐",
+      "job": "파 시어",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -113,7 +119,8 @@
     },
     {
       "id": "hero7",
-      "name": "타우렌치프틴",
+      "name": "타어 룬토템",
+      "job": "타우렌치프틴",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -130,7 +137,8 @@
     },
     {
       "id": "hero8",
-      "name": "쉐도우헌터",
+      "name": "사카잔",
+      "job": "쉐도우헌터",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -147,7 +155,8 @@
     },
     {
       "id": "hero9",
-      "name": "데스나이트",
+      "name": "로드 다크할로우",
+      "job": "데스나이트",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -164,7 +173,8 @@
     },
     {
       "id": "hero10",
-      "name": "리치",
+      "name": "레이지 윈터칠",
+      "job": "리치",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -181,7 +191,8 @@
     },
     {
       "id": "hero11",
-      "name": "드레드로드",
+      "name": "골비네",
+      "job": "드레드로드",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -198,7 +209,8 @@
     },
     {
       "id": "hero12",
-      "name": "크립트로드",
+      "name": "아락아람",
+      "job": "크립트로드",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -215,7 +227,8 @@
     },
     {
       "id": "hero13",
-      "name": "프리스티스오브문",
+      "name": "카스리스 스타송",
+      "job": "프리스티스오브문",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -232,7 +245,8 @@
     },
     {
       "id": "hero14",
-      "name": "키퍼오브그루브",
+      "name": "누아다",
+      "job": "키퍼 오브 그루브",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -249,7 +263,8 @@
     },
     {
       "id": "hero15",
-      "name": "디몬헌터",
+      "name": "쉐도우송",
+      "job": "디몬헌터",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -266,7 +281,8 @@
     },
     {
       "id": "hero16",
-      "name": "워든",
+      "name": "아이언 레이븐",
+      "job": "워든",
       "role": "일반",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -283,7 +299,8 @@
     },
     {
       "id": "hero17",
-      "name": "고블린팅커",
+      "name": "가즈 스트립볼트",
+      "job": "고블린팅커",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -300,7 +317,8 @@
     },
     {
       "id": "hero18",
-      "name": "나가씨위치",
+      "name": "레이디 베놈텅",
+      "job": "나가씨위치",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -317,7 +335,8 @@
     },
     {
       "id": "hero19",
-      "name": "판다렌브루마스터",
+      "name": "신조 하니브루",
+      "job": "판다렌브루마스터",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -334,7 +353,8 @@
     },
     {
       "id": "hero20",
-      "name": "비스트마스터",
+      "name": "기쉬 이글아이",
+      "job": "비스트마스터",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -351,7 +371,8 @@
     },
     {
       "id": "hero21",
-      "name": "제이나프라우드무어",
+      "name": "제이나 프라우드무어",
+      "job": "안토니다스의 수제자",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -368,7 +389,8 @@
     },
     {
       "id": "hero22",
-      "name": "유령아크메이지",
+      "name": "안토니다스",
+      "job": "유령아크메이지",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -386,6 +408,7 @@
     {
       "id": "hero23",
       "name": "굴단",
+      "job": "워록 서머너",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -402,7 +425,8 @@
     },
     {
       "id": "hero24",
-      "name": "말퓨리온",
+      "name": "멜퓨리언",
+      "job": "키퍼 오브 그루브",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -420,6 +444,7 @@
     {
       "id": "hero25",
       "name": "가리토스",
+      "job": "다크나이트",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -437,6 +462,7 @@
     {
       "id": "hero26",
       "name": "스랄",
+      "job": "파 시어",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -454,6 +480,7 @@
     {
       "id": "hero27",
       "name": "켈투자드",
+      "job": "아크리치",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -470,8 +497,8 @@
     },
     {
       "id": "hero28",
-      "name": "아키몬드",
-      "role": "소환",
+      "job": "아키몬드",
+      "role": "광역",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
         "attack": 7,
@@ -487,7 +514,7 @@
     },
     {
       "id": "hero29",
-      "name": "타워왕",
+      "job": "타워왕",
       "role": "소환",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -504,7 +531,7 @@
     },
     {
       "id": "hero30",
-      "name": "유령키퍼",
+      "job": "유령키퍼",
       "role": "보조",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -521,7 +548,7 @@
     },
     {
       "id": "hero31",
-      "name": "파이어로드",
+      "job": "파이어로드",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -538,7 +565,7 @@
     },
     {
       "id": "hero32",
-      "name": "다크레인저",
+      "job": "다크레인저",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -555,7 +582,7 @@
     },
     {
       "id": "hero33",
-      "name": "핏로드",
+      "job": "핏로드",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -572,7 +599,7 @@
     },
     {
       "id": "hero34",
-      "name": "나가로얄가드",
+      "job": "나가로얄가드",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -589,7 +616,7 @@
     },
     {
       "id": "hero35",
-      "name": "상인",
+      "job": "상인",
       "role": "보조",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -606,7 +633,7 @@
     },
     {
       "id": "hero36",
-      "name": "마이에브",
+      "job": "마이에브",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -623,7 +650,7 @@
     },
     {
       "id": "hero37",
-      "name": "아서스",
+      "job": "아서스",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -640,7 +667,7 @@
     },
     {
       "id": "hero38",
-      "name": "아카마",
+      "job": "아카마",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -657,7 +684,7 @@
     },
     {
       "id": "hero39",
-      "name": "흑화타우렌치프틴",
+      "job": "흑화타우렌치프틴",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -674,7 +701,7 @@
     },
     {
       "id": "hero40",
-      "name": "그롬",
+      "job": "그롬",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -691,7 +718,7 @@
     },
     {
       "id": "hero41",
-      "name": "일리단",
+      "job": "일리단",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -708,7 +735,7 @@
     },
     {
       "id": "hero42",
-      "name": "영혼사냥꾼",
+      "job": "영혼사냥꾼",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -725,7 +752,7 @@
     },
     {
       "id": "hero43",
-      "name": "흑의 창술사",
+      "job": "흑의 창술사",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -742,7 +769,9 @@
     },
     {
       "id": "hero44",
-      "name": "불꽃남자",
+      "job": "불꽃남자",
+      "type":"타입A",
+      "originid":"hero44",
       "role": "일격",
       "shortDescription": "강력한 방어력을 지닌 전사",
       "score": {
@@ -755,6 +784,286 @@
         "strength"    : "54 + 4.5",
         "agility": "36 + 3",
         "intelligence"  : "26 + 3"
+      }
+    },
+    {
+      "id": "hero45",
+      "job": "불꽃남자",
+      "type":"타입B",
+      "originid":"hero44",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "54 + 4.5",
+        "agility": "36 + 3",
+        "intelligence"  : "26 + 3"
+      }
+    },
+    {
+      "id": "hero46",
+      "job": "한조",
+      "type":"타입A",
+      "originid":"hero46",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "37 + 3",
+        "agility": "51 + 5",
+        "intelligence"  : "33 + 3"
+      }
+    },
+    {
+      "id": "hero47",
+      "job": "한조",
+      "tType":"타입B",
+      "originid":"hero46",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "37 + 3",
+        "agility": "51 + 5",
+        "intelligence"  : "33 + 3"
+      }
+    },
+    {
+      "id": "hero48",
+      "job": "한조",
+      "type":"타입C",
+      "originid":"hero46",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "37 + 3",
+        "agility": "51 + 5",
+        "intelligence"  : "33 + 3"
+      }
+    },
+    {
+      "id": "hero49",
+      "job": "배틀메이지",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "32 + 3",
+        "agility": "33 + 3.5",
+        "intelligence"  : "47 + 4.5"
+      }
+    },
+    {
+      "id": "hero50",
+      "job": "쿠아다",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "54 + 5",
+        "agility": "36 + 3",
+        "intelligence"  : "26 + 3"
+      }
+    },
+    {
+      "id": "hero51",
+      "job": "아서스-듀얼블레이더",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "37 + 3",
+        "agility": "49 + 5",
+        "intelligence"  : "33 + 3"
+      }
+    },
+    {
+      "id": "hero52",
+      "job": "버서커",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "50 + 3.5",
+        "agility": "39 + 4.5",
+        "intelligence"  : "29 + 3"
+      }
+    },
+    {
+      "id": "hero53",
+      "job": "해골바가지",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "37 + 3",
+        "agility": "49 + 5",
+        "intelligence"  : "30 + 3"
+      }
+    },
+    {
+      "id": "hero54",
+      "job": "이리시스-붉은꽃",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "37 + 3",
+        "agility": "49 + 5",
+        "intelligence"  : "30 + 3"
+      }
+    },
+    {
+      "id": "hero55",
+      "job": "크루츠 웨버-저격왕",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "32 + 3.5",
+        "agility": "52 + 4.5",
+        "intelligence"  : "34 + 2.5"
+      }
+    },
+    {
+      "id": "hero56",
+      "job": "창룡-드렉슬러",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "31 + 3",
+        "agility": "50 + 5",
+        "intelligence"  : "32 + 2.5"
+      }
+    },
+    {
+      "id": "hero57",
+      "job": "보우마스터-실바나스",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "37 + 3",
+        "agility": "52 + 4.5",
+        "intelligence"  : "33 + 3.5"
+      }
+    },
+    {
+      "id": "hero58",
+      "job": "서커스단 비운의 여우-비연",
+      "role": "일격",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "33 + 3",
+        "agility": "50 + 4.5",
+        "intelligence"  : "35 + 3"
+      }
+    },
+    {
+      "id": "hero59",
+      "job": "메디브-하늘의 예언가",
+      "role": "광역",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "29 + 3",
+        "agility": "33 + 4.5",
+        "intelligence"  : "51 + 3"
+      }
+    },
+    {
+      "id": "hero60",
+      "job": "메이지-엔젤릭화이트-아라시스",
+      "role": "광역",
+      "shortDescription": "강력한 방어력을 지닌 전사",
+      "score": {
+        "attack": 7,
+        "defense": 9,
+        "mobility": 4,
+        "utility": 6
+      },
+      "status":{
+        "strength"    : "29 + 3",
+        "agility": "33 + 4.5",
+        "intelligence"  : "51 + 3"
       }
     }
     ]

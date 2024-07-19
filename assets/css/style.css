@@ -252,7 +252,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   overflow: visible;
 }
 
@@ -283,8 +284,6 @@ h2 {
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 1000;
   pointer-events: none;
-  width: max-content;
-  max-width: 200px;
 }
 
 .keyword:hover::after {

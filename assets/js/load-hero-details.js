@@ -1,4 +1,5 @@
 let keywords = {};
+import {computePosition} from '@floating-ui/dom';
 
 async function loadKeywords() {
     try {
@@ -12,7 +13,7 @@ async function loadKeywords() {
 // Constants
 const ROLE_COLORS = {
     '일반': { bg: 'rgba(255, 99, 132, 0.3)', border: 'rgba(255, 99, 132, 1)' },
-    '소환': { bg: ' ', border: 'rgba(0, 99, 132, 1)' },
+    '소환': { bg: 'rgba(0, 99, 132, 0.3)', border: 'rgba(0, 99, 132, 1)' },
     '일격': { bg: 'rgba(54, 162, 235, 0.3)', border: 'rgba(54, 162, 235, 1)' },
     '광역': { bg: 'rgba(255, 206, 86, 0.3)', border: 'rgba(255, 206, 86, 1)' },
     '보조': { bg: 'rgba(75, 192, 192, 0.3)', border: 'rgba(75, 192, 192, 1)' }
@@ -38,47 +39,15 @@ class Hero {
         }
     
         keywordElement.innerHTML = this.keywords.map(keyword => {
-            //return `<span class="keyword" data-keyword="${keyword}">${keyword}</span>`;
-            return `<span class="keyword" data-keyword="${keyword}">${keyword}</span>`;
+            const keywordInfo = keywords[keyword];
+            return `
+                <span class="keyword" style="background-color: ${keywordInfo.color}" data-description="${keywordInfo.description}">
+                    ${keyword}
+                </span>
+            `;
         }).join('');
-
-        this.addHovercardListeners();
     }
 
-    addHovercardListeners() {
-        const keywordElements = document.querySelectorAll('.keyword');
-        const hovercard = document.getElementById('hovercard');
-        
-        keywordElements.forEach(keyword => {
-            keyword.addEventListener('mouseenter', (e) => {
-                this.showHovercard(e.target, hovercard);
-            });
-
-            keyword.addEventListener('mouseleave', () => {
-                this.hideHovercard(hovercard);
-            });
-        });
-    }
-
-    showHovercard(keywordElement, hovercard) {
-        const keyword = keywordElement.dataset.keyword;
-        const keywordInfo = keywords[keyword] || { color: '#888888', description: '설명 없음' };
-
-        hovercard.innerHTML = `
-            <h3 style="color: ${keywordInfo.color}">${keyword}</h3>
-            <p>${keywordInfo.description}</p>
-        `;
-
-        const rect = keywordElement.getBoundingClientRect();
-        hovercard.style.left = `${rect.left}px`;
-        hovercard.style.top = `${rect.bottom + 5}px`;
-        hovercard.style.display = 'block';
-    }
-
-    hideHovercard(hovercard) {
-        hovercard.style.display = 'none';
-    }
-    
     loadDescription() {
         const heroDesc = document.getElementById('selected-hero');
         if (!heroDesc) {
@@ -184,9 +153,11 @@ class Hero {
 }
 
 // Main function
+
+
 async function loadHeroDetails() {
+    await loadKeywords();
     try {
-        await loadKeywords();  // keywords 객체 로드 기다림
         const response = await fetch('/data/heroes.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -217,5 +188,6 @@ async function loadHeroDetails() {
         console.error('Error loading hero details:', error);
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', loadHeroDetails);

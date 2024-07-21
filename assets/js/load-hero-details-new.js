@@ -1,13 +1,3 @@
-let keywords = {};
-async function loadKeywords() {
-    try {
-        const response = await fetch('/data/keywords.json');
-        keywords = await response.json();
-    } catch (error) {
-        console.error('Error loading keywords:', error);
-    }
-}
-// Constants
 const ROLE_COLORS = {
     '일반': { bg: 'rgba(255, 99, 132, 0.3)', border: 'rgba(255, 99, 132, 1)' },
     '소환': { bg: 'rgba(0, 99, 132, 0.3)', border: 'rgba(0, 99, 132, 1)' },
@@ -56,8 +46,6 @@ class Hero {
             <div>
                 <p>${currentInfo.shortDescription}</p>
             </div>
-            <div id="filters" class="filters"></div>
-            <div id="hero-grid" class="hero-grid"></div>
         `;
 
         if (this.skilltree) {
@@ -144,7 +132,6 @@ class Hero {
     }
 
     updateDisplay() {
-        this.loadDescription();
         this.loadKeywords();
         this.loadStatus();
         this.loadScore();

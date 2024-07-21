@@ -137,6 +137,18 @@ h2 {
   margin: 0 auto;
 }
 
+.hero-container{
+  display: flex;
+  background-color: DodgerBlue;
+}
+.hero-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+
 .selected-hero {
   padding: 10px;
 }
@@ -254,6 +266,8 @@ h2 {
   gap: 5px;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
   overflow: visible;
 }
 

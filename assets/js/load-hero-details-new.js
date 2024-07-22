@@ -94,7 +94,7 @@ class Hero {
         return `
             <div class="hero-skill-tree-new">
                 <select id="type-selector">
-                    ${this.info.map(i => `<option value="${i.type}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type}</option>`).join('')}
+                    ${this.info.map(i => `<option value="${i.type}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type}${i.role}</option>`).join('')}
                 </select>
             </div>
         `;

@@ -83,16 +83,13 @@ class Hero {
             return;
         }
     
-        const currentInfo = this.getCurrentInfo();
-        const keywords = currentInfo.keywords;
-
-        if (!keywords || keywords.length === 0) {
-            keywordElement.innerHTML = '키워드 정보가 없습니다.';
-            return;
-        }
-
-        keywordElement.innerHTML = keywords.map(keyword => {
-            return `<span class="keyword">${keyword}</span>`;
+        keywordElement.innerHTML = this.keywords.map(keyword => {
+            const keywordInfo = keywords[keyword];
+            return `
+                <span class="keyword" style="background-color: ${keywordInfo.color}" data-description="${keywordInfo.description}">
+                    ${keyword}
+                </span>
+            `;
         }).join('');
     }
 
@@ -152,6 +149,7 @@ class Hero {
 }
 
 async function loadHeroDetails() {
+    await loadKeywords();
     try {
         const response = await fetch('/data/heroes.json');
         if (!response.ok) {

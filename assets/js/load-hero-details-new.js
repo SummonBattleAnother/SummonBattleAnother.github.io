@@ -1,9 +1,19 @@
+let keywordProperty = {};
+async function loadKeywords() {
+    try {
+        const response = await fetch('/data/keywords.json');
+        keywordProperty = await response.json();
+        console.log("키워드 정보 로딩", keywordProperty)
+    } catch (error) {
+        console.error('Error loading keywords:', error);
+    }
+}
 const ROLE_COLORS = {
-    '일반': { bg: 'rgba(255, 99, 132, 0.3)', border: 'rgba(255, 99, 132, 1)' },
-    '소환': { bg: 'rgba(0, 99, 132, 0.3)', border: 'rgba(0, 99, 132, 1)' },
-    '일격': { bg: 'rgba(54, 162, 235, 0.3)', border: 'rgba(54, 162, 235, 1)' },
-    '광역': { bg: 'rgba(255, 206, 86, 0.3)', border: 'rgba(255, 206, 86, 1)' },
-    '보조': { bg: 'rgba(75, 192, 192, 0.3)', border: 'rgba(75, 192, 192, 1)' }
+    '일반': { bg: 'rgba(170, 170, 170, 0.3)', border: 'rgba(170, 170, 170, ,1)' },
+    '소환': { bg: 'rgba(0, 188, 212, 0.3)', border: 'rgba(0, 188, 212, 1)' },
+    '일격': { bg: 'rgba(255, 0, 0, 0.3)', border: 'rgba(255, 0, 0, 1)' },
+    '광역': { bg: 'rgba(156, 39, 176, 0.3)', border: 'rgba(156, 39, 176, 1)' },
+    '보조': { bg: 'rgba(250, 142, 229, 0.3)', border: 'rgba(250, 142, 229, 1)' }
 };
 
 // Hero class
@@ -11,19 +21,22 @@ class Hero {
     constructor(heroData) {
         this.id = heroData.id;
         this.name = heroData.name;
+        this.chart = null; // Chart를 저장할 속성 추가
         this.skilltree = heroData.skilltree;
-        if (this.skilltree) {
-            this.info = heroData.info;
+        this.info = heroData.info;
+        // 스킬트리가 있을 경우 기본 타입을 설정
+        if (this.skilltree && this.info.length > 0) {
             this.selectedType = this.info[0].type;
         } else {
-            this.info = [heroData];
+            this.selectedType = null;
         }
     }
-
     getCurrentInfo() {
-        return this.skilltree 
-            ? this.info.find(i => i.type === this.selectedType)
-            : this.info[0];
+        if (this.skilltree) {
+            return this.info.find(i => i.type === this.selectedType) || this.info[0];
+        } else {
+            return this.info[0];
+        }
     }
 
     loadDescription() {
@@ -32,35 +45,57 @@ class Hero {
             console.error('Element with id "selected-hero" not found');
             return;
         }
-
+    
         const currentInfo = this.getCurrentInfo();
-
+        console.log("현재영웅정보", currentInfo);
         heroDesc.innerHTML = `
-            <a href="/heroes/${this.id}.html" class="hero-link">
-                <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-icon">
-            </a>
-            <div>
-                <h2 class="hero-title">${currentInfo.job || this.name}</h2>
-                ${this.skilltree ? this.createTypeSelector() : ''}
-            </div>
-            <div>
-                <p>${currentInfo.shortDescription}</p>
+            <div class="hero-introduction-new">
+                <div class="hero-left-new">
+                    <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-icon-new">
+                    <h2 class="hero-name-new">${this.name}</h2>
+                </div>
+                <div class="hero-right-new">
+                    <div class="hero-top-new">
+                        <span class="hero-class-new">${currentInfo.job || this.name}</span>
+                        ${this.skilltree ? this.createTypeSelector() : ''}
+                    </div>
+                    <div class="hero-bottom-new">
+                        <p class="hero-description-new">${currentInfo.shortDescription}</p>
+                    </div>
+                </div>
             </div>
         `;
-
+    
         if (this.skilltree) {
-            document.getElementById('type-selector').addEventListener('change', (e) => {
-                this.selectedType = e.target.value;
-                this.updateDisplay();
-            });
+            this.attachTypeSelector();
         }
     }
-
+    
+    attachTypeSelector() {
+        const selector = document.getElementById('type-selector');
+        if (selector) {
+            // 기존의 이벤트 리스너를 제거
+            selector.removeEventListener('change', this.handleTypeChange);
+            
+            // 새로운 이벤트 리스너를 추가
+            this.handleTypeChange = (e) => {
+                this.selectedType = e.target.value;
+                this.updateDisplay();
+            };
+            selector.addEventListener('change', this.handleTypeChange);
+            
+            // 현재 선택된 타입으로 셀렉터 값을 설정
+            selector.value = this.selectedType;
+        }
+    }
+    
     createTypeSelector() {
         return `
-            <select id="type-selector">
-                ${this.info.map(i => `<option value="${i.type}">${i.type}</option>`).join('')}
-            </select>
+            <div class="hero-skill-tree-new">
+                <select id="type-selector">
+                    ${this.info.map(i => `<option value="${i.type}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type}</option>`).join('')}
+                </select>
+            </div>
         `;
     }
 
@@ -73,14 +108,20 @@ class Hero {
     
         const currentInfo = this.getCurrentInfo();
         const keywords = currentInfo.keywords;
-
+        console.log("keywords", keywords);
         if (!keywords || keywords.length === 0) {
             keywordElement.innerHTML = '키워드 정보가 없습니다.';
             return;
         }
 
         keywordElement.innerHTML = keywords.map(keyword => {
-            return `<span class="keyword">${keyword}</span>`;
+            const keywordInfo = keywordProperty[keyword];
+            console.log("foreach", keywordInfo)
+            return `
+            <span class="keyword" style="background-color: ${keywordInfo.color}" data-description="${keywordInfo.description}">
+                ${keyword}
+            </span>
+        `;
         }).join('');
     }
 
@@ -103,18 +144,16 @@ class Hero {
         const currentInfo = this.getCurrentInfo();
         const score = currentInfo.score;
 
+        const currentType = currentInfo["role"];
+
         const data = {
             labels: Object.keys(score),
             datasets: [{
                 label: currentInfo.job || this.name,
                 data: Object.values(score),
                 fill: true,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgb(255, 99, 132)',
-                pointBackgroundColor: 'rgb(255, 99, 132)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgb(255, 99, 132)'
+                backgroundColor: ROLE_COLORS[currentType]["bg"],
+                borderColor: ROLE_COLORS[currentType]["border"]
             }]
         };
 
@@ -124,6 +163,10 @@ class Hero {
             }
         };
 
+        let chartStatus = Chart.getChart("stats-chart"); // <canvas> id
+        if (chartStatus != undefined) {
+            chartStatus.destroy();
+        }
         new Chart(ctx, {
             type: 'radar',
             data: data,
@@ -132,6 +175,7 @@ class Hero {
     }
 
     updateDisplay() {
+        this.loadDescription();
         this.loadKeywords();
         this.loadStatus();
         this.loadScore();
@@ -139,8 +183,9 @@ class Hero {
 }
 
 async function loadHeroDetails() {
+    await loadKeywords();
     try {
-        const response = await fetch('/data/heroes.json');
+        const response = await fetch('/data/heroes-DEV.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

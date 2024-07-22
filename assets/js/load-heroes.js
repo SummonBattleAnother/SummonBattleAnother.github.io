@@ -5,7 +5,7 @@ let selectedRole = 'all';
 
 async function loadHeroes() {
   try {
-    const response = await fetch('/data/heroes.json');
+    const response = await fetch('/data/heroes-dev.json');
     const data = await response.json();
     heroes = data.heroes;
     filteredHeroes = heroes;
@@ -18,7 +18,6 @@ async function loadHeroes() {
 
 function renderHeroes() {
   const heroList = document.getElementById('hero-list');
-  
   heroList.innerHTML = `
     <div id="filters" class="filters"></div>
     <div id="hero-grid" class="hero-grid"></div>
@@ -28,6 +27,7 @@ function renderHeroes() {
   const heroGrid = document.getElementById('hero-grid');
 
   filteredHeroes.forEach(hero => {
+    console.log(hero)
     const heroCard = document.createElement('div');
     heroCard.className = 'hero-card';
     heroCard.innerHTML = `

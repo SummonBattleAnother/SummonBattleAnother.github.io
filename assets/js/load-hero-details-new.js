@@ -50,6 +50,7 @@ class Hero {
         console.log("현재영웅정보", currentInfo);
         heroDesc.innerHTML = `
             <div class="hero-introduction-new">
+                
                 <div class="hero-left-new">
                     <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-icon-new">
                     <h2 class="hero-name-new">${this.name}</h2>
@@ -174,11 +175,36 @@ class Hero {
         });
     }
 
+    loadSkills() {
+        const skillTable = document.querySelector('.skill-table tbody');
+        if (!skillTable) {
+          console.error('Skill table not found');
+          return;
+        }
+    
+        const currentInfo = this.getCurrentInfo();
+        const skills = currentInfo.skills;
+        const commonSkills = this.commonSkills;
+    
+        skillTable.innerHTML = '';
+    
+        for (const [key, skill] of Object.entries({ ...skills, ...commonSkills })) {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <th scope="row">${key}</th>
+            <td>${skill.name}</td>
+            <td>${skill.description}</td>
+          `;
+          skillTable.appendChild(row);
+        }
+      }
+
     updateDisplay() {
         this.loadDescription();
         this.loadKeywords();
         this.loadStatus();
         this.loadScore();
+        this.loadSkills();  // 새로 추가
     }
 }
 
@@ -203,6 +229,7 @@ async function loadHeroDetails() {
         hero.loadKeywords();
         hero.loadStatus();
         hero.loadScore();
+        hero.loadSkills();
     } catch (error) {
         console.error('Error loading hero details:', error);
     }

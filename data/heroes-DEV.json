@@ -3,6 +3,8 @@
   {
     "id": "hero1",
     "name": "그라니스 다크해머",
+    "job": "팔라딘",
+    "role": "일반",
     "skilltree":false,
     "info":[
       {
@@ -21,6 +23,14 @@
           "strength": "47 + 4.5",
           "agility": "28 + 2.5",
           "intelligence": "37 + 3.5"
+        },
+        "skills": {
+          "D": { "name": "디보우션 오라", "description": "주변 아군 유닛의 방어력을 증가시킵니다" },
+          "Q": { "name": "일반소환-프리스트", "description": "힐, 이너파이어를 사용할 수 있는 원거리 마법유닛을 소환합니다" },
+          "W": { "name": "일반소환-나이트", "description": "근접 일반공격을하는 나이트를 일정시간 소환합니다" },
+          "E": { "name": "홀리라이트", "description": "범위내 모든 아군 생명체 유닛의 체력을 회복하고, 적 언데드 유닛에게는 피해를 입힙니다" },
+          "R": { "name": "영광의 축복", "description": "범위내의 아군 유닛들에게 공격력, 방어력이 증가하고, 3초마다 체력을 회복하는 버프를 제공합니다" },
+          "F": { "name": "특수소환-캡틴", "description": "강력한 보병유닛인 캡틴을 소환합니다. 쿨타임이 짧은 궁극 소환유닛입니다" }
         }
       }
     ]
@@ -48,6 +58,14 @@
           "strength"    : "54 + 4.5",
           "agility": "36 + 3",
           "intelligence"  : "26 + 3"
+        },
+        "skills": {
+          "D": { "name": "스킬A", "description": "스킬A 설명" },
+          "Q": { "name": "스킬A", "description": "스킬A 설명" },
+          "W": { "name": "스킬B", "description": "스킬B 설명" },
+          "E": { "name": "스킬C", "description": "스킬C 설명" },
+          "R": { "name": "스킬A", "description": "스킬A 설명" },
+          "F": { "name": "궁극기A", "description": "궁극기A 설명" }
         }
       },
       {
@@ -64,7 +82,7 @@
         },
         "status":{
           "strength"    : "54 + 4.5",
-          "agility": "36 + 3",
+          "agility": "36333 + 3",
           "intelligence"  : "26 + 3"
         }
       }

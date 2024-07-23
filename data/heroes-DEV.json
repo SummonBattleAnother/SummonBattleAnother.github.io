@@ -1260,6 +1260,14 @@
             "strength"    : "54 + 4.5",
             "agility": "36 + 3",
             "intelligence"  : "26 + 3"
+          },
+          "skills": {
+            "D": { "name": "스킬A2", "description": "스킬A 설명" },
+            "Q": { "name": "스킬A22", "description": "스킬A 설명" },
+            "W": { "name": "스킬B33", "description": "스킬B 설명" },
+            "E": { "name": "스킬C44", "description": "스킬C 설명" },
+            "R": { "name": "스킬A44", "description": "스킬A 설명" },
+            "F": { "name": "궁극기A55", "description": "궁극기A 설명" }
           }
         }
       ]
@@ -1649,7 +1657,7 @@
       "role": "광역",
       "skilltree": false,
       "info": [
-        {
+        { 
           "job": "메이지",
           "shortDescription": "강력한 방어력을 지닌 전사",
           "role": "광역",

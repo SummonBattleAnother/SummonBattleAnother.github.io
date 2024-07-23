@@ -54,9 +54,16 @@ class Hero {
                 <div class="hero-left-new">
                     <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-icon-new">
                     <h2 class="hero-name-new">${this.name}</h2>
+                </div><div class="hero-mid">
+                    <div class="hero-mid-top-new">
+                        hoho
+                    </div>
+                    <div class="hero-mid-bottom-new">
+                        haha
+                    </div>
                 </div>
                 <div class="hero-right-new">
-                    <div class="hero-top-new">
+                    <div class="hero-mid-top-new">
                         <span class="hero-class-new">${currentInfo.job || this.name}</span>
                         ${this.skilltree ? this.createTypeSelector() : ''}
                     </div>

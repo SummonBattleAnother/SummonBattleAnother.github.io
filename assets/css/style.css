@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,6 +18,7 @@ h2 {
   margin-bottom: 0;
 }
 
+/* Navigation */
 .navbar {
   background-color: #007bff;
   color: white;
@@ -34,6 +36,7 @@ h2 {
   margin-right: 15px;
 }
 
+/* Card styles */
 .card {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -63,6 +66,7 @@ h2 {
   overflow-y: auto;
 }
 
+/* Hero list and grid */
 .hero-list.collapsed .card-body {
   max-height: 0;
 }
@@ -78,29 +82,37 @@ h2 {
   background-color: #ddd;
 }
 
+/* Hero card styles */
 .hero-card {
   width: 80px;
   height: 80px;
   background-color: white;
   padding: 8px;
   border-radius: 8px;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.hero-link:hover .hero-name {
-  opacity: 1;
 }
 
 .hero-card:hover {
   transform: translateY(-5px);
 }
 
-.hero-card-list {
-  padding: 0px;
+.hero-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
 }
 
-.hero-name {
+.hero-link:hover .hero-icon-name {
+  opacity: 1;
+}
+
+.hero-icon-name {
   position: absolute;
   top: 0;
   left: 0;
@@ -126,31 +138,15 @@ h2 {
   object-fit: cover;
 }
 
-.hero-link {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
-}
-
-.hero-container{
+/* Hero container and selected hero styles */
+.hero-desc {
   display: flex;
   background-color: DodgerBlue;
 }
-.hero-container > div {
+
+.hero-desc > div {
   background-color: #f1f1f1;
-  margin: 10px;
   padding: 20px;
-  font-size: 30px;
-}
-
-
-.selected-hero {
-  padding: 10px;
 }
 
 .hero-intro {
@@ -179,6 +175,7 @@ h2 {
   margin: 0;
 }
 
+/* Tag styles */
 .tag {
   display: inline-block;
   padding: 5px 10px;
@@ -190,6 +187,7 @@ h2 {
 .tag-intelligence { background-color: #e91e63; }
 .tag-range { background-color: #ff9800; }
 
+/* Layout grids */
 .information-grid {
   display: grid;
   padding: 10px;
@@ -197,12 +195,14 @@ h2 {
   gap: 20px;
 }
 
+/* Miscellaneous */
 .skill-table {
   margin-bottom: 30px;
 }
 
 .toggle-icon {
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .hero-list.collapsed .toggle-icon {
@@ -210,31 +210,14 @@ h2 {
 }
 
 .filters {
-  margin-bottom: 16px;
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f9fa;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  margin: 0;
-}
-
-.filters {
-  margin-left: 20px ;  
-  margin-top: auto ;  
-  margin-bottom: auto ;  
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
   align-items: center;
   flex-grow: 1;
 }
 
-.toggle-icon {
-  cursor: pointer;
-}
-
+/* Info container styles */
 .info-container {
   display: flex;
   flex-wrap: wrap;
@@ -260,14 +243,12 @@ h2 {
   max-height: 400px;
 }
 
+/* Keyword styles */
 .keyword-container {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding: 20px 15%;
   overflow: visible;
 }
 
@@ -306,13 +287,14 @@ h2 {
   visibility: visible;
 }
 
-.hero-introduction-new {
+/* New hero introduction styles */
+.hero-introduction {
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
 }
 
-.hero-left-new {
+.hero-left {
   flex: 0 0 200px;
   display: flex;
   flex-direction: column;
@@ -320,76 +302,80 @@ h2 {
   justify-content: center;
 }
 
-.hero-icon-new {
+.hero-desc-icon {
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
 
-.hero-name-new {
+.hero-desc-name {
   font-size: 1.5em;
   text-align: center;
   margin: 0;
 }
 
-.hero-right-new {
+.hero-right {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.hero-top-new {
+.hero-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
 }
 
-.hero-class-new {
+.hero-class {
   font-size: 1.2em;
   font-weight: bold;
 }
 
-.hero-skill-tree-new select {
+.hero-skill-tree select {
   padding: 5px;
   font-size: 1em;
 }
 
-.hero-bottom-new {
+.hero-bottom {
   flex: 1;
   display: flex;
   align-items: center;
 }
 
-.hero-description-new {
+.hero-description {
   margin: 0;
   line-height: 1.6;
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
   body {
     padding: 10px;
   }
 
   .info-content, .info-chart {
-      min-width: 100%;
+    min-width: 100%;
   }
 
   .info-content {
-      padding-right: 0;
-      margin-bottom: 20px;
+    padding-right: 0;
+    margin-bottom: 20px;
   }
+
   .card-header {
     padding: 8px;
   }
+
   .card {
     margin-bottom: 10px;
   }
+
   .card-content {
     padding: 10px;
   }
+
   .hero-introduction-new {
     flex-direction: column;
   }
@@ -402,5 +388,3 @@ h2 {
     width: 100%;
   }
 }
-
-/* 기존 CSS 파일 끝에 추가 */

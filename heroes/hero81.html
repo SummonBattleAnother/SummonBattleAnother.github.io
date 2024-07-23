@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>여거너 - 소환대전어나더 Wiki - 영웅정보</title>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+<link href="/assets/css/style.css" rel="stylesheet"/>
+</head>
+<body id="hero81">
+<body>
+<nav class="navbar">
+<div>
+<a href="../index.html" style="font-size:40px;"> 소환대전어나더 Wiki</a>
+</div>
+<div>
+<a href="/heroes/hero1.html">Heroes</a>
+<a href="#">Item</a>
+<a href="#">tips</a>
+</div>
+</nav>
+<div class="card hero-list">
+<div class="card-header">
+<h2 id="heroListToggle">영웅 목록</h2>
+<div class="filters" id="filters"></div>
+<span class="toggle-icon" id="heroListToggle">▼</span>
+</div>
+<div class="card-body hero-card-list">
+<div class="card-content">
+<section id="hero-list">
+<!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
+</section>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<h2>영웅소개</h2>
+</div>
+<div class="card-body">
+<div class="hero-container">
+<div class="selected-hero" id="selected-hero">
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header">
+<h2>정보</h2>
+</div>
+<div class="card-body">
+<div class="info-container">
+<div class="info-content">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 two-div">
+<div class="card">
+<div class="card-header">
+<h4>KeyWord</h4>
+</div>
+<div class="card-body">
+<div class="keyword-container">
+                                                키워드
+                                            </div>
+</div>
+</div>
+</div>
+<div class="col-sm-12 two-div">
+<div class="card">
+<section id="hero-stats">
+<div class="card-header">
+<h4>스탯</h4>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-sm-4">
+<span class="badge bg-danger strength">힘 </span>
+<span id="status-strength">정보가 없습니다</span>
+</div>
+<div class="col-sm-4">
+<span class="badge bg-warning agility">민첩성 </span>
+<span id="status-agility">정보가 없습니다</span>
+</div>
+<div class="col-sm-4">
+<span class="badge bg-success intelligence">지능 </span>
+<span id="status-intelligence">정보가 없습니다</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="info-chart">
+<section id="hero-chart">
+<canvas id="stats-chart"></canvas>
+</section>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header">
+<h2>스킬 정보</h2>
+</div>
+<div class="card-body skill-table">
+<section id="hero-skills">
+<table class="table">
+<thead>
+<tr>
+<th scope="col"></th>
+<th scope="col">스킬명</th>
+<th scope="col">정보</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+<div class="card">
+<div class="card-header">
+<h2>플레이 팁</h2>
+</div>
+<div class="card-body">
+<section id="hero-tip">
+<ul>
+<li>마나가 부족한 영웅입니다. 마나포션을 적극적으로 활용하세요</li>
+<li>초반에도 체력이 높고 철거력이 높은 영웅입니다. 타워를 무시하고 주요 건물을 공격해보세요</li>
+<li>홀리라이트는 적 언데드 유닛에게는 피해를 줍니다. 공격적으로도 활용해봅시다</li>
+<li>영광의 축복은 디스펠을 통해 해제 가능하여 광역디스펠에 취약합니다. 버프를 받은 유닛을 분산하여 운용합시다</li>
+<li>영광의 축복은 부유성의 체력도 회복할 수 있습니다</li>
+<li>대공 능력이 부족한 영웅입니다. 적 부유성을 공격할때는 마법상인을 통해 스톤골렘을 소환하여 활용하면 유용합니다</li>
+</ul>
+</section>
+</div>
+</div>
+<footer>
+<a href="https://cafe.naver.com/war3sba">네이버 카페 방문</a>
+        © Summon Battle Another. All rights reserved.
+</footer>
+<script>
+        document.getElementById('heroListToggle').addEventListener('click', function() {
+            const heroList = document.querySelector('.hero-list');
+            heroList.classList.toggle('collapsed');
+        });
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.4"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script crossorigin="anonymous" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/load-heroes.js"></script>
+<script src="/assets/js/load-hero-details.js"></script>
+</body>
+</body></html>

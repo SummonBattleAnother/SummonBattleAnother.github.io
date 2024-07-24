@@ -51,13 +51,12 @@ class Hero {
         heroDesc.innerHTML = `
             <div class="hero-desc">
                 
-                <div class="hero-left">
-                    <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-desc-icon">
-                </div>
                 <div class="hero-right">
-                    <div class="hero-top">    
-                        <span class="hero-desc-name">${this.name}</span>
-                        <span class="hero-class">${currentInfo.job || this.name}</span>
+                    <div class="hero-top">
+                    <div>
+                        <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-desc-icon">
+                            <span class="hero-desc-name">${this.name} - ${currentInfo.job || ' '}</span>
+                        </div>
                         ${this.createTypeSelector()}
                     </div>
                     <div class="hero-bottom">
@@ -154,6 +153,7 @@ class Hero {
                 label: currentInfo.job || this.name,
                 data: Object.values(score),
                 fill: true,
+                color: '#fFf',
                 backgroundColor: ROLE_COLORS[currentType]["bg"],
                 borderColor: ROLE_COLORS[currentType]["border"]
             }]
@@ -161,7 +161,22 @@ class Hero {
 
         const options = {
             scale: {
-                ticks: { beginAtZero: true, max: 5 }
+                ticks: { beginAtZero: true, max: 5 },
+                r:{
+                    angleLines:{
+                        display:false
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        // This more specific font property overrides the global property
+                        font: {
+                            size: 20
+                        }
+                    }
+                }
             }
         };
 

@@ -5,7 +5,7 @@ let selectedRole = 'all';
 
 async function loadHeroes() {
   try {
-    const response = await fetch('/data/heroes-dev.json');
+    const response = await fetch('/data/heroes.json');
     const data = await response.json();
     heroes = data.heroes;
     filteredHeroes = heroes;
@@ -18,6 +18,7 @@ async function loadHeroes() {
 
 function renderHeroes() {
   const heroList = document.getElementById('hero-list');
+  
   heroList.innerHTML = `
     <div id="filters" class="filters"></div>
     <div id="hero-grid" class="hero-grid"></div>
@@ -27,13 +28,12 @@ function renderHeroes() {
   const heroGrid = document.getElementById('hero-grid');
 
   filteredHeroes.forEach(hero => {
-    console.log(hero)
     const heroCard = document.createElement('div');
     heroCard.className = 'hero-card';
     heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
         <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon">
-        <div class="hero-name">${hero.job}</div>
+        <div class="hero-icon-name">${hero.job}</div>
       </a>
     `;
     heroGrid.appendChild(heroCard);
@@ -47,7 +47,7 @@ function setupFilters() {
   const roleSelect = createSelect(roles, selectedRole, (value) => {
     selectedRole = value;
     filterHeroes();
-  }, '타입 선택');
+  }, '타입 선택 ');
 
   filtersContainer.innerHTML = ''; // Clear existing content
   filtersContainer.appendChild(roleSelect);

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://summonbattleanother.github.io/sitemap.xml

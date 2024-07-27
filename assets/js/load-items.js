@@ -93,16 +93,24 @@ function setupFilters() {
     const shopSelect = createSelect(shops, selectedShop, (value) => {
         selectedShop = value;
         filterItems();
-    }, '상점 선택 ');
+    }, '상점 선택');
 
     const typeSelect = createSelect(types, selectedType, (value) => {
         selectedType = value;
         filterItems();
-    }, ' 아이템 타입 선택 ');
+    }, '아이템 타입 선택');
 
     filtersContainer.innerHTML = ''; // Clear existing content
-    filtersContainer.appendChild(shopSelect);
-    filtersContainer.appendChild(typeSelect);
+    const shopFilterContainer = document.createElement('div');
+    shopFilterContainer.className = 'filter-container';
+    shopFilterContainer.appendChild(shopSelect);
+
+    const typeFilterContainer = document.createElement('div');
+    typeFilterContainer.className = 'filter-container';
+    typeFilterContainer.appendChild(typeSelect);
+
+    filtersContainer.appendChild(shopFilterContainer);
+    filtersContainer.appendChild(typeFilterContainer);
 }
 
 function createSelect(options, defaultValue, onChange, labelText) {
@@ -119,11 +127,12 @@ function createSelect(options, defaultValue, onChange, labelText) {
 
     const label = document.createElement('label');
     label.className = 'filter-label';
-    label.innerHTML = `<span>${labelText}:</span>`;
+    label.textContent = `${labelText}: `;
     label.appendChild(select);
 
     return label;
 }
+
 
 function filterItems() {
     filteredItems = Object.entries(items).flatMap(([shop, shopItems]) => {

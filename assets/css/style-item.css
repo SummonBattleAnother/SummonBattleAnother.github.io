@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 10px;
+  padding: 10px;
 }
 
 .item-card {
@@ -28,24 +29,69 @@
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.item-card:hover {
+  background-color: #e0e0e0;
+}
+
+.item-card.selected {
+  background-color: #d0d0d0;
+  border: 2px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .item-icon {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  height: auto;
 }
 
-.item-card.selected {
-  border: 2px solid #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+.card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
 }
 
-.item-info {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  display: none;
+#itemListToggle {
+  margin-right: auto;
+}
+
+#search-container {
+  flex-basis: 100%;
+  max-width: 300px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#shop_filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

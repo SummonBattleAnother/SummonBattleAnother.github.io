@@ -1,7 +1,15 @@
+.card-content-desc {
+  padding: 15px;
+  overflow-y: auto;
+  align-content: center;
+}
 
+.card-content .slider {
+  align-content: center;
+  height:1500px;
+}
 .wrapper{
   position: relative;
-  height: 462px;
   margin: auto;
 }
 .wrapper .img{

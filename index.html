@@ -31,9 +31,36 @@
         <div>
             <a href="/heroes/hero1.html">Heroes</a>
             <a href="/items/iteminfo.html">Item</a>
-            <a href="#">tips</a>
+            <a href="/tip/gametip.html">tips</a>
         </div>
     </nav>
+
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-header">
+                <h3>⭐영웅 정보</h3>
+              <a href="/heroes/hero1.html" class="btn btn-primary">이동</a>              
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-header">
+                <h3>⚔️아이템 정보</h3>
+                <a href="/items/iteminfo.html" class="btn btn-primary">이동</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>ℹ️게임 팁</h3>
+                    <a href="/tip/gametip.html" class="btn btn-primary">이동</a>
+                </div>
+              </div>
+          </div>
+      </div>
 
     <div class="card hero-list">
         <div class="card-header">
@@ -44,79 +71,49 @@
                 <p> <span style="font-weight: bold;">소환대전어나더</span>는 워크래프트3의 AOS 유즈맵으로, 최대 10명의 플레이어가 
                 영웅을 성장하거나 소환유닛을 업그레이드하여 상대방의 캐슬을 파괴하면 승리하는 게임입니다.
                 </p>
-                <p> 모든 영웅들은 일반/<span style="color:rgb(14, 166, 226)">소환</span>/<span style="color:red">일격</span>/<span style="color:purple">광역</span>/<span style="color:rgb(243, 100, 124)">보조</span>
+                <p> 모든 영웅들은 <span style="font-weight: bold;">일반</span>/<span style="color:rgb(14, 166, 226); font-weight: bold;">소환</span>/<span style="color:red; font-weight: bold;">일격</span>/<span style="color:purple; font-weight: bold;">광역</span>/<span style="color:rgb(243, 100, 124); font-weight: bold;">보조</span>
                 의 5종류로 나뉘어지며, 각자 역활군에 맞는 스킬들을 가지고 있습니다.
-                </p>
-                <p> 영웅이 가진 특성을 최대한 활용하여 효율적으로 전투하고, 승리를 쟁취하세요
-                </p>
-                <P>
-                    2팀의 플레이어를 <span style="font-weight: bold;">모두 컴퓨터</span>로 설정한 뒤, <span style="color:blue">AI전</span> 모드를
-                    선택하면 컴퓨터와 대전할 수 있습니다
-                </P>
-                
-                <div class="desc-screenshot">
-                    <a href="/assets/images/screenshot/screenshot1.png" target="_blank">
-                        <img width="740" height="462" border="0" align="center"  src="/assets/images/screenshot/screenshot1.png"/>
-                    </a>
-                    <a href="/assets/images/screenshot/screenshot2.png" target="_blank">
-                        <img width="740" height="462" border="0" align="center"  src="/assets/images/screenshot/screenshot2.png"/>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="card hero-list">
-        <div class="card-header">
-            <h2 id="heroListToggle">영웅 정보</h2>
-            <div id="filters" class="filters"></div>
-            <span class="toggle-icon"  id="heroListToggle">▼</span>
-        </div>
-        <div class="card-body hero-card-list">
-            <div class="card-content">
-                <section id="hero-list">
-                    <!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
-                </section>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card hero-list">
-        <div class="card-header">
-            <h2 id="heroListToggle">아이템 정보</h2>
-            <div id="filters" class="filters"></div>
-            <span class="toggle-icon"  id="heroListToggle">▼</span>
-        </div>
-        <div class="card-body item-card-list">
-            <div class="card-content">
-                <section id="item-list">
-                    추가 예정
-                </section>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card hero-list">
-        <div class="card-header">
-            <h2>게임 플레이 팁</h2>
-        </div>
-        <div class="card-body item-card-list">
-            <div class="card-content">
-                <section id="tip">
                 <ul>
-                    <li> 
-                        각 진영은 총 6개의 <span style="color:brown">곡물창고</span>를 가지고 있으며, 
-                        3분마다 곡물창고의 수에 비례하여 <span style="color:darkorange">지원금</span>을 받습니다
+                    <li>
+                        <span style="font-weight: bold;">일반</span>: 종족별 기본 영웅들로 구성된 타입입니다. 영웅별 특징이 다양합니다.
                     </li>
-                    <li> 
-                        좋은 아이템을 구매하기 위해서는 <span style="color:brown">나무</span>가 필요하며, 
-                        맵을 30초마다 이동하는 <span style="color:darkorange">떠돌이 상인</span>이 나무를 판매합니다
+                    <li>
+                        <span style="color:rgb(14, 166, 226); font-weight: bold;">소환</span>: 강력한 소환 화력유닛들을 보유한 영웅들입니다. 
+                    </li>
+                    <li>
+                        <span style="color:red; font-weight: bold;">일격</span>: 쿨타임이 길지만 강력한 피해를 주는 기술을 보유한 영웅입니다.
+                    </li>
+                    <li>
+                        <span style="color:purple; font-weight: bold;">광역</span>: 쿨타임이 길지만 범위가 넓고 공중유닛에게도 유효한 기술을 보유한 영웅입니다.
+                    </li>
+                    <li>
+                        <span style="color:rgb(243, 100, 124); font-weight: bold;">보조</span>: 아군을 보조하는 기술을 가진 영웅입니다.
                     </li>
                 </ul>
-                </section>
+
+                </p>
+                <p> 영웅이 가진 특성을 최대한 활용하여 효율적으로 전투하고, 승리를 쟁취하세요
+                </p><br>
+
+                
+                <p> 기타정보 </p>
+                <ul>
+                    <li>2팀의 플레이어를 <span style="font-weight: bold;">모두 컴퓨터</span>로 설정한 뒤, <span style="color:blue">AI전</span> 모드를 선택하면 컴퓨터와 대전할 수 있습니다
+                    </li>
+                    <li>
+                        3.4C 버전 이후의 맵들은 <span style="font-weight: bold;">M16 로더</span>로 워크래프트3를 실행해야 게임 플레이가 가능합니다
+                    </li>
+                </ul>
+
+                <a href="https://cafe.naver.com/war3sba" target="_blank" class="btn btn-success">맵 다운로드(☕공식카페)</a>
+
+                <div class="desc-screenshot">
+                    <a href="/assets/images/screenshot/screenshot1.png" target="_blank">
+                        <img class="image" src="/assets/images/screenshot/screenshot1.png"/>
+                    </a>
+                    <a href="/assets/images/screenshot/screenshot2.png" target="_blank">
+                        <img class="image" src="/assets/images/screenshot/screenshot2.png"/>
+                    </a>
                 </div>
             </div>
         </div>
@@ -127,6 +124,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script src="/assets/js/load-heroes.js"></script>
 </body>
 </html>

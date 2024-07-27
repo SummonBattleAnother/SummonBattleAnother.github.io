@@ -67,7 +67,7 @@ function createSelect(options, defaultValue, onChange, labelText) {
 
   const label = document.createElement('label');
   label.className = 'role-label';
-  label.innerHTML = `<span>${labelText}:</span>`;
+  label.innerHTML = `<span>${labelText}: </span>`;
   label.appendChild(select);
 
   return label;

@@ -206,8 +206,7 @@ class Hero {
         for (const [key, skill] of Object.entries({ ...skills, ...commonSkills })) {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <th scope="row">${key}</th>
-            <td>${skill.name}</td>
+            <td><span style="font-weight:bold;">${key}</span> ${skill.name}</td>
             <td>${skill.description}</td>
           `;
           skillTable.appendChild(row);

@@ -3,6 +3,7 @@ let filteredItems = [];
 let selectedShop = 'all';
 let selectedType = 'all';
 let selectedItemId = null;
+let searchTerm = '';
 
 async function loadItems() {
     try {
@@ -13,6 +14,7 @@ async function loadItems() {
         renderItems();
         setupFilters();
         setupItemInfoClose();
+        setupSearch();
     } catch (error) {
         console.error('Error loading items:', error);
     }
@@ -43,14 +45,14 @@ function showItemInfo(e) {
     const item = filteredItems.find(item => item.id === itemId);
 
     const description = item.desc;
-    const newdescription= description.replaceAll("|n", "<br>").replaceAll("o ", "o");
+    const newdescription= description.replaceAll("|n", "<br>").replaceAll("o", "-");
     console.log(newdescription)
 
     if (item) {
         const itemInfo = document.getElementById('item-info');
         itemInfo.innerHTML = `
             <h3>${item.name}</h3>
-            <p>가격: 🪙${item.gold}, 🪵${item.wood}</p>
+            <h5>가격: 🪙${item.gold}, 🪵${item.wood}</h5>
             <p>타입: ${item.type}</p>
             <p>${newdescription}</p>
         `;
@@ -85,54 +87,66 @@ function setupItemInfoClose() {
 }
 
 function setupFilters() {
-  const filtersContainer = document.getElementById('shop_filters');
-  const shops = ['all', ...Object.keys(items)];
-  const types = ['all', ...new Set(Object.values(items).flat().map(item => item.type))];
+    const filtersContainer = document.getElementById('shop_filters');
+    const shops = ['all', ...Object.keys(items)];
+    const types = ['all', ...new Set(Object.values(items).flat().map(item => item.type))];
 
-  const shopSelect = createSelect(shops, selectedShop, (value) => {
-    selectedShop = value;
-    filterItems();
-  }, '상점 선택 ');
+    const shopSelect = createSelect(shops, selectedShop, (value) => {
+        selectedShop = value;
+        filterItems();
+    }, '상점 선택 ');
 
-  const typeSelect = createSelect(types, selectedType, (value) => {
-    selectedType = value;
-    filterItems();
-  }, ' 아이템 타입 선택 ');
+    const typeSelect = createSelect(types, selectedType, (value) => {
+        selectedType = value;
+        filterItems();
+    }, ' 아이템 타입 선택 ');
 
-  filtersContainer.innerHTML = ''; // Clear existing content
-  filtersContainer.appendChild(shopSelect);
-  filtersContainer.appendChild(typeSelect);
+    filtersContainer.innerHTML = ''; // Clear existing content
+    filtersContainer.appendChild(shopSelect);
+    filtersContainer.appendChild(typeSelect);
 }
 
 function createSelect(options, defaultValue, onChange, labelText) {
-  const select = document.createElement('select');
-  select.className = 'filter-select';
-  options.forEach(option => {
-    const optionElement = document.createElement('option');
-    optionElement.value = option;
-    optionElement.textContent = option === 'all' ? `모든 ${labelText.split(' ')[0]}` : option;
-    if (option === defaultValue) optionElement.selected = true;
-    select.appendChild(optionElement);
-  });
-  select.addEventListener('change', (e) => onChange(e.target.value));
+    const select = document.createElement('select');
+    select.className = 'filter-select';
+    options.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option;
+        optionElement.textContent = option === 'all' ? `모든 ${labelText.split(' ')[0]}` : option;
+        if (option === defaultValue) optionElement.selected = true;
+        select.appendChild(optionElement);
+    });
+    select.addEventListener('change', (e) => onChange(e.target.value));
 
-  const label = document.createElement('label');
-  label.className = 'filter-label';
-  label.innerHTML = `<span>${labelText}:</span>`;
-  label.appendChild(select);
+    const label = document.createElement('label');
+    label.className = 'filter-label';
+    label.innerHTML = `<span>${labelText}:</span>`;
+    label.appendChild(select);
 
-  return label;
+    return label;
 }
 
 function filterItems() {
-  filteredItems = Object.entries(items).flatMap(([shop, shopItems]) => {
-    return shopItems.filter(item => 
-      (selectedShop === 'all' || shop === selectedShop) &&
-      (selectedType === 'all' || item.type === selectedType)
-    );
-  });
-  renderItems();
+    filteredItems = Object.entries(items).flatMap(([shop, shopItems]) => {
+        return shopItems.filter(item => 
+            (selectedShop === 'all' || shop === selectedShop) &&
+            (selectedType === 'all' || item.type === selectedType) &&
+            (searchTerm === '' || item.name.toLowerCase().includes(searchTerm.toLowerCase()))
+        );
+    });
+    renderItems();
 }
 
+function setupSearch() {
+    const searchContainer = document.getElementById('search-container');
+    searchContainer.innerHTML = `
+        <input type="text" id="search-input" placeholder="아이템 이름 검색" />
+    `;
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value;
+        filterItems();
+    });
+}
 
 document.addEventListener('DOMContentLoaded', loadItems);

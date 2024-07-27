@@ -46,7 +46,6 @@ function showItemInfo(e) {
 
     const description = item.desc;
     const newdescription= description.replaceAll("|n", "<br>").replaceAll("o", "-");
-    console.log(newdescription)
 
     if (item) {
         const itemInfo = document.getElementById('item-info');

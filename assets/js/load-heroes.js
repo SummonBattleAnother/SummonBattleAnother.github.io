@@ -21,7 +21,6 @@ function renderHeroes() {
   
   heroList.innerHTML = `
     <div id="filters" class="filters"></div>
-    <div>hahah</div>
     <div id="hero-grid" class="hero-grid"></div>
     
   `;

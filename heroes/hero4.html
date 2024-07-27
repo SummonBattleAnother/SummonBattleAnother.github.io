@@ -3,59 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영웅1 - SBA 위키 영웅정보</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <title>블러드 메이지 - 소환대전어나더 Wiki - 영웅정보</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>영웅2</h1>
-        <nav>
-            <a href="../index.html">홈으로</a>
-        </nav>
-        <section id="hero-list">
-            <!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
-        </section>
-    </header>
     
-    <main>
-        <section id="hero-info">
-            <img src="/assets/images/hero-full/hero1-full.jpg" alt="영웅1의 전신 이미지">
-            <h2>역할: 탱커</h2>
-            <p>
-                영웅1은 전장의 최전선에서 아군을 보호하는 강력한 방어 전문가입니다. 
-                그의 거대한 방패와 굳건한 의지로, 어떠한 공격도 막아낼 수 있습니다. 
-                팀의 진군을 이끌며, 적의 공격을 무력화시키는 그의 능력은 승리의 핵심 요소입니다.
-            </p>
-            <p>
-                전투 경험이 풍부한 영웅1은 언제나 냉철한 판단으로 전황을 분석하고, 
-                팀원들에게 적절한 지시를 내립니다. 그의 존재만으로도 아군의 사기는 크게 올라가며, 
-                적들은 그를 마주하는 것을 두려워합니다.
-            </p>
-        </section>
-        
-        <section id="hero-skills">
-            <h2>스킬</h2>
-            <!-- 스킬 정보는 동적으로 로드됩니다 -->
-        </section>
-        
-        <section id="hero-stats">
-            <h2>능력치</h2>
-            <!-- 능력치는 동적으로 로드됩니다 -->
-        </section>
+</head>
+<body id="hero4">
+    <body>
+        <nav class="navbar">
+            <div>
+                <a href="../index.html" style="font-size:40px;"> 소환대전어나더 Wiki</a>
+            </div>
+            <div>
+                <a href="/heroes/hero1.html">Heroes</a>
+                <a href="#">Item</a>
+                <a href="#">tips</a>
+            </div>
+        </nav>
+    
+        <div class="card hero-list">
+            <div class="card-header">
+                <h2 id="heroListToggle">영웅 목록</h2>
+                <div id="filters" class="filters"></div>
+                <span class="toggle-icon"  id="heroListToggle">▼</span>
+            </div>
+            <div class="card-body hero-card-list">
+                <div class="card-content">
+                    <section id="hero-list">
+                        <!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
+                    </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
-        <section id="hero-chart">
-            <h2>차트</h2>
-            <canvas id="stats-chart"></canvas>
-        </section>
-    </main>
+        <div class="card">
+            <div class="card-header">
+                <h2>영웅소개</h2>
+            </div>
+            <div  class="card-body">
+                <div id="selected-hero">
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>정보</h2>
+            </div>
+            <div class="card-body">
+                <div class="info-container">
+                    <div class="info-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 two-div">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>KeyWord</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="keyword-container">
+                                                키워드
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 two-div">
+                                    <div class="card">
+                                        <section id="hero-stats">
+                                            <div class="card-header">
+                                                <h4>스탯</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <span class="badge bg-danger strength">힘 </span> 
+                                                        <span id="status-strength">정보가 없습니다</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <span class="badge bg-warning agility">민첩성 </span>
+                                                        <span id="status-agility">정보가 없습니다</span>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <span class="badge bg-success intelligence">지능 </span>
+                                                        <span id="status-intelligence">정보가 없습니다</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-chart">
+                        <section id="hero-chart">
+                            <canvas id="stats-chart"></canvas>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    <div class="card">
+        <div class="card-header">
+            <h2>스킬 정보</h2>
+        </div>
+        <div class="card-body skill-table">
+            <section id="hero-skills">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col"></th>
+                        <th scope="col">스킬명</th>
+                        <th scope="col">정보</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>플레이 팁</h2>
+        </div>
+        <div class="card-body">
+            <section id="hero-tip">
+                <ul>
+                    <li>마나가 부족한 영웅입니다. 마나포션을 적극적으로 활용하세요</li>
+                    <li>초반에도 체력이 높고 철거력이 높은 영웅입니다. 타워를 무시하고 주요 건물을 공격해보세요</li>
+                    <li>홀리라이트는 적 언데드 유닛에게는 피해를 줍니다. 공격적으로도 활용해봅시다</li>
+                    <li>영광의 축복은 디스펠을 통해 해제 가능하여 광역디스펠에 취약합니다. 버프를 받은 유닛을 분산하여 운용합시다</li>
+                    <li>영광의 축복은 부유성의 체력도 회복할 수 있습니다</li>
+                    <li>대공 능력이 부족한 영웅입니다. 적 부유성을 공격할때는 마법상인을 통해 스톤골렘을 소환하여 활용하면 유용합니다</li>
+                </ul>
+            </section>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; Summon Battle Another. All rights reserved.</p>
+        <a href="https://cafe.naver.com/war3sba">네이버 카페 방문</a>
+        &copy; Summon Battle Another. All rights reserved.</p>
     </footer>
-
+    
+    <script>
+        document.getElementById('heroListToggle').addEventListener('click', function() {
+            const heroList = document.querySelector('.hero-list');
+            heroList.classList.toggle('collapsed');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="/assets/js/load-heroes.js"></script>
     <script src="/assets/js/load-hero-details.js"></script>
 </body>

@@ -168,7 +168,9 @@ h2 {
 }
 
 .hero-desc-name {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  font-weight: bold;
+
   text-align: center;
   margin-left: 10px;
 }
@@ -177,11 +179,6 @@ h2 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-}
-
-.hero-desc-class {
-  font-size: 1.5em;
-  font-weight: bold;
 }
 
 .hero-skill-tree select {

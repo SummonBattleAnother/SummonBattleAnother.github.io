@@ -15,6 +15,7 @@
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYHLZBTLXR"></script>
+<script async src="/assets/js/tip.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -44,31 +45,190 @@
                 <section id="tip">
                     
                     <div>
-                        <h3>아군 기지</h3>
+                        <h4>전체 맵</h4>
+                        <button type="button" class="btn btn-primary ">텍스트 보이기</button>
+                        
+                        <div class="gamemap">
+                            <img src="/assets/images/tips/gamemapAll.png" alt="Sample Image">
+                            <canvas id="arrowCanvas"></canvas>
+                            <div class="overlay rectangle" style="top: 88%; left: 7%; transform: translate(-50%, -50%);" data-text="클릭시 이동" onclick="scrollToSection('base')">본진</div>
+
+                            <div class="overlay rectangle side" style="top:20%; left: 20%; transform: translate(-50%, -50%);" data-text="클릭시 이동" onclick="scrollToSection('base8')">사이드(탑)</div>
+                            <div class="overlay rectangle side" style="top:75%; left: 82%; transform: translate(-50%, -50%);" data-text="클릭시 이동" onclick="scrollToSection('base8')">사이드(바텀)</div>
+
+                            <div class="overlay circle" style="top: 72%; left: 5%;" data-text="클릭시 이동" onclick="scrollToSection('base2')">생명의빙하</div>
+                            <div class="overlay circle" style="top: 88%; left: 21%;" data-text="클릭시 이동" onclick="scrollToSection('base2')">군 사령부</div>
+                            <div class="overlay circle" style="top: 48%; left: 49%; transform: translate(-50%, -50%);" onclick="scrollToSection('base3')">마나의샘</div>
+                            
+                            <div class="overlay circle-medium" style="top: 62%; left: 46%;" data-text="클릭시 이동" onclick="scrollToSection('base7')">곡물창고1</div>
+                            <div class="overlay circle" style="top: 40%; left: 33%;" data-text="클릭시 이동" onclick="scrollToSection('base7')">곡물창고2</div>
+                            <div class="overlay circle" style="top: 35%; left: 5%;" data-text="클릭시 이동" onclick="scrollToSection('base7')">곡물창고3</div>
+                            <div class="overlay circle" style="top: 90%; left: 71%;" data-text="클릭시 이동" onclick="scrollToSection('base7')">곡물창고4</div>
+                            <div class="overlay circle" style="top: 71%; left: 15%;" data-text="클릭시 이동" onclick="scrollToSection('base7')">곡물창고5</div>
+                            <div class="overlay circle" style="top: 82%; left: 28%;" data-text="클릭시 이동" onclick="scrollToSection('base7')">곡물창고6</div>
+
+
+                            <div class="overlay circle-small camp" style="top: 50%; left: 4%;" data-text="클릭시 이동" onclick="scrollToSection('base5')">크립1</div>
+                            <div class="overlay circle-small camp" style="top: 67%; left: 60%;" data-text="클릭시 이동" onclick="scrollToSection('base5')">크립2</div>
+
+                            <div class="overlay circle-small camp" style="top: 43%; left: 41%;" data-text="클릭시 이동" onclick="scrollToSection('base6')">과거</div>
+                            
+                            <div class="overlay circle-small camp" style="top: 52%; left: 57%;" data-text="클릭시 이동" onclick="scrollToSection('base6')">미래</div>
+
+                            <div class="overlay rectangle" style="top: 8%; left: 7%; transform: translate(-50%, -50%);" data-text="클릭시 이동" onclick="scrollToSection('base4')">지옥 상점</div>
+                            <div class="overlay rectangle" style="top: 88%; left: 93%; transform: translate(-50%, -50%);" data-text="클릭시 이동" onclick="scrollToSection('base4')">천국 상점</div>
+                        </div>
+                        <p> 좌측 하단 <span style="color:red; font-weight: bold;">1팀 기준</span>으로 설명합니다. 2팀의 경우 대각선 대칭으로 구성되어 있습니다. 1팀은 우상향하여 오른쪽 위에 위치한 2팀의 캐슬을 파괴하면 승리합니다. </p>
+                        
+                        <ul>
+                            <li>미니맵의 각 부분을 클릭하면 아래 설명으로 이동합니다.</li>
+                            <li>! 미니맵은<span style="font-weight: bold;">PC 환경에 최적화</span>되어 있습니다.</li>
+                        </ul>
+
+                        <br>
+
+                        <h4 id="base">아군 기지</h4>
                         <a href="/assets/images/tips/image1.png" target="_blank">
                             <img class="image" src="/assets/images/tips/image1.png"/>
                         </a>
-                        <p> 아군 아케인 캐슬과 상점들이 위치한 본진입니다. 아케인 캐슬이 파괴되면 게임에서 패배하며, 반대로 적 캐슬을 파괴하면 승리합니다</p>
+                        <p> 아군 아케인 캐슬과 상점들이 위치한 본진입니다. 캐슬이 파괴되면 게임에서 패배하며, 반대로 적 캐슬을 파괴하면 승리합니다</p>
                         <ul>
                             <li>캐슬에서 일부 <span style="color:purple; font-weight: bold;">고급 아이템</span>을 판매합니다.</li>
                             <li>본진에는 최후 수비타워인 부유성(노란 상자)이 존재합니다. 주변 모든 적들을 무작위로 공격(마법 타입)하며 매우 빠른 공격속도를 가지고 있습니다.</li>
-
+                            <li>본진에는 각 플레이의 소환물 업그레이드 건물이 있습니다. 소환영웅은 업그레이드를 필수적으로 진행합시다.</li>
                         </ul>
-                    </p>
-                    
-                    </div>
-                
 
-                    <ul>
-                        <li> 
-                            각 진영은 총 6개의 <span style="color:brown; font-weight: bold;">곡물창고</span>를 가지고 있으며, 
-                            3분마다 곡물창고의 수에 비례하여 <span style="color:darkorange; font-weight: bold;">지원금</span>을 받습니다
-                        </li>
-                        <li> 
-                            좋은 아이템을 구매하기 위해서는 <span style="color:green; font-weight: bold;">목재</span>가 필요하며, 
-                            맵을 30초마다 이동하는 <span style="color:darkorange; font-weight: bold;">떠돌이 상인</span>이 목재를 판매합니다
-                        </li>
-                    </ul>
+                        <br>
+                        <h4 id="base2">생명의 빙하 & 군사령부</h4>
+                        <div class="multi-image-container">
+                            <a href="/assets/images/tips/image2.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image2.png" alt="생명의 빙하"/>
+                            </a>
+                            <a href="/assets/images/tips/image3.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image3.png" alt="군 사령부"/>
+                            </a>
+                        </div>
+
+                        <p> 본진 언덕 바로 아래에 주요건물인 <span style="color:blue; font-weight: bold;">생명의 빙하</span>와 <span style="color:chocolate; font-weight: bold;">군 사령부</span>가 있습니다 </p>
+
+                        <ul>
+                            <li>생명의 빙하는 아군 영웅의 <span style="color:fuchsia; font-weight: bold;">부활을 빠르게</span>해주고, 다른 주요건물의 체력을 5초마다 400 회복시키는 매우 중요한 건물입니다.</li>
+                            <li>아군 군 사령부가 파괴되면, 적군 미니언 웨이브에 강력한 <span style="color:crimson; font-weight: bold;">챔피언 유닛</span>이 추가됩니다.</li>
+                        </ul>
+
+                        <br>
+                        <h4 id="base7">곡물창고</h4>
+                            <div class="multi-image-container">
+                                <a href="/assets/images/tips/image4.png" target="_blank">
+                                    <img class="multi-images" src="/assets/images/tips/image4.png" alt="곡물창고"/>
+                                </a>
+                                <ul>
+                                    
+                                <p> 
+                                    곡물 창고는 게임 초~중반부 <span style="font-weight: bold;">반드시 수비해야는</span> 아군 주요 건물입니다.
+                                </p>
+                                    <li> 
+                                        각 진영은 총 6개의 <span style="color:brown; font-weight: bold;">곡물창고</span>를 가지고 있으며, 
+                                        3분마다 200*곡물창고의수 + 300 골드의 <span style="color:darkorange; font-weight: bold;">지원금</span>을 받습니다
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <br>
+                        <h4 id="base5">크립캠프</h4>
+                        <div class="multi-image-container">
+                            <a href="/assets/images/tips/image9.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image9.png" alt="차원의 틈"/>
+                            </a>
+                            <ul>
+                            <p> 맵 곳곳에 <span style="color:brown; font-weight: bold;">크립 캠프</span>가 위치 해 있습니다. 크립을 처치하고 추가 골드와 경험치를 획득하세요
+                            <li> 
+                                크립 캠프는 <span style="font-weight: bold;">2분</span>마다 리젠됩니다. 단, 크립 캠프에 시체가 남아있는경우 적이 리젠되지 않습니다.
+                            </li>
+                            <li> 
+                                소환 영웅은 지속시간이 무제한인 소환 유닛을 캠프에 배치하거나, 주기적으로 소환유닛을 보내 크립핑을 하면 성장에 크게 도움이 됩니다.
+                            </li>
+                            <li> 
+                                10분이 지나면 크립캠프의 적들이 강화되고 보상이 증가합니다.
+                            </li>
+                        </ul>
+                        </div>
+                        
+
+                        <br>
+                        <h4 id="base4">떠돌이 상인과 천국&지옥 상점</h4>
+                        <div class="multi-image-container">
+                            <a href="/assets/images/tips/image5.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image5.png" alt="떠돌이 상인"/>
+                            </a><a href="/assets/images/tips/image6.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image6.png" alt="지옥상점"/>
+                            </a>
+                            
+                            <ul>
+                                
+                            <p> 
+                                두 명의 <span style="color:darkorange; font-weight: bold;">떠돌이 상인</span>이 맵을 30초마다 이동합니다. 
+                            </p>
+                                
+                                <li> 
+                                    떠돌이 상인은 높은 등급의 아이템을 구매하기 위해 필요한 <span style="color:green; font-weight: bold;">목재</span> 및 오라 아이템 등 고급 아이템을 판매합니다 
+                                </li>
+                                <li>
+                                    떠돌이 상인을 통해서 <span style="font-weight: bold; color:rgb(67, 193, 243)">천국</span> 또는 <span style="font-weight: bold; color:red">지옥</span> 으로 이동할 수 있습니다. 천국/지옥에서는 더욱 강력한 <span style="font-weight: bold; color:darkorange">보물</span> 또는 <span style="font-weight: bold; color:purple">유니크</span> 등급의 아이템을 구입할 수 있습니다.
+                                </li>
+                            </ul>
+                        
+                        </div>
+
+
+                        <br>
+                        <h4 id="base6">과거와 미래</h4>
+                        <div class="multi-image-container">
+                            <a href="/assets/images/tips/image7.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image7.png" alt="차원의 틈"/>
+                            </a><a href="/assets/images/tips/image8.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image8.png" alt="지옥상점"/>
+                            </a>
+                            
+                        </div>
+                        <p> 중앙 지역 마나의 샘 좌우로는 <span style="color:brown; font-weight: bold;">차원의 틈</span>이 존재합니다. <span style="font-weight: bold;">밤 시간</span>에 차원의 틈을 통해, 과거/미래로 이동할 수 있습니다. </p>
+                        <ul>
+                            <li> 
+                                과거에서는 보물 및 유니크 아이템을 구매할 수 있으며, 강력한 유닛인 <span style="color:darkorange; font-weight: bold;">'용병'</span>을 고용하여 게임 중 활용할 수 있습니다. 
+                            </li>
+                            <li> 
+                                미래에서도 고급아이템을 판매하고 있으며, 강력한 스킬을 사용할 수 있는 <span style="color:darkorange; font-weight: bold;"> '슈퍼무기(건물)'</span>을 구입할 수 있습니다.
+                            </li>
+                            <li> 
+                                미래/과거 지역 모두 중립 크립캠프가 있어, 2분마다 크립이 리젠됩니다. 중립 유닛을 처치하고 추가 골드와 경험치를 획득하세요
+                            </li>
+                        </ul>
+
+                        <br>
+                        <h4 id="base8">옆길 활용</h4>
+                        <div class="multi-image-container">
+                            <a href="/assets/images/tips/image10.png" target="_blank">
+                                <img class="multi-images" src="/assets/images/tips/image10.png" alt="옆길 활용"/>
+                            </a>
+                        </div>
+                        <p> 소환대전어나더의 <span style="font-weight: bold;">사이드라인(탑/바텀)</span>은 미니언 웨이브가 생성되지 않습니다. 하지만 메인 전장인 중앙 지역을 우회하여 적 기지 안으로 침투할 수 있기에, 중요도가 아주 높습니다. 특히 주요 건물인 생명의 빙하/군 사령부와 빠르게 이어지기에 사이드라인 확보는 승리를 위한 필수요소입니다.</p>
+                        <ul>
+                            <li> 
+                                사이드라인의 게이트웨이는 강력한 중립 크립인 <span style="color:rgb(255, 0, 106); font-weight: bold;">게이트키퍼</span>가 지키고 있습니다. 게이트키퍼는 마나쉴드를 사용하지만, <span style="font-weight: bold;">제자리로 이동하는 동안은 마나쉴드를 사용하지 않습니다</span>.
+                            </li>
+                            <li> 
+                                각 사이드라인에 존재하는 <span style="color:darkorange; font-weight: bold;">게이트웨이는 파괴 가능하며</span> 적진의 게이트웨이를 파괴시, 아군 방향으로 이동할 수 없게됩니다. (반대로 아군에서 적기지로는 이동가능) 
+                            </li>
+                            <li> 
+                                아군 게이트가 파괴된 경우, 물가 지형에서 언덕으로 블링크를 사용하여 이동 가능합니다.
+                            </li>
+                            <li> 
+                                게이트키퍼를 공격하는 경우, 아군 타워를 적극적으로 활용합시다. (끌어오기 사냥)
+                            </li>
+                        </ul>
+                    </div>
                 </section>
                 </div>
             </div>

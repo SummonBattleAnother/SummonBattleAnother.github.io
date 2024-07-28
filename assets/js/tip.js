@@ -1,6 +1,8 @@
 function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
+    var section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 window.onload = function() {
@@ -8,6 +10,21 @@ window.onload = function() {
     const ctx = canvas.getContext('2d');
     const width = canvas.width = canvas.offsetWidth;
     const height = canvas.height = canvas.offsetHeight;
+    
+    const toggleButton = document.getElementById('toggleButton');
+    toggleButton.addEventListener('click', function() {
+        console.log("button click")
+        var overlays = document.getElementsByClassName('overlay');
+        for (var i = 0; i < overlays.length; i++) {
+            if (overlays[i].classList.contains('hidden')) {
+                toggleButton.innerHTML  = "추가정보 숨기기";
+                overlays[i].classList.remove('hidden');
+            } else {
+                toggleButton.innerHTML  = "추가정보 보이기";
+                overlays[i].classList.add('hidden');
+            }
+        }
+    });
 
     const initialArrows  = [
         { startX: width * 0.05, startY: height * 0.35, 

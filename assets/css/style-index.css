@@ -1,3 +1,7 @@
+.map-title{
+  font-size: large;
+  margin:auto;
+}
 .descbox {
   background-color: DodgerBlue;
   background-color: #f1f1f1;
@@ -17,6 +21,7 @@
   position: relative;
   display: inline-block;
   width: 100%; /* Ensure container takes full width */
+  margin-top: 10px;
 }
 
 .gamemap img {
@@ -125,7 +130,10 @@
   margin: 0 10px; /* 이미지 사이에 간격을 주기 위해 추가 */
 }
 
-
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
 
 /* Media Queries for responsive design */
 @media (max-width: 768px) {
@@ -198,7 +206,7 @@
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
 }
 #arrowCanvas {

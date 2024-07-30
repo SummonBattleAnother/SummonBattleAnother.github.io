@@ -250,3 +250,69 @@ async function loadHeroDetails() {
 }
 
 document.addEventListener('DOMContentLoaded', loadHeroDetails);
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('아이템정보 불러오기')
+    fetch('/data/items.json')
+        .then(response => response.json())
+        .then(data => {
+            // 모든 아이템 데이터를 저장할 객체
+            const allItems = {};
+
+            // JSON 데이터에서 각 상점의 아이템을 추출하여 allItems에 저장
+            data.items.forEach(store => {
+                Object.values(store).forEach(items => {
+                    items.forEach(item => {
+                        allItems[item.id] = item;
+                    });
+                });
+            });
+            console.log(allItems)
+            // Intersection Observer를 설정
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const textElement = entry.target;
+                        const itemClass = textElement.className;
+                        const itemData = allItems[itemClass];
+                        console.log('textElement', textElement)
+                        console.log('itemClass', itemClass)
+                        console.log('itemData', itemData)
+                        if (itemData) {
+                            // 아이템에 대한 HTML을 생성 (이미지와 툴팁 포함)
+                            const tooltipHTML = `
+                                <span class="tooltip">
+                                    <img src="/assets/images/item-icons/${itemClass}.webp" alt="${itemData.name}" style="width: 64px; height: 64px;">
+                                    <span class="tooltiptext">
+                                        <strong>${itemData.name}</strong><br>
+                                        종류: ${itemData.type}<br>
+                                        설명: ${itemData.desc}<br>
+                                        골드: ${itemData.gold}<br>
+                                        나무: ${itemData.wood}
+                                    </span>
+                                </span>
+                                ${itemData.name}
+                            `;
+                            console.log('change',tooltipHTML)
+                            // 요소의 텍스트 내용을 아이콘과 툴팁으로 교체
+                            //textElement.innerHTML = textElement.innerHTML.replace(itemClass, tooltipHTML);
+                            textElement.innerHTML=tooltipHTML;
+                            observer.unobserve(textElement);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // 모든 클래스가 "item"으로 시작하는 요소를 선택하고 Observer를 적용
+            const textElements = document.querySelectorAll('[class^="item"]');
+            textElements.forEach(textElement => {
+                observer.observe(textElement);
+            });
+        })
+        .catch(error => console.error('Error fetching the JSON data:', error));
+});

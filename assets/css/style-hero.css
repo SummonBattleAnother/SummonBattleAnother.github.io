@@ -296,6 +296,43 @@ th {
   object-fit: cover;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #f9f9f9;
+  color: #000;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%; /* 툴팁을 위로 이동 */
+  left: 50%;
+  margin-left: -100px; /* 툴팁을 중앙 정렬 */
+  transition: visibility 0.3s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* 툴팁 아래에 삼각형 추가 */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #f9f9f9 transparent transparent transparent; /* 삼각형 색상 */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   body {

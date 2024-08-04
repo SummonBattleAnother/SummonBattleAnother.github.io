@@ -1,13 +1,39 @@
 let keywordProperty = {};
+
 async function loadKeywords() {
     try {
         const response = await fetch('/data/keywords.json');
         keywordProperty = await response.json();
-        console.log("키워드 정보 로딩", keywordProperty)
+        //console.log("키워드 정보 로딩", keywordProperty)
     } catch (error) {
         console.error('Error loading keywords:', error);
     }
 }
+
+let allItems = {};
+async function loadAllItems() {
+    try {
+        const response = await fetch('/data/items.json');
+        allItems = await response.json();
+        //console.log("아이템 정보 로딩", allItems)
+    } catch (error) {
+        console.error('Error loading keywords:', error);
+    }
+}
+
+function getItemById(id) {
+    for (const shop of allItems.items) {
+        for (const category in shop) {
+            for (const item of shop[category]) {
+                if (item.id === id) {
+                    return item;
+                }
+            }
+        }
+    }
+    return null; // id에 해당하는 아이템이 없을 경우 null 반환
+}
+
 const ROLE_COLORS = {
     '일반': { bg: 'rgba(170, 170, 170, 0.3)', border: 'rgba(170, 170, 170, ,1)' },
     '소환': { bg: 'rgba(0, 188, 212, 0.3)', border: 'rgba(0, 188, 212, 1)' },
@@ -47,7 +73,6 @@ class Hero {
         }
     
         const currentInfo = this.getCurrentInfo();
-        console.log("현재영웅정보", currentInfo);
         heroDesc.innerHTML = `
             <div class="hero-desc">
                 
@@ -100,29 +125,42 @@ class Hero {
     }
 
     loadKeywords() {
-        const keywordElement = document.querySelector('.card-body .keyword-container');
+        const keywordElement = document.querySelector('.card-body .keyword-table');
         if (!keywordElement) {
             console.error('Keyword container not found');
             return;
         }
-    
+        while (keywordElement.firstChild) {
+            keywordElement.removeChild(keywordElement.firstChild);
+        }
+
         const currentInfo = this.getCurrentInfo();
         const keywords = currentInfo.keywords;
-        console.log("keywords", keywords);
         if (!keywords || keywords.length === 0) {
             keywordElement.innerHTML = '키워드 정보가 없습니다.';
             return;
         }
 
-        keywordElement.innerHTML = keywords.map(keyword => {
+        for (const [key, keyword] of Object.entries({ ...keywords})) {
+            const row = document.createElement('tr');
             const keywordInfo = keywordProperty[keyword];
-            console.log("foreach", keywordInfo)
+            row.innerHTML = `
+              <td><span class="keyword" style="background-color: ${keywordInfo.color};">${keyword}</span> </td>
+              <td>${keywordInfo.description}</td>
+            `;
+            keywordElement.appendChild(row);
+          }
+
+        /*keywordElement.innerHTML = keywords.map(keyword => {
+            const keywordInfo = keywordProperty[keyword];
+            //console.log("foreach", keywordInfo)
             return `
             <span class="keyword" style="background-color: ${keywordInfo.color}" data-description="${keywordInfo.description}">
                 ${keyword}
             </span>
         `;
-        }).join('');
+        }).join('')*/
+        ;
     }
 
     loadStatus() {
@@ -146,6 +184,8 @@ class Hero {
 
         const currentType = currentInfo["role"];
 
+        console.log("차트를 그립니다", score)
+
         const data = {
             labels: Object.keys(score),
             datasets: [{
@@ -162,6 +202,9 @@ class Hero {
             scale: {
                 ticks: { beginAtZero: true, max: 5 },
                 r:{
+                    beginAtZero: true,
+                    min:0,
+                    max:5,
                     angleLines:{
                         display:false
                     }
@@ -196,13 +239,19 @@ class Hero {
           console.error('Skill table not found');
           return;
         }
-    
+        
+
         const currentInfo = this.getCurrentInfo();
         const skills = currentInfo.skills;
         const commonSkills = this.commonSkills;
     
         skillTable.innerHTML = '';
-    
+        if (Object.keys(skills).length === 0) {
+            skillTable.innerHTML = '스킬 정보가 없습니다.';
+            return;
+        }
+
+
         for (const [key, skill] of Object.entries({ ...skills, ...commonSkills })) {
           const row = document.createElement('tr');
           row.innerHTML = `
@@ -211,7 +260,44 @@ class Hero {
           `;
           skillTable.appendChild(row);
         }
-      }
+    }
+
+    loadItems() {
+        const itemTable = document.querySelector('.item-table tbody');
+        if (!itemTable) {
+            console.error('item table not found');
+            return;
+        }
+
+        const currentInfo = this.getCurrentInfo();
+        const recommenditem = currentInfo.recommenditem;
+
+        itemTable.innerHTML = '';
+
+        for (const [key, item] of Object.entries({ ...recommenditem})) {
+            const itemid = item.id;
+            const itemData = getItemById(itemid);
+            /* item.json에서 아이템 이름 가져오기?*/
+
+            const tooltip = `
+            <a href="/items/iteminfo.html?itemid=${itemid}">
+                <img src="/assets/images/item-icons/${item.id}.webp" alt="${item.id.name}" style="width: 64px; height: 64px;">
+            </a>    
+            `
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td>
+                ${tooltip}
+            </td>
+            <td>
+                <h4>${itemData.name}</h4>
+                ${item.description}
+            </td>
+            `;
+            itemTable.appendChild(row);
+        }
+    }
 
     updateDisplay() {
         this.loadDescription();
@@ -219,11 +305,13 @@ class Hero {
         this.loadStatus();
         this.loadScore();
         this.loadSkills();  // 새로 추가
+        this.loadItems();  // 새로 추가
     }
 }
 
 async function loadHeroDetails() {
     await loadKeywords();
+    await loadAllItems();
     try {
         const response = await fetch('/data/heroes.json');
         if (!response.ok) {
@@ -244,75 +332,10 @@ async function loadHeroDetails() {
         hero.loadStatus();
         hero.loadScore();
         hero.loadSkills();
+        hero.loadItems();
     } catch (error) {
         console.error('Error loading hero details:', error);
     }
 }
 
 document.addEventListener('DOMContentLoaded', loadHeroDetails);
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('아이템정보 불러오기')
-    fetch('/data/items.json')
-        .then(response => response.json())
-        .then(data => {
-            // 모든 아이템 데이터를 저장할 객체
-            const allItems = {};
-
-            // JSON 데이터에서 각 상점의 아이템을 추출하여 allItems에 저장
-            data.items.forEach(store => {
-                Object.values(store).forEach(items => {
-                    items.forEach(item => {
-                        allItems[item.id] = item;
-                    });
-                });
-            });
-            console.log(allItems)
-            // Intersection Observer를 설정
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const textElement = entry.target;
-                        const itemClass = textElement.className;
-                        const itemData = allItems[itemClass];
-                        console.log('textElement', textElement)
-                        console.log('itemClass', itemClass)
-                        console.log('itemData', itemData)
-                        if (itemData) {
-                            // 아이템에 대한 HTML을 생성 (이미지와 툴팁 포함)
-                            const tooltipHTML = `
-                                <span class="tooltip">
-                                    <img src="/assets/images/item-icons/${itemClass}.webp" alt="${itemData.name}" style="width: 64px; height: 64px;">
-                                    <span class="tooltiptext">
-                                        <strong>${itemData.name}</strong><br>
-                                        종류: ${itemData.type}<br>
-                                        설명: ${itemData.desc}<br>
-                                        골드: ${itemData.gold}<br>
-                                        나무: ${itemData.wood}
-                                    </span>
-                                </span>
-                                ${itemData.name}
-                            `;
-                            console.log('change',tooltipHTML)
-                            // 요소의 텍스트 내용을 아이콘과 툴팁으로 교체
-                            //textElement.innerHTML = textElement.innerHTML.replace(itemClass, tooltipHTML);
-                            textElement.innerHTML=tooltipHTML;
-                            observer.unobserve(textElement);
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            // 모든 클래스가 "item"으로 시작하는 요소를 선택하고 Observer를 적용
-            const textElements = document.querySelectorAll('[class^="item"]');
-            textElements.forEach(textElement => {
-                observer.observe(textElement);
-            });
-        })
-        .catch(error => console.error('Error fetching the JSON data:', error));
-});

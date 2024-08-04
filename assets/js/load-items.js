@@ -10,6 +10,8 @@ async function loadItems() {
         const response = await fetch('/data/items.json');
         const data = await response.json();
         items = data.items[0];
+        console.log(items)
+        console.log(items['과거'])
         filteredItems = Object.values(items).flat();
         renderItems();
         setupFilters();
@@ -35,13 +37,17 @@ function renderItems() {
         itemCard.innerHTML = `
             <img src="/assets/images/item-icons/${item.id}.webp" alt="${item.name}" class="item-icon" data-item-id="${item.id}">
         `;
-        itemCard.addEventListener('click', showItemInfo);
+        itemCard.addEventListener('click', showItemInfoEvent);
         itemGrid.appendChild(itemCard);
     });
 }
 
-function showItemInfo(e) {
+function showItemInfoEvent(e){
     const itemId = e.target.dataset.itemId;
+    showItemInfo(itemId);
+}
+
+function showItemInfo(itemId) {
     const item = filteredItems.find(item => item.id === itemId);
 
     const description = item.desc;
@@ -51,7 +57,7 @@ function showItemInfo(e) {
         const itemInfo = document.getElementById('item-info');
         itemInfo.innerHTML = `
             <h3>${item.name}</h3>
-            <h5>가격: 🪙${item.gold}, 🪵${item.wood}</h5>
+            <h5>가격: 🪙<span style="color:#b8860b">${item.gold} 골드</span> , 🪵<span style="color:#0B6623">${item.wood} 목재</span></h5>
             <p>타입: ${item.type}</p>
             <p>${newdescription}</p>
         `;
@@ -158,3 +164,23 @@ function setupSearch() {
 }
 
 document.addEventListener('DOMContentLoaded', loadItems);
+
+function triggerA() {
+    console.log("A function triggered!");
+    // 여기에 A 함수의 내용을 작성합니다.
+}
+
+function triggerB() {
+    console.log("B function triggered!");
+    // 여기에 B 함수의 내용을 작성합니다.
+}
+
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemid = urlParams.get('itemid');
+    console.log("onload", itemid)
+
+    if (itemid) {
+        showItemInfo(itemid);
+    } 
+}

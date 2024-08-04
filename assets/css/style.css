@@ -12,9 +12,14 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ddd;
+  animation: fadeIn 0.5s;
 }
 
-h2 {
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+h2, h4 {
   margin-bottom: 0;
 }
 

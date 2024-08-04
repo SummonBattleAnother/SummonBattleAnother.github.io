@@ -13,7 +13,16 @@
           "role": "일반",
           "keywords": [
             "일반",
-            "공성"
+            "소환",
+            "일격",
+            "광역",
+            "보조",
+            "특수소환",
+            "기동성",
+            "공성",
+            "수영가능",
+            "무적반격",
+            "스킬트리"
           ],
           "score": {
             "소환화력": 3.5,
@@ -1453,7 +1462,7 @@
             "D": { "name": "스킬A", "description": "스킬A 설ㅇㅇ명" },
             "Q": { "name": "스킬A", "description": "스킬A 설명" },
             "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
+            "E": { "name": "스킬C", "description": "스킬C 설명" },  
             "R": { "name": "스킬A", "description": "스킬A 설명" },
             "F": { "name": "궁극기A", "description": "궁극기A 설명" }
           },
@@ -1481,123 +1490,76 @@
       "skilltree": false,
       "info": [
         {
-          "type":"타입A",
           "job": "쾌검사",
+          "shortDescription": "정보 없음",
           "role": "일격",
-          "shortDescription": "쾌검사 한조는 빠른 기동력을 가진 일격영웅으로, 3가지 스킬트리중 하나를 선택할 수 있습니다. A타입은 빠른 발동속도의 범위 기술들을 가진 밸런스형 스킬트리입니다.",
-          "keywords": ["스킬트리","일격"],
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "37 + 3",
             "agility": "51 + 5",
             "intelligence": "33 + 3"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },
+          "skills": {}
+        }
+      ]
+    },
+    {
+      "id": "hero47",
+      "name": "한조",
+      "job": "쾌검사",
+      "role": "일격",
+      "skilltree": false,
+      "info": [
         {
-          "type":"타입B",
           "job": "쾌검사",
+          "shortDescription": "정보 없음",
           "role": "일격",
-          "shortDescription": "쾌검사 한조는 빠른 기동력을 가진 일격영웅으로, 3가지 스킬트리중 하나를 선택할 수 있습니다. A타입은 빠른 발동속도의 범위 기술들을 가진 밸런스형 스킬트리입니다.",
-          "keywords": ["스킬트리","일격"],
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "37 + 3",
             "agility": "51 + 5",
             "intelligence": "33 + 3"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },{
-          "type":"흑도빙의",
+          "skills": {}
+        }
+      ]
+    },
+    {
+      "id": "hero48",
+      "name": "한조",
+      "job": "쾌검사",
+      "role": "일격",
+      "skilltree": false,
+      "info": [
+        {
           "job": "쾌검사",
+          "shortDescription": "정보 없음",
           "role": "일격",
-          "shortDescription": "쾌검사 한조는 빠른 기동력을 가진 일격영웅으로, 3가지 스킬트리중 하나를 선택할 수 있습니다. A타입은 빠른 발동속도의 범위 기술들을 가진 밸런스형 스킬트리입니다.",
-          "keywords": ["스킬트리","일격"],
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "37 + 3",
             "agility": "51 + 5",
             "intelligence": "33 + 3"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
+          "skills": {}
         }
       ]
     },
@@ -1902,126 +1864,80 @@
       "id": "hero60",
       "name": "아라시스",
       "job": "메이지",
-      "role": "선택",
-      "skilltree": true,
+      "role": "광역",
+      "skilltree": false,
       "info": [
         {
-          "type":"루나틱 블랙",
           "job": "메이지",
+          "shortDescription": "정보 없음",
           "role": "광역",
-          "shortDescription": "살게라스는 힘속성 근접 영웅으로, 두가지 일격 스킬트리를 선택할 수 있습니다. A타입은 잡기 기반의 기술들로 확실하게 적 영웅을 제압할 수 있는 스킬들을 보유하고 있습니다.",
-          "keywords": ["스킬트리","광역"],
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "28 + 2.5",
             "agility": "33 + 2.5",
             "intelligence": "49 + 5"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },{
-          "type":"엔젤릭 화이트",
+          "skills": {}
+        }
+      ]
+    },
+    {
+      "id": "hero61",
+      "name": "아라시스",
+      "job": "메이지",
+      "role": "광역",
+      "skilltree": false,
+      "info": [
+        {
           "job": "메이지",
+          "shortDescription": "정보 없음",
           "role": "광역",
-          "shortDescription": "살게라스는 힘속성 근접 영웅으로, 두가지 일격 스킬트리를 선택할 수 있습니다. A타입은 잡기 기반의 기술들로 확실하게 적 영웅을 제압할 수 있는 스킬들을 보유하고 있습니다.",
-          "keywords": ["스킬트리","광역"],
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "28 + 2.5",
             "agility": "33 + 2.5",
             "intelligence": "49 + 5"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },{
-          "type":"샤이어",
+          "skills": {}
+        }
+      ]
+    },
+    {
+      "id": "hero62",
+      "name": "아라시스",
+      "job": "메이지",
+      "role": "광역",
+      "skilltree": false,
+      "info": [
+        {
           "job": "메이지",
+          "shortDescription": "정보 없음",
           "role": "광역",
-          "shortDescription": "살게라스는 힘속성 근접 영웅으로, 두가지 일격 스킬트리를 선택할 수 있습니다. A타입은 잡기 기반의 기술들로 확실하게 적 영웅을 제압할 수 있는 스킬들을 보유하고 있습니다.",
-          "keywords": ["스킬트리","광역"],
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "28 + 2.5",
             "agility": "33 + 2.5",
             "intelligence": "49 + 5"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
+          "skills": {}
         }
       ]
     },
@@ -2164,88 +2080,26 @@
       "id": "hero68",
       "name": "김철거",
       "job": "철거왕",
-      "role": "선택",
-      "skilltree": true,
+      "role": "일격",
+      "skilltree": false,
       "info": [
         {
-          "type":"솔로철거",
           "job": "철거왕",
+          "shortDescription": "정보 없음",
           "role": "일격",
-          "shortDescription": "철거왕 솔로 철거 스킬트리는 강력한 공성 소환 유닛과 더불어 고정된 위치의 적들에게 큰 피해를 주는 폭탄을 사용하여 적 주요건물을 빠르게 공략할 수 있습니다.",
-          "keywords": ["스킬트리","일격","공성"],
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
-          "status":{
-            "strength"    : "54 + 4.5",
-            "agility": "36 + 3",
-            "intelligence"  : "26 + 3"
+          "status": {
+            "strength": "54 + 4.5",
+            "agility": "36 + 3.5",
+            "intelligence": "26 + 3"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item003",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },
-        {
-          "type":"용역 사무소",
-          "job": "철거왕",
-          "role": "소환",
-          "shortDescription": "철거왕 솔로 철거 스킬트리는 강력한 공성 소환 유닛과 더불어 고정된 위치의 적들에게 큰 피해를 주는 폭탄을 사용하여 적 주요건물을 빠르게 공략할 수 있습니다.",
-          "keywords": ["스킬트리","소환","공성"],
-          "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
-          },
-          "status":{
-            "strength"    : "54 + 4.5",
-            "agility": "36 + 3",
-            "intelligence"  : "26 + 3"
-          },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item001",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
+          "skills": {}
         }
       ]
     },
@@ -2254,87 +2108,25 @@
       "name": "아란",
       "job": "다스인챈터",
       "role": "선택",
-      "skilltree": true,
+      "skilltree": false,
       "info": [
         {
-          "type":"디스인챈터",
-          "job": "디스인챈터",
-          "role": "광역",
-          "shortDescription": "아란 디스인챈터 타입은 소환유닛들에게 적들의 버프를 제거하고 소환유닛에게 추가 피해를 주는 디스인챈터를 필두로, 강력한 카오스 타입 소환유닛인 소울이터, 적의 마나를 태우는 피드백을 사용합니다.",
-          "keywords": ["스킬트리","광역"],
+          "job": "다스인챈터",
+          "shortDescription": "정보 없음",
+          "role": "선택",
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "31 + 3",
             "agility": "37 + 2",
             "intelligence": "49 + 5.5"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },
-        {
-          "type":"브레이커",
-          "job": "디스인챈터",
-          "role": "일격",
-          "shortDescription": "아란 디스인챈터 타입은 소환유닛들에게 적들의 버프를 제거하고 소환유닛에게 추가 피해를 주는 디스인챈터를 필두로, 강력한 카오스 타입 소환유닛인 소울이터, 적의 마나를 태우는 피드백을 사용합니다.",
-          "keywords": ["스킬트리","일격"],
-          "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
-          },
-          "status": {
-            "strength": "31 + 3",
-            "agility": "37 + 2",
-            "intelligence": "49 + 5.5"
-          },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
+          "skills": {}
         }
       ]
     },
@@ -2343,87 +2135,25 @@
       "name": "이리시스의 푸른혼",
       "job": "푸른검",
       "role": "선택",
-      "skilltree": true,
+      "skilltree": false,
       "info": [
         {
-          "type":"푸른검",
           "job": "푸른검",
-          "role": "광역",
-          "shortDescription": "푸른검은 냉기의 기운을 사용하는 근접 민첩 영웅입니다. 범위 평타공격을 가지고 있어 기본적으로 다수의 적을 상대하기에 유리하며 다양한 상황에서 대처가능한 범위 기술들을 가지고 있습니다. 또한 물지역을 이동할 수 있어 지형을 더욱 활용할 수 있습니다.",
-          "keywords": ["스킬트리","광역","수영가능"],
+          "shortDescription": "정보 없음",
+          "role": "선택",
+          "keywords": [],
           "score": {
-            "소환화력": 1,
-            "대인능력": 3,
-            "공성능력": 2,
-            "광역처리": 5,
-            "유틸": 2
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
-          "status":{
+          "status": {
             "strength": "31 + 3",
             "agility": "48 + 5",
             "intelligence": "33 + 2.5"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },
-        {
-          "type":"크로스보우",
-          "job": "푸른검",
-          "role": "일격",
-          "shortDescription": "원거리 무장으로 변경합니다. 크리티컬 히트와, 빙결 버프를 활용하여, 최고의 평타 딜링능력을 가지고 있으며 궁극기를 활용하여 다수의 지상의 적을 상대할 수 있습니다. 기본 타입과 마찬가지로 물지역 이동이 가능하여 다양한 루트를 활용할 수 있습니다.",
-          "keywords": ["스킬트리","일격","수영가능"],
-          "score": {
-            "소환화력": 0.5,
-            "대인능력": 5,
-            "공성능력": 2,
-            "광역처리": 1,
-            "유틸": 2
-          },
-          "status":{
-            "strength": "31 + 3",
-            "agility": "48 + 5",
-            "intelligence": "33 + 2.5"
-          },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
+          "skills": {}
         }
       ]
     },
@@ -2432,86 +2162,25 @@
       "name": "헨드릭스",
       "job": "거너",
       "role": "선택",
-      "skilltree": true,
+      "skilltree": false,
       "info": [
         {
-          "type":"레인저",
           "job": "거너",
-          "role": "일격",
-          "shortDescription": "적 영웅을 원거리에서 제압하는 민첩 원거리 영웅입니다.  ",
-          "keywords": ["스킬트리","일격"],
+          "shortDescription": "정보 없음",
+          "role": "선택",
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "30 + 3",
             "agility": "50 + 5",
             "intelligence": "29 + 2.5"
           },
-         "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        },{
-          "type":"버스터",
-          "job": "거너",
-          "role": "광역",
-          "shortDescription": "지뢰,류탄,레이저라이플 등을 사용하여 다수의 적을 상대하는데 능한 광역형 스킬트리입니다.",
-          "keywords": ["스킬트리","일격"],
-          "score": {
-            "소환화력": 1.5,
-            "대인능력": 5,
-            "공성능력": 1,
-            "광역처리": 0.5,
-            "유틸": 3.5
-          },
-          "status": {
-            "strength": "30 + 3",
-            "agility": "50 + 5",
-            "intelligence": "29 + 2.5"
-          },
-         "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
+          "skills": {}
         }
       ]
     },
@@ -2520,118 +2189,25 @@
       "name": "이나리우스",
       "job": "마궁수",
       "role": "선택",
-      "skilltree": true,
+      "skilltree": false,
       "info": [
         {
-          "type":"피닉스 레인저",
           "job": "마궁수",
-          "role": "일격",
-          "shortDescription": "피닉스아티팩트를 통한 원거리 견제와 다수의 아처를이용한 힘싸움에 유리한 스킬트리입니다. 궁극기인 마경이 관통공격력의 업그레이드를 적용받기때문에 업그레이드는 필수적입니다",
-          "keywords": ["스킬트리","일격"],
+          "shortDescription": "정보 없음",
+          "role": "선택",
+          "keywords": [],
           "score": {
-            "소환화력": 1.5,
-            "대인능력": 3.5,
-            "공성능력": 3,
-            "광역처리": 3.5,
-            "유틸": 1
+            "attack": 7,
+            "defense": 9,
+            "mobility": 4,
+            "utility": 6
           },
           "status": {
             "strength": "33 + 3",
             "agility": "48 + 4.5",
             "intelligence": "36 + 3.5"
           },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
-        }, {
-          "type":"블러드 레인저",
-          "job": "마궁수",
-          "role": "일격",
-          "shortDescription": "피를 다루는 마궁수입니다. 기본스킬로 크리티컬, 블링크를 사용할 수 있는 평타형 영웅으로 순간적인 능력 강화, 체력 회복을통해 1:1에 유리한 스킬트리입니다",
-          "keywords": ["스킬트리","일격","기동성"],
-          "score": {
-            "소환화력": 2.5,
-            "대인능력": 4,
-            "공성능력": 2.5,
-            "광역처리": 1,
-            "유틸": 3
-          },
-          "status": {
-            "strength": "33 + 3",
-            "agility": "48 + 4.5",
-            "intelligence": "36 + 3.5"
-          },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            }
-          ]
-        },{
-          "type":"고스트 리더",
-          "job": "마궁수",
-          "role": "일격",
-          "shortDescription": "1:1에 뛰어난 근접타입 스킬트리입니다. 기본공격에 추가피해를 제공하는 윈드웤, 원거리에있는 적을 끌고와 공격할 수 있는 노블레스 디센트와 범위내의 적들을 공격할 수 있는 데스페라도를 사용할 수있습니다.",
-          "keywords": ["스킬트리","일격","기동성"],
-          "score": {
-            "소환화력": 2,
-            "대인능력": 4.5,
-            "공성능력": 2.5,
-            "광역처리": 2,
-            "유틸": 3
-          },
-          "status": {
-            "strength": "36 + 3.5",
-            "agility": "50 + 4.5",
-            "intelligence": "33 + 3"
-          },
-          "skills": {
-            "D": { "name": "스킬A", "description": "스킬A 설명" },
-            "Q": { "name": "스킬A", "description": "스킬A 설명" },
-            "W": { "name": "스킬B", "description": "스킬B 설명" },
-            "E": { "name": "스킬C", "description": "스킬C 설명" },
-            "R": { "name": "스킬A", "description": "스킬A 설명" },
-            "F": { "name": "궁극기A", "description": "궁극기A 설명" }
-          },
-          "recommenditem":[
-            {
-              "id":"item005",
-              "description":"마나가 부족한 경우가 잦습니다. 포션을 활용합시다"
-            },{
-              "id":"item904",
-              "description":"아군의 기동성이 높아지며 근접 유닛인 나이트와 캡틴은 이동속도 증가가 전투력으로 이어집니다."
-            },
-            {
-              "id":"item905",
-              "description":"소환영웅의 전체적인 화력을 크게 끌어올려주는 필수 아이템입니다."
-            }
-          ]
+          "skills": {}
         }
       ]
     },
@@ -2640,14 +2216,13 @@
       "name": "댈린 프라우드무어",
       "job": "용기사",
       "role": "선택",
-      "skilltree": true,
+      "skilltree": false,
       "info": [
         {
-          "type":"용기사",
           "job": "용기사",
-          "role": "소환",
-          "shortDescription": "소환에 중점을둔 스킬트리입니다. 궁극기인 용소환의 쿨타임이 짧고 강력한 네더드래곤을 소환하여 싸울 수 있습니다. ",
-          "keywords": ["스킬트리","일격"],
+          "shortDescription": "정보 없음",
+          "role": "선택",
+          "keywords": [],
           "score": {
             "attack": 7,
             "defense": 9,

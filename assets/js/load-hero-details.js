@@ -117,7 +117,7 @@ class Hero {
     createTypeSelector() {
         return `
             <div class="hero-skill-tree-new">
-                스킬트리 선택: <select id="type-selector">
+                스킬트리 선택: <select class="form-select form-select-sm" id="type-selector">
                     ${this.info.map(i => `<option value="${i.type || ''}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type ? `${i.type}(${i.role})` : `기본(${i.role})`}</option>`).join('')}
                 </select>
             </div>

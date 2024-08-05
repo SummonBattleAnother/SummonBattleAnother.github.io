@@ -55,7 +55,7 @@ function setupFilters() {
 
 function createSelect(options, defaultValue, onChange, labelText) {
   const select = document.createElement('select');
-  select.className = 'role-select';
+  select.className = 'role-select form-select form-select-sm';
   options.forEach(option => {
     const optionElement = document.createElement('option'); 
     optionElement.value = option;

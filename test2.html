@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Gradient Border Animation</title>
+    <style>
+        .gradient-border {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation: rotate 4s linear infinite;
+        }
+
+        .corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, red, yellow);
+            animation: gradientAnimation 4s linear infinite;
+        }
+
+        .top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .top-right {
+            top: 0;
+            right: 0;
+            transform: rotate(90deg);
+        }
+
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+            transform: rotate(270deg);
+        }
+
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+            transform: rotate(180deg);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(45deg, red, yellow);
+            }
+            50% {
+                background: linear-gradient(45deg, yellow, red);
+            }
+            100% {
+                background: linear-gradient(45deg, red, yellow);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-border">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+    </div>
+</body>
+</html>

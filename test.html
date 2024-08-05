@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Border Animation</title>
+    <style>
+        .gradient-border {
+            width: 200px;
+            height: 200px;
+            border: 5px solid;
+            border-image: linear-gradient(90deg, red, yellow);
+            border-image-slice: 1;
+            animation: gradientAnimation 4s infinite;
+        }
+        
+        .block {
+            width: 100px;
+            height: 100px;
+            /* dashed border */
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            }
+
+        @keyframes gradientAnimation {
+            0% {
+                border-image-source: linear-gradient(90deg, red, yellow);
+            }
+            50% {
+                border-image-source: linear-gradient(90deg, yellow, red);
+            }
+            100% {
+                border-image-source: linear-gradient(90deg, red, yellow);
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1">
+                    <animate attributeName="stop-color" values="rgb(255,255,0);rgb(255,0,0);rgb(255,255,0)" dur="4s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1">
+                    <animate attributeName="stop-color" values="rgb(255,0,0);rgb(0,0,255);rgb(255,0,0)" dur="4s" repeatCount="indefinite" />
+                </stop>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <div class="gradient-border"></div>
+
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='5' stroke-dasharray='50%2c25%2c50%2c25%2c50' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+</body>
+</html>

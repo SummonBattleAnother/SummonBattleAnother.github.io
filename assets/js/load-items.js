@@ -121,7 +121,7 @@ function setupFilters() {
 
 function createSelect(options, defaultValue, onChange, labelText) {
     const select = document.createElement('select');
-    select.className = 'filter-select form-select form-select-sm';
+    select.className = 'filter-select';
     options.forEach(option => {
         const optionElement = document.createElement('option');
         optionElement.value = option;

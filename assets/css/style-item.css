@@ -95,3 +95,16 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.item-search{
+  background-color: #007bff;
+  width:100%
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .item-search{
+    background-color: #007bff;
+    width:100%
+  }
+}

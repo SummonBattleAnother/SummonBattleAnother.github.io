@@ -291,7 +291,7 @@ class Hero {
                 ${tooltip}
             </td>
             <td>
-                <h4>${itemData.name}</h4>
+                <h5>${itemData.name}</h5>
                 ${item.description}
             </td>
             `;

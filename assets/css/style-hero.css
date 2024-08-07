@@ -86,6 +86,10 @@
   margin-bottom: 30px;
 }
 
+.hero-text-skill{
+  font-weight:bold;
+}
+
 .hero-left {
   flex: 0 0 200px;
   display: flex;
@@ -99,12 +103,13 @@
 }
 
 .hero-desc-name {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   margin:auto;
   text-align: center;
   margin-left: 10px;
 }
+
 .hero-top {
   display: flex;
   justify-content: space-between;

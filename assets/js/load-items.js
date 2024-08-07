@@ -56,7 +56,7 @@ function showItemInfo(itemId) {
     if (item) {
         const itemInfo = document.getElementById('item-info');
         itemInfo.innerHTML = `
-            <h3>${item.name}</h3>
+            <h4>${item.name}</h4>
             <h5>가격: 🪙<span style="color:#b8860b">${item.gold} 골드</span> , 🪵<span style="color:#0B6623">${item.wood} 목재</span></h5>
             <p>타입: ${item.type}</p>
             <p>${newdescription}</p>
@@ -154,7 +154,7 @@ function filterItems() {
 function setupSearch() {
     const searchContainer = document.getElementById('search-container');
     searchContainer.innerHTML = `
-        <input type="text" id="search-input" placeholder="아이템 이름 검색" />
+        <input class="item-search" type="text" id="search-input" placeholder="아이템 검색" />
     `;
     const searchInput = document.getElementById('search-input');
     searchInput.addEventListener('input', (e) => {

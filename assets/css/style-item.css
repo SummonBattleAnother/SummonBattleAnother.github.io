@@ -93,5 +93,10 @@
 .filter-select {
   padding: 5px;
   border: 1px solid #ccc;
+  background-color:seashell;
   border-radius: 4px;
+}
+
+.item-search{
+  background-color:seashell;
 }

@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  padding: 20px;
+  padding: 10px;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ddd;
@@ -29,7 +29,7 @@ h2, h3, h4 {
   background-color: #007bff;
   color: white;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .navbar h1 {
@@ -46,7 +46,7 @@ h2, h3, h4 {
 .card {
   border: 1px solid #ddd;
   border-radius: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   overflow: visible;
 }
 

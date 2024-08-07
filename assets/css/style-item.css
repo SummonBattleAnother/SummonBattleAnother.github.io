@@ -93,18 +93,10 @@
 .filter-select {
   padding: 5px;
   border: 1px solid #ccc;
+  background-color:seashell;
   border-radius: 4px;
 }
 
 .item-search{
-  background-color: #007bff;
-  width:100%
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .item-search{
-    background-color: #007bff;
-    width:100%
-  }
+  background-color:seashell;
 }

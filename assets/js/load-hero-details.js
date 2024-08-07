@@ -80,7 +80,7 @@ class Hero {
                     <div class="hero-top">
                     <div>
                         <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-desc-icon">
-                            <span class="hero-desc-name">${this.name} - ${currentInfo.job || ' '}</span>
+                            <span class="hero-desc-name">${currentInfo.job || ' '} - ${this.name}</span>
                         </div>
                         ${this.createTypeSelector()}
                     </div>

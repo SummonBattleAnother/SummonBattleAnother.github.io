@@ -4,19 +4,23 @@ let selectedShop = 'all';
 let selectedType = 'all';
 let selectedItemId = null;
 let searchTerm = '';
+let initialItemId = null;  // Store the initial item id
 
 async function loadItems() {
     try {
         const response = await fetch('/data/items.json');
         const data = await response.json();
         items = data.items[0];
-        console.log(items)
-        console.log(items['과거'])
         filteredItems = Object.values(items).flat();
         renderItems();
         setupFilters();
         setupItemInfoClose();
         setupSearch();
+
+        // After items are loaded, check if there was an initial itemid and show its info
+        if (initialItemId) {
+            showItemInfo(initialItemId);
+        }
     } catch (error) {
         console.error('Error loading items:', error);
     }
@@ -50,10 +54,9 @@ function showItemInfoEvent(e){
 function showItemInfo(itemId) {
     const item = filteredItems.find(item => item.id === itemId);
 
-    const description = item.desc;
-    const newdescription= description.replaceAll("|n", "<br>").replaceAll("o", "-");
-
     if (item) {
+        const description = item.desc;
+        const newdescription = description.replaceAll("|n", "<br>").replaceAll("o", "-");
         const itemInfo = document.getElementById('item-info');
         itemInfo.innerHTML = `
             <h3>${item.name}</h3>
@@ -64,6 +67,7 @@ function showItemInfo(itemId) {
         itemInfo.style.display = 'block';
         selectedItemId = itemId;
         highlightSelectedItem();
+        itemInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -139,7 +143,6 @@ function createSelect(options, defaultValue, onChange, labelText) {
     return label;
 }
 
-
 function filterItems() {
     filteredItems = Object.entries(items).flatMap(([shop, shopItems]) => {
         return shopItems.filter(item => 
@@ -165,22 +168,10 @@ function setupSearch() {
 
 document.addEventListener('DOMContentLoaded', loadItems);
 
-function triggerA() {
-    console.log("A function triggered!");
-    // 여기에 A 함수의 내용을 작성합니다.
-}
-
-function triggerB() {
-    console.log("B function triggered!");
-    // 여기에 B 함수의 내용을 작성합니다.
-}
-
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const itemid = urlParams.get('itemid');
-    console.log("onload", itemid)
-
     if (itemid) {
-        showItemInfo(itemid);
-    } 
+        initialItemId = itemid;  // Store the item id temporarily
+    }
 }

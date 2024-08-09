@@ -7,10 +7,13 @@ let searchTerm = '';
 let initialItemId = null;  // Store the initial item id
 
 const TYPE_COLORS = {
-    '소모품': '#ff0',//'rgba(255, 170, 170, 0.3)',
-    '장비-일반': 'rgba(170, 170, 170, 0.3)',
-    '장비-보물': 'rgba(170, 170, 170, 0.3)',
-    '장비-유니크': 'rgba(170, 170, 170, 0.3)',
+    '소모품': '#1DE9DA',//'rgba(255, 170, 170, 0.3)',
+    '보조도구': '#7F8C8D',
+    '장비-일반': '#7F8C8D',
+    '장비-보물': '#CD9031',
+    '장비-유니크': '#4500C7',
+    '한정': '#36CD31',
+    '조합': '#F91212',
 };
 
 async function loadItems() {

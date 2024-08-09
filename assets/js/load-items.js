@@ -210,5 +210,6 @@ window.onload = function() {
     const itemid = urlParams.get('itemid');
     if (itemid) {
         initialItemId = itemid;  // Store the item id temporarily
+        showItemInfo(initialItemId);
     }
 }

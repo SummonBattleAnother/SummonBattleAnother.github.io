@@ -6,6 +6,13 @@ let selectedItemId = null;
 let searchTerm = '';
 let initialItemId = null;  // Store the initial item id
 
+const TYPE_COLORS = {
+    '소모품': '#ff0',//'rgba(255, 170, 170, 0.3)',
+    '장비-일반': 'rgba(170, 170, 170, 0.3)',
+    '장비-보물': 'rgba(170, 170, 170, 0.3)',
+    '장비-유니크': 'rgba(170, 170, 170, 0.3)',
+};
+
 async function loadItems() {
     try {
         const response = await fetch('/data/items.json');
@@ -58,10 +65,12 @@ function showItemInfo(itemId) {
         const description = item.desc;
         const newdescription = description.replaceAll("|n", "<br>").replaceAll("o", "-");
         const itemInfo = document.getElementById('item-info');
+        const color = TYPE_COLORS[item.type];
+        console.log("color :", color)
         itemInfo.innerHTML = `
             <h4>${item.name}</h4>
             <h5>가격: 🪙<span style="color:#b8860b">${item.gold} 골드</span> , 🪵<span style="color:#0B6623">${item.wood} 목재</span></h5>
-            <p>타입: ${item.type}</p>
+            <p>타입: <span style=color:${color}>${item.type}</span></p>
             <p>${newdescription}</p>
         `;
         itemInfo.style.display = 'block';

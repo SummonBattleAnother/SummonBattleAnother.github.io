@@ -16,18 +16,6 @@ const TYPE_COLORS = {
     '한정': '#36CD31',
     '조합': '#F91212',
 };
-
-const SHOP_COLORS = {
-    '소모품': '#008DFF',
-    '보조도구': '#7F8C8D',
-    '장비-일반': '#7F8C8D',
-    '장비-레어': '#0071FF',
-    '장비-보물': '#CD9031',
-    '장비-유니크': '#4500C7',
-    '한정': '#36CD31',
-    '조합': '#F91212',
-};
-
 async function loadItems() {
     try {
         const response = await fetch('/data/items.json');
@@ -98,7 +86,7 @@ function showItemInfo(itemId) {
             <p><h4>${item.name}</h4></p>
             <h5>가격: 🪙<span style="color:#b8860b">${item.gold} 골드</span> , 🪵<span style="color:#0B6623">${item.wood} 목재</span></h5>
             <p>타입: <span style=color:${color}>${item.type}</span>
-            <br>상점: ${item.shopname}</p>
+            <br>상점: <span style="color:#46695E">${item.shopname}</span></p>
             <p>${newdescription}</p>
         `;
         itemInfo.style.display = 'block';

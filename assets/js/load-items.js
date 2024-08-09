@@ -7,9 +7,21 @@ let searchTerm = '';
 let initialItemId = null;  // Store the initial item id
 
 const TYPE_COLORS = {
-    '소모품': '#1DE9DA',//'rgba(255, 170, 170, 0.3)',
+    '소모품': '#008DFF',
     '보조도구': '#7F8C8D',
     '장비-일반': '#7F8C8D',
+    '장비-레어': '#0071FF',
+    '장비-보물': '#CD9031',
+    '장비-유니크': '#4500C7',
+    '한정': '#36CD31',
+    '조합': '#F91212',
+};
+
+const SHOP_COLORS = {
+    '소모품': '#008DFF',
+    '보조도구': '#7F8C8D',
+    '장비-일반': '#7F8C8D',
+    '장비-레어': '#0071FF',
     '장비-보물': '#CD9031',
     '장비-유니크': '#4500C7',
     '한정': '#36CD31',
@@ -20,7 +32,19 @@ async function loadItems() {
     try {
         const response = await fetch('/data/items.json');
         const data = await response.json();
-        items = data.items[0];
+
+        // 모든 상점의 아이템을 로드하고 items에 저장
+        items = data.items.reduce((acc, shop) => {
+            Object.entries(shop).forEach(([shopName, shopItems]) => {
+                acc[shopName] = shopItems.map(item => ({
+                    ...item,             // 기존 아이템 정보 유지
+                    shopname: shopName       // "상점" 정보 추가
+                }));
+            });
+            return acc;
+        }, {});
+
+        // 모든 상점의 아이템을 평탄화하여 초기 filteredItems 설정
         filteredItems = Object.values(items).flat();
         renderItems();
         setupFilters();
@@ -71,9 +95,10 @@ function showItemInfo(itemId) {
         const color = TYPE_COLORS[item.type];
         console.log("color :", color)
         itemInfo.innerHTML = `
-            <h4>${item.name}</h4>
+            <p><h4>${item.name}</h4></p>
             <h5>가격: 🪙<span style="color:#b8860b">${item.gold} 골드</span> , 🪵<span style="color:#0B6623">${item.wood} 목재</span></h5>
-            <p>타입: <span style=color:${color}>${item.type}</span></p>
+            <p>타입: <span style=color:${color}>${item.type}</span>
+            <br>상점: ${item.shopname}</p>
             <p>${newdescription}</p>
         `;
         itemInfo.style.display = 'block';
@@ -157,7 +182,7 @@ function createSelect(options, defaultValue, onChange, labelText) {
 
 function filterItems() {
     filteredItems = Object.entries(items).flatMap(([shop, shopItems]) => {
-        return shopItems.filter(item => 
+        return shopItems.filter(item =>
             (selectedShop === 'all' || shop === selectedShop) &&
             (selectedType === 'all' || item.type === selectedType) &&
             (searchTerm === '' || item.name.toLowerCase().includes(searchTerm.toLowerCase()))

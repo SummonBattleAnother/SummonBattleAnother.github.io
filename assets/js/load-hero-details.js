@@ -35,7 +35,7 @@ function getItemById(id) {
 }
 
 const ROLE_COLORS = {
-    '일반': { bg: 'rgba(170, 170, 170, 0.3)', border: 'rgba(170, 170, 170, ,1)' },
+    '일반': { bg: 'rgba(170, 170, 170, 0.3)', border: 'rgba(255, 255, 255, ,1)' },
     '소환': { bg: 'rgba(0, 188, 212, 0.3)', border: 'rgba(0, 188, 212, 1)' },
     '일격': { bg: 'rgba(255, 0, 0, 0.3)', border: 'rgba(255, 0, 0, 1)' },
     '광역': { bg: 'rgba(156, 39, 176, 0.3)', border: 'rgba(156, 39, 176, 1)' },
@@ -71,19 +71,41 @@ class Hero {
             console.error('Element with id "selected-hero" not found');
             return;
         }
-    
+        
         const currentInfo = this.getCurrentInfo();
+        const score = currentInfo.score;
+        const currentType = currentInfo["role"];
+        const jobcolor =ROLE_COLORS[currentType]["border"];
+
         heroDesc.innerHTML = `
             <div class="hero-desc">
                 
                 <div class="hero-right">
                     <div class="hero-top">
-                    <div>
-                        <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-desc-icon">
-                            <span class="hero-desc-name">${currentInfo.job || ' '} - ${this.name}</span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-2">
+                                    <article class="hero-icon-card-container">
+                                        <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-desc-icon ">           
+                                        <span class="borderspan border-top"></span>
+                                        <span class="borderspan border-right"></span>
+                                        <span class="borderspan border-bottom"></span>
+                                        <span class="borderspan border-left"></span>
+                                        </article>
+                                </div>
+                                <div class="col-7 hero-desc-name-container">
+                                    <span class="hero-desc-name">
+                                        <span style="color:${jobcolor};">${currentInfo.job || ' '}</span>
+                                    <br>
+                                    <span class="hero-desc-name">${this.name}</span>
+                                </div>
+                                <div class="col-3">
+                                    ${this.createTypeSelector()}
+                                </div>
+                            </div>
                         </div>
-                        ${this.createTypeSelector()}
                     </div>
+                        
                     <div class="hero-bottom">
                         <p class="hero-description">${currentInfo.shortDescription}</p>
                     </div>
@@ -117,7 +139,7 @@ class Hero {
     createTypeSelector() {
         return `
             <div class="hero-skill-tree-new">
-                스킬트리 선택: <select class="form-select form-select-sm" id="type-selector">
+                스킬트리: <select class="form-select form-select-sm" id="type-selector">
                     ${this.info.map(i => `<option value="${i.type || ''}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type ? `${i.type}(${i.role})` : `기본(${i.role})`}</option>`).join('')}
                 </select>
             </div>
@@ -290,7 +312,7 @@ class Hero {
             <td>
                 ${tooltip}
             </td>
-            <td>
+            <td class="item-description">
                 <h5>${itemData.name}</h5>
                 ${item.description}
             </td>

@@ -3,6 +3,14 @@ let heroes = [];
 let filteredHeroes = [];
 let selectedRole = 'all';
 
+const colors = {
+  '일반': 'rgb(0, 0, 0)',
+  '소환': 'rgba(0, 188, 212, 1)' ,
+  '일격': 'rgba(255, 0, 0, 1)' ,
+  '광역': 'rgba(156, 39, 176, 1)' ,
+  '보조': 'rgba(250, 142, 229, 1)' ,
+  '선택': 'rgba(255, 121, 55, 1)'
+};
 async function loadHeroes() {
   try {
     const response = await fetch('/data/heroes.json');
@@ -22,7 +30,6 @@ function renderHeroes() {
   heroList.innerHTML = `
     <div id="filters" class="filters"></div>
     <div id="hero-grid" class="hero-grid"></div>
-    
   `;
 
   const heroGrid = document.getElementById('hero-grid');
@@ -32,7 +39,7 @@ function renderHeroes() {
     heroCard.className = 'hero-card';
     heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
-        <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon">
+        <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon" style="border:solid 3px ${colors[hero.role]};border-radius: 10px; clip-path: inset(1px);">
         <div class="hero-icon-name">${hero.job}</div>
       </a>
     `;
@@ -51,6 +58,7 @@ function setupFilters() {
 
   filtersContainer.innerHTML = ''; // Clear existing content
   filtersContainer.appendChild(roleSelect);
+
 }
 
 function createSelect(options, defaultValue, onChange, labelText) {
@@ -69,7 +77,6 @@ function createSelect(options, defaultValue, onChange, labelText) {
   label.className = 'role-label';
   label.innerHTML = `<span>${labelText}: </span>`;
   label.appendChild(select);
-
   return label;
 }
 

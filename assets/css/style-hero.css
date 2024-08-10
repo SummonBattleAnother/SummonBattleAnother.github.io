@@ -70,6 +70,14 @@
   object-fit: cover;
 }
 
+.hero-icon-normal{
+  border-color: solid 50px #00bcd4;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+}
+
+
 /* Hero container and selected hero styles */
 .hero-desc {
   display: flex;
@@ -102,12 +110,23 @@
   object-fit: cover;
 }
 
+.hero-desc-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-desc-job {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+}
+
 .hero-desc-name {
   font-size: 1.2em;
   font-weight: bold;
-  margin:auto;
+  margin:5px;
   text-align: center;
-  margin-left: 10px;
 }
 
 .hero-top {
@@ -256,8 +275,8 @@ th {
 
 .hero-card {
   background-color: white;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 4px;
+  border-radius: 4px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -266,6 +285,22 @@ th {
   transform: translateY(-5px);
 }
 
+.item-table{
+  padding:0px;
+}
+
+.item-description{
+  align-content: center;
+}
+
+@keyframes moveGradient {
+  0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -316,7 +351,7 @@ th {
 
   .hero-desc-name,
   .hero-desc-class {
-    text-align: left; /* 텍스트 왼쪽 정렬 */
+    text-align: center; /* 텍스트 왼쪽 정렬 */
   }
 
   .hero-skill-tree-new{
@@ -339,5 +374,155 @@ th {
   }
   td:nth-child(1) {  
     background-color: #ddd;
+  }
+}
+
+.hero-icon-card-container {
+  position: relative;
+  color: #fff;
+  background: transparent;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 49, 49, 0.5);
+  border-right: 1px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+  border-left: 1px solid rgba(255, 255, 113, 0.5);
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.borderspan {
+  position: absolute;
+  border-radius: 100vmax;
+}
+
+.border-top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(255, 49, 49, 0.5),
+    rgb(255, 49, 49)
+  );
+}
+
+.border-bottom {
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    rgb(57, 255, 20),
+    rgba(57, 255, 20, 0.5),
+    transparent 50%
+  );
+}
+
+.border-right {
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.5),
+    rgb(0, 255, 255)
+  );
+}
+
+.border-left {
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 113),
+    rgba(255, 255, 113, 0.5),
+    transparent 70%
+  );
+}
+
+.border-top {
+  animation: animateTop 3s ease-in-out infinite;
+}
+
+.border-bottom {
+  animation: animateBottom 3s ease-in-out infinite;
+}
+
+.border-right {
+  animation: animateRight 3s ease-in-out infinite;
+}
+
+.border-left {
+  animation: animateLeft 3s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  55%,
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
   }
 }

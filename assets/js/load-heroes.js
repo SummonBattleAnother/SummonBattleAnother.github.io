@@ -37,12 +37,27 @@ function renderHeroes() {
   filteredHeroes.forEach(hero => {
     const heroCard = document.createElement('div');
     heroCard.className = 'hero-card';
-    heroCard.innerHTML = `
+
+    const id= parseInt(hero.id.match(/\d+/)[0], 10)
+
+    if(id > 29){
+      heroCard.innerHTML = `
+      <a href="#" class="hero-link">
+        <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon-notready" style="border:solid 3px ${colors[hero.role]};border-radius: 10px; clip-path: inset(1px);">
+        <div class="hero-icon-name">(작성중)</div>
+      </a>
+    `;
+    }else{
+    console.log(id)
+
+      heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
         <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon" style="border:solid 3px ${colors[hero.role]};border-radius: 10px; clip-path: inset(1px);">
         <div class="hero-icon-name">${hero.job}</div>
       </a>
     `;
+    }
+
     heroGrid.appendChild(heroCard);
   });
 }

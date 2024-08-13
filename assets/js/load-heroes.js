@@ -40,7 +40,7 @@ function renderHeroes() {
 
     const id= parseInt(hero.id.match(/\d+/)[0], 10)
 
-    if(id == 34 || id > 35){
+    if(id == 40 || id > 41){
       heroCard.innerHTML = `
       <a href="#" class="hero-link">
         <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon-notready" style="border:solid 3px ${colors[hero.role]};border-radius: 10px; clip-path: inset(1px);">

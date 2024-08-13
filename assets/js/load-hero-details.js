@@ -84,7 +84,7 @@ class Hero {
                     <div class="hero-top">
                         <div class="container">
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     <article class="hero-icon-card-container">
                                         <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-desc-icon ">           
                                         <span class="borderspan border-top"></span>
@@ -93,7 +93,7 @@ class Hero {
                                         <span class="borderspan border-left"></span>
                                         </article>
                                 </div>
-                                <div class="col-6 hero-desc-name-container">
+                                <div class="col-7 hero-desc-name-container">
                                     <span class="hero-desc-name">
                                         <span style="color:${jobcolor};">${currentInfo.job || ' '}</span>
                                     <br>
@@ -277,8 +277,9 @@ class Hero {
         for (const [key, skill] of Object.entries({ ...skills, ...commonSkills })) {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td><span style="font-weight:bold;">${key}</span> ${skill.name}</td>
-            <td>${skill.description}</td>
+            <td><span style="font-weight:bold;">[${key}] ${skill.name}</span> 
+            <br>
+            ${skill.description}</td>
           `;
           skillTable.appendChild(row);
         }

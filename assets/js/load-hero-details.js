@@ -79,35 +79,32 @@ class Hero {
 
         heroDesc.innerHTML = `
             <div class="hero-desc">
-                
-                <div class="hero-right">
-                    <div class="hero-top">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-2">
-                                    <article class="hero-icon-card-container">
-                                        <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}" class="hero-desc-icon ">           
-                                        <span class="borderspan border-top"></span>
-                                        <span class="borderspan border-right"></span>
-                                        <span class="borderspan border-bottom"></span>
-                                        <span class="borderspan border-left"></span>
-                                        </article>
-                                </div>
-                                <div class="col-7 hero-desc-name-container">
-                                    <span class="hero-desc-name">
-                                        <span style="color:${jobcolor};">${currentInfo.job || ' '}</span>
-                                    <br>
-                                    <span class="hero-desc-name">${this.name}</span>
-                                </div>
-                                <div class="col-3">
-                                    ${this.createTypeSelector()}
-                                </div>
-                            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <article class="hero-icon-card-container">
+                                <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}">           
+                                <span class="borderspan border-top"></span>
+                                <span class="borderspan border-right"></span>
+                                <span class="borderspan border-bottom"></span>
+                                <span class="borderspan border-left"></span>
+                            </article>
+                        </div>
+                        
+                        <div class="col-7">
+                            <div style="color:${jobcolor};" class="hero-desc-job">${currentInfo.job || ' '}</div>
+                            <div  class="hero-desc-name">${this.name}</div>
+                        </div>
+                        <div class="col-3">
+                            ${this.createTypeSelector()}
                         </div>
                     </div>
-                        
-                    <div class="hero-bottom">
-                        <p class="hero-description">${currentInfo.shortDescription}</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-bottom">
+                                <p class="hero-description">${currentInfo.shortDescription}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

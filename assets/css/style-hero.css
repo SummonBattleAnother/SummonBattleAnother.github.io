@@ -117,18 +117,6 @@
   font-weight:bold;
 }
 
-.hero-left {
-  flex: 0 0 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-desc-icon {
-  object-fit: cover;
-}
-
 .hero-desc-name-container {
   display: flex;
   justify-content: center;
@@ -136,23 +124,16 @@
 }
 
 .hero-desc-job {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: bold;
   text-align: center;
 }
 
 .hero-desc-name {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   margin:5px;
   text-align: center;
-}
-
-.hero-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
 }
 
 .hero-skill-tree select {

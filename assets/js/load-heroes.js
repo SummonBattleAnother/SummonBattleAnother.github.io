@@ -33,6 +33,16 @@ function renderHeroes() {
   `;
 
   const heroGrid = document.getElementById('hero-grid');
+  const randomid = Math.floor(Math.random() * 40);
+  const randomCard = document.createElement('div');
+  randomCard.className = 'hero-card';
+  randomCard.innerHTML=`
+    <a href="/heroes/hero${randomid}.html" class="hero-link">
+        <img src="/assets/images/item-icons/item608.webp" alt="랜덤" class="hero-icon" style="border:solid 3px ${colors["선택"]};border-radius: 10px; clip-path: inset(1px);">
+        <div class="hero-icon-name">랜덤선택</div>
+  </a>
+`;
+  heroGrid.appendChild(randomCard);
 
   filteredHeroes.forEach(hero => {
     const heroCard = document.createElement('div');
@@ -49,7 +59,6 @@ function renderHeroes() {
     `;
     }else{
     console.log(id)
-
       heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
         <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon" style="border:solid 3px ${colors[hero.role]};border-radius: 10px; clip-path: inset(1px);">

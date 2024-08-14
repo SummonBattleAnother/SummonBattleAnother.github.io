@@ -79,35 +79,39 @@ class Hero {
 
         heroDesc.innerHTML = `
             <div class="hero-desc">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <article class="hero-icon-card-container">
-                                <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}">           
-                                <span class="borderspan border-top"></span>
-                                <span class="borderspan border-right"></span>
-                                <span class="borderspan border-bottom"></span>
-                                <span class="borderspan border-left"></span>
-                            </article>
-                        </div>
-                        
-                        <div class="col-7">
-                            <div style="color:${jobcolor};" class="hero-desc-job">${currentInfo.job || ' '}</div>
-                            <div  class="hero-desc-name">${this.name}</div>
-                        </div>
-                        <div class="col-3">
-                            ${this.createTypeSelector()}
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <!-- 1. Icon Card Container -->
+                    <div class="col-6 col-md-3 order-1">
+                        <article class="hero-icon-card-container">
+                            <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}">           
+                            <span class="borderspan border-top"></span>
+                            <span class="borderspan border-right"></span>
+                            <span class="borderspan border-bottom"></span>
+                            <span class="borderspan border-left"></span>
+                        </article>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="hero-bottom">
-                                <p class="hero-description">${currentInfo.shortDescription}</p>
-                            </div>
+                    
+                    <!-- 3. Type Selector -->
+                    <div class="col-6 col-md-3 order-2 order-md-3">
+                        ${this.createTypeSelector()}
+                    </div>
+        
+                    <!-- 2. Job and Name -->
+                    <div class="col-12 col-md-6 order-3 order-md-2">
+                        <div style="color:${jobcolor};" class="hero-desc-job">${currentInfo.job || ' '}</div>
+                        <div class="hero-desc-name">${this.name}</div>
+                    </div>
+        
+                    <!-- 4. Bottom Description -->
+                    <div class="col-12 order-4">
+                        <div class="hero-bottom">
+                            <p class="hero-description">${currentInfo.shortDescription}</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         `;
     
         if (this.skilltree) {

@@ -153,11 +153,6 @@
   line-height: 1.6;
 }
 
-.hero-icon-container {
-  flex: 0 0 auto;
-  margin-right: 20px;
-}
-
 .hero-info {
   flex: 1;
   display: flex;

@@ -82,9 +82,9 @@ class Hero {
             <div class="container">
                 <div class="row">
                     <!-- 1. Icon Card Container -->
-                    <div class="col-6 col-md-3 order-1">
+                    <div class="col-6 col-md-3 order-1 style="border:1px solid black;">
                         <article class="hero-icon-card-container">
-                            <img src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}">           
+                            <img class = "hero-icon" src="/assets/images/hero-icons/${this.id}.webp" alt="${currentInfo.job || this.name}">           
                             <span class="borderspan border-top"></span>
                             <span class="borderspan border-right"></span>
                             <span class="borderspan border-bottom"></span>
@@ -139,8 +139,8 @@ class Hero {
     
     createTypeSelector() {
         return `
-            <div class="hero-skill-tree-new">
-                스킬트리: <select class="form-select form-select-sm" id="type-selector">
+            <div class="hero-skill-tree">
+                <span style="font-size:0.8em;">스킬트리</span>: <select class="form-select form-select-sm type-selector" id="type-selector">
                     ${this.info.map(i => `<option value="${i.type || ''}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type ? `${i.type}(${i.role})` : `기본(${i.role})`}</option>`).join('')}
                 </select>
             </div>

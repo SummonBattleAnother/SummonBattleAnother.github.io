@@ -89,6 +89,7 @@
   object-fit: cover;
 }
 
+
 .hero-icon-normal{
   border-color: solid 50px #00bcd4;
   font-size: 12px;
@@ -162,6 +163,10 @@
 
 .hero-title {
   margin: 0 0 10px 0;
+}
+
+.type-selector{
+  margin:auto;
 }
 
 /* Tag styles */
@@ -324,22 +329,6 @@ th {
     padding: 10px;
   }
 
-  .hero-left {
-    margin-bottom: 20px;
-  }
-
-  .hero-right {
-    width: 100%;
-  }
-  .hero-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-top > * {
-    margin-bottom: 10px; /* 각 항목 사이 간격 */
-  }
-
   .hero-desc-icon {
     align-self: center; /* 아이콘 중앙 정렬 */
   }
@@ -349,7 +338,7 @@ th {
     text-align: center; /* 텍스트 왼쪽 정렬 */
   }
 
-  .hero-skill-tree-new{
+  .hero-skill-tree{
     margin:auto
   }
 

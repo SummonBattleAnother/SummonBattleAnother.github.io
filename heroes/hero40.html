@@ -1,172 +1,212 @@
 <!DOCTYPE html>
 
 <html lang="ko">
-<head>
-<meta charset="utf-8"/>
-<title>광기의 블레이드마스터 - 소환대전어나더 Wiki - 영웅정보</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="/assets/images/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/assets/images/favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/assets/images/favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/assets/images/favicon_io/site.webmanifest" rel="manifest"/>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
-<link href="/assets/css/style.css" rel="stylesheet"/>
-<link href="/assets/css/style-hero.css" rel="stylesheet"/>
-</head>
-<body id="hero40">
-<body>
-<nav class="navbar">
-<div>
-<a href="../index.html" style="font-size:40px;"> 소환대전어나더 Wiki</a>
-</div>
-<div>
-<a href="/heroes/hero1.html">Heroes</a>
-<a href="/items/iteminfo.html">Item</a>
-<a href="/tip/gametip.html">tips</a>
-</div>
-</nav>
-<div class="card hero-list">
-<div class="card-header">
-<h3 id="heroListToggle">🔍영웅 목록</h3>
-<div class="filters" id="filters"></div>
-<span class="toggle-icon" id="heroListToggle">▼</span>
-</div>
-<div class="card-body hero-card-list">
-<div class="card-content">
-<section id="hero-list">
-<!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
-</section>
-</div>
-</div>
-</div>
+    <head>
+        <meta charset="utf-8" />
+        <title>광기의 블레이드마스터 - 소환대전어나더 Wiki - 영웅정보</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link href="/assets/images/favicon_io/apple-touch-icon.png"
+            rel="apple-touch-icon" sizes="180x180" />
+        <link href="/assets/images/favicon_io/favicon-32x32.png" rel="icon"
+            sizes="32x32" type="image/png" />
+        <link href="/assets/images/favicon_io/favicon-16x16.png" rel="icon"
+            sizes="16x16" type="image/png" />
+        <link href="/assets/images/favicon_io/site.webmanifest"
+            rel="manifest" />
+        <link crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            rel="stylesheet" />
+        <link href="/assets/css/style.css" rel="stylesheet" />
+        <link href="/assets/css/style-hero.css" rel="stylesheet" />
+            
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYHLZBTLXR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-<div class="card">
-<div class="card-header">
-<h3>🎖영웅소개</h3>
-</div>
-<div class="card-body">
-<div id="selected-hero">
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-header">
-<h3>📝기본 정보</h3>
-</div>
-<div class="card-body">
-<div class="info-container">
-<div class="info-content">
-<div class="container">
-<div class="row">
-<div class="col-sm-12 two-div">
-<div class="card">
-<div class="card-header">
-<h4>키워드</h4>
-</div>
-<div class="card-body">
-<div class="card-body keyword-table">
-<section id="hero-keyword">
-<table class="table table-hover">
-<tbody>
-</tbody>
-</table>
-</section>
-</div>
-</div>
-</div>
-</div>
-<div class="col-sm-12 two-div">
-<div class="card">
-<section id="hero-stats">
-<div class="card-header">
-<h4>스탯</h4>
-</div>
-<div class="card-body">
-<div class="row" id="info-stat">
-<div class="col-sm-4">
-<span class="badge bg-danger strength">힘 </span>
-<span id="status-strength">정보가 없습니다</span>
-</div>
-<div class="col-sm-4">
-<span class="badge bg-warning agility">민첩성 </span>
-<span id="status-agility">정보가 없습니다</span>
-</div>
-<div class="col-sm-4">
-<span class="badge bg-success intelligence">지능 </span>
-<span id="status-intelligence">정보가 없습니다</span>
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="info-chart">
-<section id="hero-chart">
-<canvas id="stats-chart"></canvas>
-</section>
-</div>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-header">
-<h3>📋스킬 정보</h3>
-</div>
-<div class="card-body skill-table">
-<section id="hero-skills">
-<table class="table">
-<tbody>
-</tbody>
-</table>
-</section>
-</div>
-</div>
-<div class="card">
-<div class="card-header">
-<h3>✅플레이 팁</h3>
-</div>
-<div class="card-body">
-<section id="hero-tip">
-<ul>
-<li>팁이 작성되지 않았습니다</li>
-</ul>
-</section>
-</div>
-</div>
-<div class="card">
-<div class="card-header">
-<h3>⚔️추천 아이템</h3>
-            아이콘 클릭시 상세 정보로 이동합니다
-        </div>
-<div class="card-body">
-<div class="card-body item-table">
-<section id="hero-items">
-<table class="table">
-<tbody>
-</tbody>
-</table>
-</section>
-</div>
-</div>
-</div>
-<script async="" crossorigin="anonymous" issue-term="pathname" repo="SummonBattleAnother/blogComments" src="https://utteranc.es/client.js" theme="github-light">
+            gtag('config', 'G-YYHLZBTLXR');
+        </script>
+        
+    </head>
+    <body id="hero40">
+        <body>
+            <nav class="navbar">
+                <div>
+                    <a href="../index.html" style="font-size:40px;"> 소환대전어나더
+                        Wiki</a>
+                </div>
+                <div>
+                    <a href="/heroes/hero1.html">Heroes</a>
+                    <a href="/items/iteminfo.html">Item</a>
+                    <a href="/tip/gametip.html">tips</a>
+                </div>
+            </nav>
+            <div class="card hero-list">
+                <div class="card-header">
+                    <h3 id="heroListToggle">🔍영웅 목록</h3>
+                    <div class="filters" id="filters"></div>
+                    <span class="toggle-icon" id="heroListToggle">▼</span>
+                </div>
+                <div class="card-body hero-card-list">
+                    <div class="card-content">
+                        <section id="hero-list">
+                            <!-- 영웅 목록이 여기에 동적으로 로드됩니다 -->
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>🎖영웅소개</h3>
+                </div>
+                <div class="card-body">
+                    <div id="selected-hero">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>📝기본 정보</h3>
+                </div>
+                <div class="card-body">
+                    <div class="info-container">
+                        <div class="info-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 two-div">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>키워드</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-body keyword-table">
+                                                    <section id="hero-keyword">
+                                                        <table
+                                                            class="table table-hover">
+                                                            <tbody>
+                                                            </tbody>
+                                                        </table>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 two-div">
+                                        <div class="card">
+                                            <section id="hero-stats">
+                                                <div class="card-header">
+                                                    <h4>스탯</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="row"
+                                                        id="info-stat">
+                                                        <div class="col-sm-4">
+                                                            <span
+                                                                class="badge bg-danger strength">힘
+                                                            </span>
+                                                            <span
+                                                                id="status-strength">정보가
+                                                                없습니다</span>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <span
+                                                                class="badge bg-warning agility">민첩성
+                                                            </span>
+                                                            <span
+                                                                id="status-agility">정보가
+                                                                없습니다</span>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <span
+                                                                class="badge bg-success intelligence">지능
+                                                            </span>
+                                                            <span
+                                                                id="status-intelligence">정보가
+                                                                없습니다</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-chart">
+                            <section id="hero-chart">
+                                <canvas id="stats-chart"></canvas>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>📋스킬 정보</h3>
+                </div>
+                <div class="card-body skill-table">
+                    <section id="hero-skills">
+                        <table class="table">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>✅플레이 팁</h3>
+                </div>
+                <div class="card-body">
+                    <section id="hero-tip">
+                        <ul>
+                            <li>[클리빙 어택]을 보유하여 다수의 적을 상대로도 효과적인 전투가 가능합니다. 평타 공격력 위주의 아이템을 사용합시다</li>
+                            <li>[피의 갈구]와 [블러드 클러]의 효과를 극대화 하기 위해서는 최대체력을 높히고, 체력을 중간정도로 유지하는것이 좋습니다.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>⚔️추천 아이템</h3>
+                    <span style="font-size:0.8em;">아이콘 클릭시 상세 정보로 이동</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-body item-table">
+                        <section id="hero-items">
+                            <table class="table">
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <script async crossorigin="anonymous" issue-term="pathname"
+                repo="SummonBattleAnother/blogComments"
+                src="https://utteranc.es/client.js" theme="github-light">
 </script>
-<footer>
-<p>© Summon Battle Another. All rights reserved.</p>
-</footer>
-<script>
+            <footer>
+                <p>© Summon Battle Another. All rights reserved.</p>
+            </footer>
+            <script>
         document.getElementById('heroListToggle').addEventListener('click', function() {
             const heroList = document.querySelector('.hero-list');
             heroList.classList.toggle('collapsed');
         });
     </script>
-<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.4"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script crossorigin="anonymous" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-<script src="/assets/js/load-heroes.js"></script>
-<script src="/assets/js/load-hero-details.js"></script>
-</body>
-</body></html>
+            <script
+                src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.4"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script crossorigin="anonymous"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+            <script src="/assets/js/load-heroes.js"></script>
+            <script src="/assets/js/load-hero-details.js"></script>
+        </body>
+    </body></html>

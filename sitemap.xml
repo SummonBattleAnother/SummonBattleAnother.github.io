@@ -5,23 +5,225 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://summonbattleanother.github.io/</loc>
-  <lastmod>2024-07-24T05:17:32+00:00</lastmod>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://summonbattleanother.github.io/index.html</loc>
-  <lastmod>2024-07-24T05:17:32+00:00</lastmod>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://summonbattleanother.github.io/heroes/hero1.html</loc>
-  <lastmod>2024-07-24T05:17:32+00:00</lastmod>
+  <loc>https://summonbattleanother.github.io/tip/gametip.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://summonbattleanother.github.io/items/iteminfo.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero1.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero2.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero3.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero4.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero5.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero6.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero7.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero8.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero9.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero10.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero11.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero12.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero13.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero14.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero15.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero16.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero17.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero18.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero19.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero20.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero21.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero22.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero23.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero24.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero25.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero26.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero27.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero28.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero29.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero30.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero31.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero32.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero33.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero34.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero35.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero36.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero37.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero38.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero39.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://summonbattleanother.github.io/heroes/hero40.html</loc>
+  <lastmod>2024-08-20T05:17:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>

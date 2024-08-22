@@ -207,8 +207,6 @@ class Hero {
 
         const currentType = currentInfo["role"];
 
-        console.log("차트를 그립니다", score)
-
         const data = {
             labels: Object.keys(score),
             datasets: [{

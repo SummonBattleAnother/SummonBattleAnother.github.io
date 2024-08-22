@@ -59,7 +59,6 @@ function renderHeroes() {
       </a>
     `;
     }else{
-    console.log(id)
       heroCard.innerHTML = `
       <a href="/heroes/${hero.id}.html" class="hero-link">
         <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon" style="border:solid 3px ${colors[hero.role]};border-radius: 10px; clip-path: inset(1px);">

@@ -2,6 +2,7 @@
 let heroes = [];
 let filteredHeroes = [];
 let selectedRole = 'all';
+let validHeroNo = 46; // 해당번호의 영웅까지만 작성이 되었습니다
 
 const colors = {
   '일반': 'rgb(0, 0, 0)',
@@ -33,7 +34,7 @@ function renderHeroes() {
   `;
 
   const heroGrid = document.getElementById('hero-grid');
-  const randomid = Math.floor(Math.random() * 40);
+  const randomid = Math.floor(Math.random() * validHeroNo) + 1;
   const randomCard = document.createElement('div');
   randomCard.className = 'hero-card';
   randomCard.innerHTML=`
@@ -50,7 +51,7 @@ function renderHeroes() {
 
     const id= parseInt(hero.id.match(/\d+/)[0], 10)
 
-    if(id > 45){
+    if(id > validHeroNo){ 
       heroCard.innerHTML = `
       <a href="#" class="hero-link">
         <img src="/assets/images/hero-icons/${hero.id}.webp" alt="${hero.job}" class="hero-icon-notready" style="border:solid 3px ${colors[hero.role]};border-radius: 10px; clip-path: inset(1px);">

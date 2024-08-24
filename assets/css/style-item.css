@@ -33,6 +33,10 @@
   transition: background-color 0.3s;
 }
 
+.item-card-contents{
+  padding:0px
+}
+
 .item-card:hover {
   background-color: #e0e0e0;
 }

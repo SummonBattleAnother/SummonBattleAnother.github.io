@@ -3319,7 +3319,7 @@
           "job": "스켈레탈 워로드",
           "shortDescription": "정보 없음",
           "role": "일격",
-          "keywords": [],
+          "keywords": ["일격"],
           "score": {
             "소환화력": 4,
             "대인능력": 2,

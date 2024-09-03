@@ -2,7 +2,7 @@
 let heroes = [];
 let filteredHeroes = [];
 let selectedRole = 'all';
-let validHeroNo = 54; // 해당번호의 영웅까지만 작성이 되었습니다
+let validHeroNo = 55; // 해당번호의 영웅까지만 작성이 되었습니다
 
 const colors = {
   '일반': 'rgb(0, 0, 0)',

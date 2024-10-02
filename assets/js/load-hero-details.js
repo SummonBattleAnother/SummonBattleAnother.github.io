@@ -138,10 +138,17 @@ class Hero {
     }
     
     createTypeSelector() {
+        const options = this.info.map(i => 
+            `<option value="${i.type || ''}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type ? `${i.type}(${i.role})` : `기본(${i.role})`}</option>`
+        ).join('');
+        
+        const isDisabled = this.info.length === 1 ? 'disabled' : ''; // 선택지가 하나일 때 disabled 추가
+    
         return `
             <div class="hero-skill-tree">
-                <span style="font-size:0.8em;">스킬트리</span>: <select class="form-select form-select-sm type-selector" id="type-selector">
-                    ${this.info.map(i => `<option value="${i.type || ''}" ${i.type === this.selectedType ? 'selected' : ''}>${i.type ? `${i.type}(${i.role})` : `기본(${i.role})`}</option>`).join('')}
+                <span style="font-size:0.8em;">스킬트리</span>: 
+                <select class="form-select form-select-sm type-selector" id="type-selector" ${isDisabled}>
+                    ${options}
                 </select>
             </div>
         `;

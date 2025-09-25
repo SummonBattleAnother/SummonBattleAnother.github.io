@@ -518,7 +518,7 @@ th {
 }
 
 .dropdown-highlight {
-  animation: highlight-border 1.2s ease-in-out 2;
+  animation: highlight-border 1.2s ease-in-out 10;
   border: 2px solid #00bcd4 !important;
   transition: border 0.3s;
 }

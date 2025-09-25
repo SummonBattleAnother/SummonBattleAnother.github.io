@@ -122,18 +122,23 @@ class Hero {
     attachTypeSelector() {
         const selector = document.getElementById('type-selector');
         if (selector) {
-            // 기존의 이벤트 리스너를 제거
             selector.removeEventListener('change', this.handleTypeChange);
-            
-            // 새로운 이벤트 리스너를 추가
+    
             this.handleTypeChange = (e) => {
                 this.selectedType = e.target.value;
                 this.updateDisplay();
             };
             selector.addEventListener('change', this.handleTypeChange);
-            
-            // 현재 선택된 타입으로 셀렉터 값을 설정
+    
             selector.value = this.selectedType;
+    
+            // [추가] 드랍다운이 활성화(선택지 2개 이상)일 때만 애니메이션 강조
+            if (!selector.disabled) {
+                selector.classList.add('dropdown-highlight');
+                setTimeout(() => {
+                    selector.classList.remove('dropdown-highlight');
+                }, 12000); // (1.2초 * 10회) 만큼 지난 뒤 제거
+            }
         }
     }
     
